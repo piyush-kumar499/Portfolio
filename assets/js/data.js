@@ -11,7 +11,7 @@ window.personalData = {
     email: "piyushchaurasiya805@gmail.com",
     phone: "", // Intentionally left empty
     location: "Gopalganj, Bihar 841428",
-    profileImage: "assets/images/piyush.jpg", // Update this path if needed
+    profileImage: "assets/images/profile.jpg", // Update this path if needed
     resumeUrl: "", // Optional: add resume download URL later
     
     // Biography
