@@ -623,3 +623,28 @@
         font-size: 2.5rem;
     }
 }
+
+/* Bold text styling for **text** patterns */
+.bio-paragraphs .bold-text {
+    font-weight: 600;
+    color: #2c3e50;
+    position: relative;
+}
+
+.bio-paragraphs .bold-text::before,
+.bio-paragraphs .bold-text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #007bff, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.bio-paragraphs .bold-text:hover::before,
+.bio-paragraphs .bold-text:hover::after {
+    opacity: 0.3;
+}
