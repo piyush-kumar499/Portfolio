@@ -181,28 +181,31 @@ function populateHomepage() {
     
     // Populate skills preview (top 6 skills)
     const skillsContainer = document.getElementById('skills-preview-grid');
-    if (skillsContainer && window.skillsData) {
-        skillsContainer.innerHTML = '';
-        
-        const topSkills = [...(window.skillsData.programming || []), ...(window.skillsData.frameworks || [])]
-            .sort((a, b) => (b.level || 0) - (a.level || 0))
-            .slice(0, 6);
-        
-        topSkills.forEach(skill => {
-            const skillElement = document.createElement('div');
-            skillElement.className = 'skill-item';
-            skillElement.innerHTML = `
+if (skillsContainer && window.skillsData) {
+    skillsContainer.innerHTML = '';
+    
+    const topSkills = [...(window.skillsData.programming || []), ...(window.skillsData.frameworks || [])]
+        .sort((a, b) => (b.level || 0) - (a.level || 0))
+        .slice(0, 6);
+    
+    topSkills.forEach(skill => {
+        const skillElement = document.createElement('div');
+        skillElement.className = 'skill-item';
+        skillElement.innerHTML = `
                 <div class="skill-icon">
                     <i class="${skill.icon || 'fas fa-code'}" style="color: ${skill.color || '#007bff'}"></i>
                 </div>
                 <h3>${skill.name || 'Skill'}</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: ${skill.level || 75}%; background-color: ${skill.color || '#007bff'}"></div>
+                <div class="skill-bar-container">
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: ${skill.level || 75}%; background-color: ${skill.color || '#007bff'}"></div>
+                    </div>
+                    <div class="skill-percentage">${skill.level || 75}%</div>
                 </div>
             `;
-            skillsContainer.appendChild(skillElement);
-        });
-    }
+        skillsContainer.appendChild(skillElement);
+    });
+}
     
     // Populate featured projects
     const featuredProjectsContainer = document.getElementById('featured-projects-grid');
@@ -410,11 +413,13 @@ function populateSkillCategory(containerId, skills) {
                 </div>
                 <div class="skill-info">
                     <h3>${skill.name || 'Skill'}</h3>
-                    <span class="skill-level">${skill.level || 0}%</span>
                 </div>
             </div>
-            <div class="skill-bar">
-                <div class="skill-progress" style="width: ${skill.level || 0}%; background-color: ${skill.color || '#007bff'}"></div>
+            <div class="skill-bar-container">
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: ${skill.level || 0}%; background-color: ${skill.color || '#007bff'}"></div>
+                </div>
+                <div class="skill-percentage">${skill.level || 0}%</div>
             </div>
         `;
         container.appendChild(skillElement);
@@ -775,21 +780,3 @@ document.addEventListener('DOMContentLoaded', () => {
 // Export the main loading function for use in HTML files
 window.loadComponentsAndInit = loadComponentsAndInit;
 window.loadComponentsSequentially = loadComponentsSequentially;
-
-
-// Function to parse **text** and make it bold
-function parseBoldText(text) {
-    // Replace **text** with <span class="bold-text">text</span>
-    return text.replace(/\*\*(.*?)\*\*/g, '<span class="bold-text">$1</span>');
-}
-
-// Function to apply bold text parsing to bio content
-function applyBoldTextToBio() {
-    const bioContent = document.getElementById('bio-content');
-    if (bioContent) {
-        const paragraphs = bioContent.querySelectorAll('p');
-        paragraphs.forEach(paragraph => {
-            paragraph.innerHTML = parseBoldText(paragraph.innerHTML);
-        });
-    }
-}
