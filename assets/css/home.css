@@ -495,6 +495,53 @@ body {
     background-size: cover;
 }
 
+/* Updated Skills Bar Layout for Homepage - Percentage on Right */
+.skills-preview .skill-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skills-preview .skill-percentage {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #007bff;
+    min-width: 45px;
+    text-align: left;
+}
+
+.skills-preview .skill-bar {
+    flex: 1;
+    width: auto; /* Override the existing 100% width */
+    height: 10px;
+    background: linear-gradient(135deg, #e9ecef, #dee2e6);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skills-preview .skill-progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 10px;
+    transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.skills-preview .skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 2s infinite;
+}
+
 /* Enhanced Section Titles */
 .section-title {
     text-align: center;
@@ -1014,6 +1061,15 @@ body {
     .social-links-hero {
         justify-content: center;
     }
+    
+    .skills-preview .skill-bar-container {
+    gap: 0.75rem;
+}
+
+.skills-preview .skill-percentage {
+    font-size: 1rem;
+    min-width: 40px;
+}
 }
 
 @media (max-width: 480px) {
@@ -1070,6 +1126,15 @@ body {
         padding: 4rem 0;
     }
     
+    .skills-preview .skill-bar-container {
+    gap: 0.5rem;
+}
+
+.skills-preview .skill-percentage {
+    font-size: 0.9rem;
+    min-width: 35px;
+}
+
     .hero-actions {
         gap: 0.8rem;
     }
