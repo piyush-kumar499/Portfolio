@@ -1,4 +1,4 @@
-font-size: 2re/* Updated Skills Page Styles - Percentage on Left Side */
+/* Updated Skills Page Styles - Percentage on Left Side */
 
 /* Import shared styles */
 @import url('home.css');
@@ -95,13 +95,14 @@ main {
 
 .skill-item {
     background: white;
-    padding: 2rem;
-    border-radius: 1rem;
+    padding: 2.5rem;
+    border-radius: 20px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.05);
     position: relative;
     overflow: hidden;
+    text-align: center; /* Center everything like homepage */
 }
 
 .skill-item::before {
@@ -125,26 +126,13 @@ main {
     transform: scaleX(1);
 }
 
-.skill-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.skill-icon {
+    text-align: center;
     margin-bottom: 1.5rem;
 }
 
-.skill-icon {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 123, 255, 0.1);
-    border-radius: 1rem;
-    transition: all 0.3s ease;
-}
-
 .skill-icon i {
-    font-size: 2rem;
+    font-size: 3.5rem;
     transition: transform 0.3s ease;
 }
 
@@ -157,26 +145,12 @@ main {
     transform: scale(1.1);
 }
 
-.skill-info {
-    flex: 1;
-}
-
-.skill-info h3 {
+.skill-item h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
     font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-    color: #333;
-}
-
-/* Updated skill level positioning - now just displays the percentage */
-.skill-level {
-    font-size: 1rem;
     font-weight: 700;
-    color: #007bff;
-    background: rgba(0, 123, 255, 0.1);
-    padding: 0.25rem 0.75rem;
-    border-radius: 1rem;
-    display: inline-block;
+    color: #333;
 }
 
 /* New skill bar container with percentage on the right */
