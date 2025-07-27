@@ -30,7 +30,6 @@
         <div class="profile-glow"></div>
     </div>
 </div>
-<p class="hero-description fade-in-up delay-2" id="hero-bio">Short professional bio will be loaded here...</p>
                     
                     <div class="hero-actions fade-in-up delay-3">
                         <a href="#featured-projects" class="btn btn-primary modern-btn">
@@ -118,71 +117,114 @@
     <!-- Scripts -->
     <script src="assets/js/data.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-        // Initialize page after DOM and data are loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load header and footer with proper initialization
-            loadComponentsAndInit(function() {
-                // Populate homepage content after components are loaded
-                populateHomepage();
-                initAnimations();
-                createParticles();
+<script>
+    // Initialize page after DOM and data are loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load header and footer with proper initialization
+        loadComponentsAndInit(function() {
+            // Populate homepage content after components are loaded
+            populateHomepage();
+            initAnimations();
+            createParticles();
+            initScrollButton(); // Add this line to initialize scroll button
+        });
+    });
+
+    // Initialize animations
+    function initAnimations() {
+        // Typewriter effect for hero subtitle
+        const subtitle = document.querySelector('.hero-subtitle');
+        if (subtitle && subtitle.textContent !== 'Professional Title') {
+            typewriterEffect(subtitle, subtitle.textContent, 100);
+        }
+        
+        // Reveal on scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
             });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+            observer.observe(el);
         });
 
-        // Initialize animations
-        function initAnimations() {
-            // Typewriter effect for hero subtitle
-            const subtitle = document.querySelector('.hero-subtitle');
-            if (subtitle && subtitle.textContent !== 'Professional Title') {
-                typewriterEffect(subtitle, subtitle.textContent, 100);
-            }
-            
-            // Reveal on scroll animations
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
+        // Animate skill bars when visible
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBar = entry.target.querySelector('.skill-progress');
+                    if (progressBar) {
+                        const width = progressBar.getAttribute('data-width') || '75%';
+                        progressBar.style.width = width;
                     }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.reveal-on-scroll').forEach(el => {
-                observer.observe(el);
+                }
             });
+        }, { threshold: 0.5 });
 
-            // Animate skill bars when visible
-            const skillObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const progressBar = entry.target.querySelector('.skill-progress');
-                        if (progressBar) {
-                            const width = progressBar.getAttribute('data-width') || '75%';
-                            progressBar.style.width = width;
-                        }
-                    }
-                });
-            }, { threshold: 0.5 });
+        document.querySelectorAll('.skill-item').forEach(el => {
+            skillObserver.observe(el);
+        });
+    }
 
-            document.querySelectorAll('.skill-item').forEach(el => {
-                skillObserver.observe(el);
+    // Create floating particles
+    function createParticles() {
+        const particles = document.querySelector('.hero-particles');
+        if (!particles) return;
+        
+        for (let i = 0; i < 50; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 20 + 's';
+            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            particles.appendChild(particle);
+        }
+    }
+
+    // Smooth scroll functionality for the scroll indicator button
+    function initScrollButton() {
+        const scrollButton = document.querySelector('.scroll-arrow');
+        
+        if (scrollButton) {
+            scrollButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Find the next section after hero (skills-preview section)
+                const targetSection = document.querySelector('.skills-preview');
+                
+                if (targetSection) {
+                    // Smooth scroll to the target section
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                } else {
+                    // Fallback: scroll to next section or specific distance
+                    window.scrollTo({
+                        top: window.innerHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+            
+            // Optional: Hide scroll button when user scrolls down
+            window.addEventListener('scroll', function() {
+                const scrollY = window.scrollY;
+                const heroHeight = document.querySelector('.hero-section')?.offsetHeight || window.innerHeight;
+                
+                if (scrollY > heroHeight * 0.3) {
+                    scrollButton.style.opacity = '0';
+                    scrollButton.style.transform = 'translateX(-50%) translateY(20px)';
+                } else {
+                    scrollButton.style.opacity = '1';
+                    scrollButton.style.transform = 'translateX(-50%) translateY(0)';
+                }
             });
         }
-
-        // Create floating particles
-        function createParticles() {
-            const particles = document.querySelector('.hero-particles');
-            if (!particles) return;
-            
-            for (let i = 0; i < 50; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-                particles.appendChild(particle);
-            }
-        }
-    </script>
+    }
+</script>
 </body>
 </html>
