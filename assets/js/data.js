@@ -17,7 +17,7 @@ window.personalData = {
     shortBio: "🚀 Passionate about building intelligent systems and impactful web applications. I’m a B.Tech student specializing in Artificial Intelligence and Machine Learning, eager to explore real-world use cases of AI while mastering full-stack web development. Always driven by curiosity, I strive to turn ideas into reality through code, learning, and collaboration.",
     
     fullBio: [
-    "👋 Hey there! I'm **Piyush Kumar Chaurasiya** — a passionate and ambitious Computer Science Engineering undergraduate *(2025–2029)* specializing in **Artificial Intelligence and Machine Learning**. I’m driven by curiosity, fueled by creativity, and constantly inspired by how technology can solve meaningful problems around us.",
+    "👋 Hey there! I'm **Piyush Kumar Chaurasiya** — a passionate and ambitious Computer Science Engineering undergraduate **(2025–2029)** specializing in **Artificial Intelligence and Machine Learning**. I’m driven by curiosity, fueled by creativity, and constantly inspired by how technology can solve meaningful problems around us.",
     
     "🚀 My journey in tech began with basic programming and web development, but quickly expanded into full-stack application design, cloud computing, and machine learning. I’m fascinated by how intelligent systems can enhance decision-making, automate tedious processes, and unlock powerful user experiences — and I aim to be part of building such systems that scale and serve people worldwide.",
     
