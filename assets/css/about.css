@@ -69,31 +69,149 @@
 
 /* Biography Section */
 .biography-section {
-    padding: 5rem 0;
-    background: white;
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f4f8 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.biography-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(0, 123, 255, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.bio-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 .bio-content {
-    max-width: 800px;
-    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    padding: 3rem;
+    box-shadow: 
+        0 20px 60px rgba(0, 123, 255, 0.1),
+        0 8px 25px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.bio-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #667eea, #764ba2);
+    border-radius: 2rem 2rem 0 0;
+}
+
+.bio-content::after {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8rem;
+    font-family: 'Playfair Display', serif;
+    color: rgba(0, 123, 255, 0.08);
+    line-height: 1;
+    pointer-events: none;
+}
+
+.bio-text {
+    max-width: 100%;
+    margin: 0;
+}
+
+.bio-text .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.bio-text .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #007bff, #667eea);
+    border-radius: 2px;
+}
+
+.bio-paragraphs {
+    position: relative;
 }
 
 .bio-paragraphs p {
+    font-family: 'Inter', sans-serif;
     font-size: 1.1rem;
+    font-weight: 400;
     line-height: 1.8;
-    margin-bottom: 1.5rem;
-    color: #555;
+    margin-bottom: 1.8rem;
+    color: #4a5568;
     text-align: justify;
+    position: relative;
+    padding-left: 0.5rem;
+}
+
+.bio-paragraphs p:first-child {
+    margin-top: 1rem;
 }
 
 .bio-paragraphs p:first-child::first-letter {
-    font-size: 4rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
     font-weight: 700;
     float: left;
-    line-height: 3rem;
-    margin: 0.5rem 0.5rem 0 0;
+    line-height: 3.2rem;
+    margin: 0.8rem 0.8rem 0.2rem 0;
     color: #007bff;
-    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 4px rgba(0, 123, 255, 0.2);
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.bio-paragraphs p:last-child {
+    margin-bottom: 0;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+/* Decorative elements */
+.bio-content .quote-decoration {
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 100px;
+    background: linear-gradient(to bottom, #007bff, #667eea, #764ba2);
+    border-radius: 3px;
+    opacity: 0.3;
 }
 
 /* Education Section */
@@ -360,10 +478,52 @@
         height: 280px;
     }
     
+    /* Biography responsive fixes */
+    .biography-section {
+        padding: 4rem 0;
+    }
+    
+    .bio-container {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .bio-content {
+        padding: 2.5rem 2rem;
+        border-radius: 1.5rem;
+    }
+    
+    .bio-text .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .bio-text .section-title::after {
+        width: 60px;
+        height: 2px;
+    }
+    
+    .bio-paragraphs p {
+        font-size: 1rem;
+        text-align: left;
+        padding-left: 0;
+        line-height: 1.7;
+    }
+    
     .bio-paragraphs p:first-child::first-letter {
-        font-size: 3rem;
-        line-height: 2.5rem;
-        margin: 0.3rem 0.3rem 0 0;
+        font-size: 3.5rem;
+        line-height: 2.8rem;
+        margin: 0.5rem 0.5rem 0.2rem 0;
+    }
+    
+    .bio-content::after {
+        font-size: 6rem;
+        top: -5px;
+        right: 20px;
+    }
+    
+    .bio-content .quote-decoration {
+        display: none;
     }
     
     .education-timeline::before {
@@ -403,6 +563,48 @@
     .about-img {
         width: 220px;
         height: 220px;
+    }
+    
+    /* Biography small screen fixes */
+    .biography-section {
+        padding: 3rem 0;
+    }
+    
+    .bio-container {
+        padding: 0 0.5rem;
+    }
+    
+    .bio-content {
+        padding: 2rem 1.5rem;
+        border-radius: 1.2rem;
+    }
+    
+    .bio-text .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .bio-text .section-title::after {
+        width: 50px;
+        height: 2px;
+    }
+    
+    .bio-paragraphs p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1.4rem;
+    }
+    
+    .bio-paragraphs p:first-child::first-letter {
+        font-size: 3rem;
+        line-height: 2.4rem;
+        margin: 0.4rem 0.4rem 0.1rem 0;
+    }
+    
+    .bio-content::after {
+        font-size: 5rem;
+        top: 0;
+        right: 15px;
     }
     
     .timeline-content {
