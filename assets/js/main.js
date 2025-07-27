@@ -775,3 +775,21 @@ document.addEventListener('DOMContentLoaded', () => {
 // Export the main loading function for use in HTML files
 window.loadComponentsAndInit = loadComponentsAndInit;
 window.loadComponentsSequentially = loadComponentsSequentially;
+
+
+// Function to parse **text** and make it bold
+function parseBoldText(text) {
+    // Replace **text** with <span class="bold-text">text</span>
+    return text.replace(/\*\*(.*?)\*\*/g, '<span class="bold-text">$1</span>');
+}
+
+// Function to apply bold text parsing to bio content
+function applyBoldTextToBio() {
+    const bioContent = document.getElementById('bio-content');
+    if (bioContent) {
+        const paragraphs = bioContent.querySelectorAll('p');
+        paragraphs.forEach(paragraph => {
+            paragraph.innerHTML = parseBoldText(paragraph.innerHTML);
+        });
+    }
+}
