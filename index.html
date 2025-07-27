@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio of [Your Name] - Web Developer & Designer">
+    <meta name="keywords" content="web developer, portfolio, projects, skills">
+    <title>Piyush Chaurasiya</title>
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-bg-animation"></div>
+        <div class="hero-particles"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title fade-in-up">Hi, I'm <span id="hero-name" class="highlight glow-text">Your Name</span></h1>
+<h2 class="hero-subtitle typewriter" id="hero-title">Professional Title</h2>
+<div class="hero-image fade-in-up delay-1">
+    <div class="profile-img-container">
+        <img id="hero-profile-img" src="https://via.placeholder.com/400x400/007bff/ffffff?text=Your+Photo" alt="Profile Picture" class="profile-img floating">
+        <div class="profile-ring"></div>
+        <div class="profile-glow"></div>
+    </div>
+</div>
+<p class="hero-description fade-in-up delay-2" id="hero-bio">Short professional bio will be loaded here...</p>
+                    
+                    <div class="hero-actions fade-in-up delay-3">
+                        <a href="#featured-projects" class="btn btn-primary modern-btn">
+                            <span class="btn-text">View My Work</span>
+                            <div class="btn-shine"></div>
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary modern-btn">
+                            <span class="btn-text">Get In Touch</span>
+                            <div class="btn-shine"></div>
+                        </a>
+                        <a href="#" id="resume-download" class="btn btn-outline modern-btn glass-effect" download>
+                            <i class="fas fa-download btn-icon"></i>
+                            <span class="btn-text">Download Resume</span>
+                            <div class="btn-shine"></div>
+                        </a>
+                    </div>
+                    
+                    <div class="social-links-hero fade-in-up delay-4" id="hero-social-links">
+                        <!-- Social links will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Skills Preview -->
+    <section class="skills-preview">
+        <div class="container">
+            <h2 class="section-title reveal-on-scroll">
+                <span class="title-main">Core Skills</span>
+                <span class="title-accent"></span>
+            </h2>
+            <div class="skills-grid" id="skills-preview-grid">
+                <!-- Skills will be populated by JavaScript -->
+            </div>
+            <div class="text-center reveal-on-scroll">
+                <a href="skills.html" class="btn btn-outline-dark">View All Skills</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="featured-projects" id="featured-projects">
+        <div class="container">
+            <h2 class="section-title reveal-on-scroll">
+                <span class="title-main">Featured Projects</span>
+                <span class="title-accent"></span>
+            </h2>
+            <div class="projects-grid" id="featured-projects-grid">
+                <!-- Featured projects will be populated by JavaScript -->
+            </div>
+            <div class="text-center reveal-on-scroll">
+                <a href="projects.html" class="btn btn-primary modern-btn">
+                    <span class="btn-text">View All Projects</span>
+                    <div class="btn-shine"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="cta-bg-animation"></div>
+        <div class="container">
+            <div class="cta-content reveal-on-scroll">
+                <h2 class="cta-title">Let's Work Together</h2>
+                <p class="cta-description">Ready to bring your ideas to life? Let's discuss your next project.</p>
+                <a href="contact.html" class="btn btn-cta modern-btn pulse-btn">
+                    <span class="btn-text">Start a Conversation</span>
+                    <div class="btn-shine"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Initialize page after DOM and data are loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load header and footer with proper initialization
+            loadComponentsAndInit(function() {
+                // Populate homepage content after components are loaded
+                populateHomepage();
+                initAnimations();
+                createParticles();
+            });
+        });
+
+        // Initialize animations
+        function initAnimations() {
+            // Typewriter effect for hero subtitle
+            const subtitle = document.querySelector('.hero-subtitle');
+            if (subtitle && subtitle.textContent !== 'Professional Title') {
+                typewriterEffect(subtitle, subtitle.textContent, 100);
+            }
+            
+            // Reveal on scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Animate skill bars when visible
+            const skillObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const progressBar = entry.target.querySelector('.skill-progress');
+                        if (progressBar) {
+                            const width = progressBar.getAttribute('data-width') || '75%';
+                            progressBar.style.width = width;
+                        }
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.skill-item').forEach(el => {
+                skillObserver.observe(el);
+            });
+        }
+
+        // Create floating particles
+        function createParticles() {
+            const particles = document.querySelector('.hero-particles');
+            if (!particles) return;
+            
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particles.appendChild(particle);
+            }
+        }
+    </script>
+</body>
+</html>

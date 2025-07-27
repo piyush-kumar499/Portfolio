@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<style>
+/* Portfolio Footer Styles - Isolated and Fixed */
+.portfolio-footer {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    color: #ffffff;
+    padding: 3rem 0 1.5rem;
+    margin-top: 0.15rem;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.portfolio-footer * {
+    box-sizing: border-box;
+}
+
+.portfolio-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.portfolio-footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.portfolio-footer-section {
+    color: #ffffff;
+}
+
+.portfolio-footer-section h4 {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.portfolio-footer-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #60a5fa;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.portfolio-footer-name:hover {
+    color: #3b82f6;
+}
+
+.portfolio-footer-title {
+    font-size: 1rem;
+    color: #d1d5db;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.portfolio-footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.portfolio-footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.portfolio-footer-links a {
+    color: #d1d5db !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.3rem 0;
+    display: inline-block;
+    position: relative;
+    font-size: 1rem;
+}
+
+.portfolio-footer-links a:hover {
+    color: #60a5fa !important;
+    transform: translateX(8px);
+    text-decoration: none;
+}
+
+.portfolio-footer-links a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #60a5fa, #3b82f6);
+    transition: width 0.3s ease;
+}
+
+.portfolio-footer-links a:hover::before {
+    width: 100%;
+}
+
+.portfolio-footer-links a.active {
+    color: #60a5fa !important;
+    font-weight: 600;
+}
+
+.portfolio-footer-social-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.portfolio-footer-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+    color: #d1d5db !important;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(96, 165, 250, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-footer-social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #60a5fa, #3b82f6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.portfolio-footer-social-link:hover::before {
+    opacity: 1;
+}
+
+.portfolio-footer-social-link:hover {
+    color: #ffffff !important;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(96, 165, 250, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+}
+
+.portfolio-footer-social-link i {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio-footer-social-link:hover i {
+    transform: scale(1.1);
+}
+
+.portfolio-footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(96, 165, 250, 0.2);
+    color: #d1d5db;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.portfolio-footer-copyright-name {
+    color: #60a5fa;
+    font-weight: 600;
+}
+
+.portfolio-current-year {
+    color: #60a5fa;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-footer {
+        padding: 2.5rem 0 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .portfolio-footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2.5rem;
+    }
+
+    .portfolio-footer-social-links {
+        justify-content: center;
+        gap: 1.2rem;
+    }
+
+    .portfolio-footer-section h4 {
+        font-size: 1.1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .portfolio-footer-links a {
+        padding: 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    .portfolio-footer-social-link {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-footer {
+        padding: 2rem 0 1.2rem;
+        margin-top: 2rem;
+    }
+
+    .portfolio-footer-container {
+        padding: 0 15px;
+    }
+
+    .portfolio-footer-content {
+        gap: 2rem;
+    }
+
+    .portfolio-footer-social-link {
+        width: 42px;
+        height: 42px;
+    }
+
+    .portfolio-footer-social-link i {
+        font-size: 1.1rem;
+    }
+
+    .portfolio-footer-bottom {
+        padding-top: 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation for footer appearance */
+.portfolio-footer {
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideUpFooter 0.6s ease-out;
+}
+
+@keyframes slideUpFooter {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .portfolio-footer {
+        border-top: 3px solid #60a5fa;
+        background: #000000;
+    }
+    
+    .portfolio-footer-links a:hover {
+        background-color: rgba(96, 165, 250, 0.2);
+        padding: 0.3rem 0.8rem;
+        border-radius: 0.3rem;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .portfolio-footer-social-link:hover,
+    .portfolio-footer-links a:hover,
+    .portfolio-footer-name:hover {
+        transform: none;
+    }
+    
+    .portfolio-footer-social-link,
+    .portfolio-footer-links a,
+    .portfolio-footer-social-link i,
+    .portfolio-footer-name {
+        transition: none;
+    }
+    
+    .portfolio-footer {
+        animation: none;
+    }
+}
+</style>
+
+<footer class="portfolio-footer" id="portfolio-footer">
+    <div class="portfolio-footer-container">
+        <div class="portfolio-footer-content">
+            <div class="portfolio-footer-section">
+                <h4 class="portfolio-footer-name" id="portfolio-footer-name">Your Name</h4>
+                <p class="portfolio-footer-title" id="portfolio-footer-title">Professional Title</p>
+            </div>
+            
+            <div class="portfolio-footer-section">
+                <h4>Quick Links</h4>
+                <ul class="portfolio-footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="portfolio-footer-section">
+                <h4>Connect With Me</h4>
+                <div class="portfolio-footer-social-links" id="portfolio-footer-social-links">
+                    <!-- Social links will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="portfolio-footer-bottom">
+            <p>&copy; <span class="portfolio-current-year" id="portfolio-current-year"></span> <span class="portfolio-footer-copyright-name" id="portfolio-footer-copyright-name">Your Name</span>. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function() {
+    'use strict';
+    
+    function initializeFooter() {
+        // Set current year
+        const yearElement = document.getElementById('portfolio-current-year');
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+
+        // Load personal data for footer if available
+        if (typeof window.personalData !== 'undefined' && window.personalData) {
+            populateFooterData();
+        } else {
+            // Wait for data to load
+            const checkData = setInterval(() => {
+                if (typeof window.personalData !== 'undefined' && window.personalData) {
+                    populateFooterData();
+                    clearInterval(checkData);
+                }
+            }, 100);
+            
+            // Stop checking after 5 seconds
+            setTimeout(() => clearInterval(checkData), 5000);
+        }
+        
+        // Set active page in footer links
+        setActiveFooterLink();
+        
+        // Add footer interaction handlers
+        addFooterInteractions();
+    }
+    
+    function populateFooterData() {
+        const data = window.personalData;
+        
+        // Update name and title
+        const nameElement = document.getElementById('portfolio-footer-name');
+        const titleElement = document.getElementById('portfolio-footer-title');
+        const copyrightNameElement = document.getElementById('portfolio-footer-copyright-name');
+        
+        if (nameElement && data.name) {
+            nameElement.textContent = data.name;
+        }
+        if (titleElement && data.title) {
+            titleElement.textContent = data.title;
+        }
+        if (copyrightNameElement && data.name) {
+            copyrightNameElement.textContent = data.name;
+        }
+        
+        // Populate social links
+        const socialContainer = document.getElementById('portfolio-footer-social-links');
+        if (socialContainer && data.social && Array.isArray(data.social)) {
+            socialContainer.innerHTML = '';
+            
+            data.social.forEach(social => {
+                if (social.url && social.icon && social.platform) {
+                    const link = document.createElement('a');
+                    link.href = social.url;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                    link.className = 'portfolio-footer-social-link';
+                    link.innerHTML = `<i class="${social.icon}"></i>`;
+                    link.title = `Visit my ${social.platform} profile`;
+                    link.setAttribute('aria-label', `Visit my ${social.platform} profile`);
+                    
+                    socialContainer.appendChild(link);
+                }
+            });
+        }
+    }
+    
+    function setActiveFooterLink() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const footerLinks = document.querySelectorAll('.portfolio-footer-links a');
+        
+        footerLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
+    
+    function addFooterInteractions() {
+        // Scroll to top functionality for footer name
+        const footerName = document.getElementById('portfolio-footer-name');
+        if (footerName) {
+            footerName.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            footerName.setAttribute('title', 'Scroll to top');
+        }
+        
+        // Enhanced hover effects for footer links
+        const footerLinks = document.querySelectorAll('.portfolio-footer-links a');
+        footerLinks.forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.paddingLeft = '0.5rem';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.paddingLeft = '0';
+            });
+        });
+    }
+    
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeFooter);
+    } else {
+        initializeFooter();
+    }
+    
+})();
+</script>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<style>
+    /* Portfolio Header Styles - Isolated and Fixed */
+    .portfolio-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.95) 0%, rgba(139, 92, 246, 0.95) 50%, rgba(59, 130, 246, 0.95) 100%);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
+        transition: all 0.3s ease;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        min-height: 60px;
+    }
+    
+    .portfolio-navbar {
+        padding: 0.75rem 0;
+        width: 100%;
+    }
+    
+    .portfolio-nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .portfolio-brand-link {
+        text-decoration: none;
+        color: #ffffff !important;
+        font-weight: 700;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        z-index: 10001;
+    }
+    
+    .portfolio-brand-link:hover {
+        color: #fbbf24 !important;
+        transform: translateY(-1px);
+        text-decoration: none;
+    }
+    
+    .portfolio-nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+    }
+    
+    .portfolio-nav-item {
+        list-style: none;
+        margin: 0;
+    }
+    
+    .portfolio-nav-link {
+        text-decoration: none;
+        color: #ffffff !important;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        transition: all 0.3s ease;
+        position: relative;
+        backdrop-filter: blur(10px);
+        display: block;
+    }
+    
+    .portfolio-nav-link:hover {
+        color: #111827 !important;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(249, 250, 251, 0.9) 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        text-decoration: none;
+    }
+    
+    .portfolio-nav-link.active {
+        color: #111827 !important;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(249, 250, 251, 0.8) 100%);
+    }
+    
+    .portfolio-nav-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 0.5rem;
+        background: none;
+        border: none;
+        z-index: 10001;
+    }
+    
+    .portfolio-nav-toggle span {
+        width: 25px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 3px 0;
+        transition: 0.3s;
+        display: block;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .portfolio-nav-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .portfolio-nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .portfolio-nav-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+        .portfolio-nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 60px;
+            flex-direction: column;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.98) 0%, rgba(139, 92, 246, 0.98) 50%, rgba(59, 130, 246, 0.98) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            width: 100%;
+            text-align: center;
+            transition: left 0.3s ease;
+            box-shadow: 0 20px 50px rgba(99, 102, 241, 0.2);
+            padding: 2rem 0;
+            gap: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            z-index: 10000;
+            min-height: calc(100vh - 60px);
+        }
+        
+        .portfolio-nav-menu.active {
+            left: 0;
+        }
+        
+        .portfolio-nav-item {
+            margin: 1rem 0;
+            width: 100%;
+        }
+        
+        .portfolio-nav-link {
+            display: block;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .portfolio-nav-toggle {
+            display: flex;
+        }
+    }
+    
+    /* Ensure no conflicts with body */
+    body.portfolio-body {
+        padding-top: 60px !important;
+        margin: 0;
+    }
+    
+    @media (max-width: 768px) {
+        body.portfolio-body {
+            padding-top: 60px !important;
+        }
+    }
+</style>
+
+<header class="portfolio-header" id="portfolio-header">
+    <nav class="portfolio-navbar">
+        <div class="portfolio-nav-container">
+            <div class="portfolio-nav-brand">
+                <a href="index.html" class="portfolio-brand-link">
+                    <span class="portfolio-brand-name">Portfolio</span>
+                </a>
+            </div>
+            <button class="portfolio-nav-toggle" id="portfolio-nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="portfolio-nav-menu" id="portfolio-nav-menu">
+                <li class="portfolio-nav-item">
+                    <a href="index.html" class="portfolio-nav-link">Home</a>
+                </li>
+                <li class="portfolio-nav-item">
+                    <a href="about.html" class="portfolio-nav-link">About</a>
+                </li>
+                <li class="portfolio-nav-item">
+                    <a href="skills.html" class="portfolio-nav-link">Skills</a>
+                </li>
+                <li class="portfolio-nav-item">
+                    <a href="projects.html" class="portfolio-nav-link">Projects</a>
+                </li>
+                <li class="portfolio-nav-item">
+                    <a href="contact.html" class="portfolio-nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<script>
+    (function() {
+        'use strict';
+        
+        // Wait for DOM to be ready
+        function initializeHeader() {
+            // Add body class for proper spacing
+            document.body.classList.add('portfolio-body');
+            
+            // Mobile menu toggle functionality
+            const navToggle = document.getElementById('portfolio-nav-toggle');
+            const navMenu = document.getElementById('portfolio-nav-menu');
+            
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    this.classList.toggle('active');
+                });
+            }
+            
+            // Close mobile menu when clicking on a link
+            const navLinks = document.querySelectorAll('.portfolio-nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (navMenu && navToggle) {
+                        navMenu.classList.remove('active');
+                        navToggle.classList.remove('active');
+                    }
+                });
+            });
+            
+            // Set active page
+            setActiveNavLink();
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (navMenu && navToggle &&
+                    !navMenu.contains(event.target) &&
+                    !navToggle.contains(event.target) &&
+                    navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    navToggle.classList.remove('active');
+                }
+            });
+        }
+        
+        // Set active navigation link based on current page
+        function setActiveNavLink() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.portfolio-nav-link');
+            
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+        
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeHeader);
+        } else {
+            initializeHeader();
+        }
+        
+    })();
+</script>
