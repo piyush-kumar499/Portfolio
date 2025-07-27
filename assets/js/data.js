@@ -7,6 +7,7 @@
 window.personalData = {
     name: "Piyush Kumar Chaurasiya",
     title: "🎓 B.Tech CSE (AI & ML) | Future AI/ML Engineer",
+    availability: "Open for Internships & Opportunities",
     email: "piyushchaurasiya805@gmail.com",
     phone: "", // Intentionally left empty
     location: "Gopalganj, Bihar 841428",
