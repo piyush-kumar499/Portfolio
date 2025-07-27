@@ -1,4 +1,4 @@
-/* Skills Page Styles */
+font-size: 2re/* Updated Skills Page Styles - Percentage on Left Side */
 
 /* Import shared styles */
 @import url('home.css');
@@ -168,6 +168,7 @@ main {
     color: #333;
 }
 
+/* Updated skill level positioning - now just displays the percentage */
 .skill-level {
     font-size: 1rem;
     font-weight: 700;
@@ -178,8 +179,24 @@ main {
     display: inline-block;
 }
 
+/* New skill bar container with percentage on the right */
+.skill-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skill-percentage {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #007bff;
+    min-width: 45px;
+    text-align: left;
+}
+
 .skill-bar {
-    width: 100%;
+    flex: 1;
     height: 10px;
     background-color: #e9ecef;
     border-radius: 5px;
@@ -412,6 +429,15 @@ main {
         font-size: 1.5rem;
     }
     
+    .skill-bar-container {
+        gap: 0.75rem;
+    }
+    
+    .skill-percentage {
+        font-size: 1rem;
+        min-width: 40px;
+    }
+    
     .soft-skills-grid {
         grid-template-columns: 1fr;
     }
@@ -446,6 +472,15 @@ main {
     
     .skill-item {
         padding: 1.25rem;
+    }
+    
+    .skill-bar-container {
+        gap: 0.5rem;
+    }
+    
+    .skill-percentage {
+        font-size: 0.9rem;
+        min-width: 35px;
     }
     
     .soft-skill-item {
