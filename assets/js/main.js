@@ -152,6 +152,11 @@ function populateHomepage() {
     
     if (heroNameElement) heroNameElement.textContent = window.personalData.name || 'Your Name';
     if (heroTitleElement) heroTitleElement.textContent = window.personalData.title || 'Professional Title';
+    const availabilityElement = document.getElementById('availability-tag');
+const availabilityTextElement = availabilityElement?.querySelector('.availability-text');
+if (availabilityTextElement && window.personalData.availability) {
+    availabilityTextElement.textContent = window.personalData.availability;
+}
     if (heroBioElement) heroBioElement.textContent = window.personalData.shortBio || 'Professional bio will be loaded here...';
     if (heroProfileImgElement) {
         heroProfileImgElement.src = window.personalData.profileImage || 'https://via.placeholder.com/400x400/007bff/ffffff?text=Your+Photo';
