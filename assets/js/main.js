@@ -184,30 +184,30 @@ if (availabilityTextElement && window.personalData.availability) {
         });
     }
     
-    // Populate skills preview (top 6 skills)
+    // Populate skills preview (top 8 skills)
     const skillsContainer = document.getElementById('skills-preview-grid');
 if (skillsContainer && window.skillsData) {
     skillsContainer.innerHTML = '';
     
     const topSkills = [...(window.skillsData.programming || []), ...(window.skillsData.frameworks || [])]
         .sort((a, b) => (b.level || 0) - (a.level || 0))
-        .slice(0, 6);
+        .slice(0, 8);
     
     topSkills.forEach(skill => {
         const skillElement = document.createElement('div');
         skillElement.className = 'skill-item';
         skillElement.innerHTML = `
-                <div class="skill-icon">
-                    <i class="${skill.icon || 'fas fa-code'}" style="color: ${skill.color || '#007bff'}"></i>
+            <div class="skill-icon">
+                <i class="${skill.icon || 'fas fa-code'}" style="color: ${skill.color || '#007bff'}"></i>
+            </div>
+            <h3>${skill.name || 'Skill'}</h3>
+            <div class="skill-bar-container">
+                <div class="skill-bar">
+                    <div class="skill-progress" data-width="${skill.level || 75}%" style="background-color: ${skill.color || '#007bff'}; width: 0%;"></div>
                 </div>
-                <h3>${skill.name || 'Skill'}</h3>
-                <div class="skill-bar-container">
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: ${skill.level || 75}%; background-color: ${skill.color || '#007bff'}"></div>
-                    </div>
-                    <div class="skill-percentage">${skill.level || 75}%</div>
-                </div>
-            `;
+                <div class="skill-percentage">${skill.level || 75}%</div>
+            </div>
+        `;
         skillsContainer.appendChild(skillElement);
     });
 }
@@ -781,6 +781,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Export the main loading function for use in HTML files
 window.loadComponentsAndInit = loadComponentsAndInit;
 window.loadComponentsSequentially = loadComponentsSequentially;
+
 
 // Function to parse **text** and make it bold
 function parseBoldText(text) {
