@@ -407,14 +407,10 @@ function populateSkillCategory(containerId, skills) {
         const skillElement = document.createElement('div');
         skillElement.className = 'skill-item';
         skillElement.innerHTML = `
-            <div class="skill-header">
-                <div class="skill-icon">
-                    <i class="${skill.icon || 'fas fa-code'}" style="color: ${skill.color || '#007bff'}"></i>
-                </div>
-                <div class="skill-info">
-                    <h3>${skill.name || 'Skill'}</h3>
-                </div>
+            <div class="skill-icon">
+                <i class="${skill.icon || 'fas fa-code'}" style="color: ${skill.color || '#007bff'}"></i>
             </div>
+            <h3>${skill.name || 'Skill'}</h3>
             <div class="skill-bar-container">
                 <div class="skill-bar">
                     <div class="skill-progress" style="width: ${skill.level || 0}%; background-color: ${skill.color || '#007bff'}"></div>
