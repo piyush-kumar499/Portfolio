@@ -680,24 +680,10 @@ window.projectsData = [
 }
 ];
 
-// Add this to your data.js file, before the contactData section
-
 // Certificates and Achievements Data
 window.certificatesData = [
   {
     id: 1,
-    name: "Python for Data Science",
-    organization: "IBM",
-    issueDate: "2025-07-23",
-    expirationDate: "",
-    credentialUrl: "https://www.credly.com/badges/e01003eb-e425-4da6-a255-e5e9d51df6e0/linked_in_profile",
-    imageUrl: "assets/images/certificates/1.jpg",
-    category: "ai-ml",
-    skills: ["Python", "Data Science", "Pandas", "NumPy", "Matplotlib", "Jupyter Notebooks", "Data Wrangling"],
-    description: "This certificate from IBM introduces core Python programming for data science. It covered data manipulation using Pandas, numerical computation using NumPy, data visualization through Matplotlib, and interactive development with Jupyter notebooks. Learners also explored conditional logic, loops, functions, and real-world data workflows in data science projects."
-  },
-  {
-    id: 2,
     name: "Prompt Engineering for Everyone",
     organization: "IBM",
     issueDate: "2025-07-25",
@@ -709,31 +695,19 @@ window.certificatesData = [
     description: "This course provides an in-depth overview of prompt engineering, focusing on crafting effective instructions for large language models (LLMs) such as ChatGPT. It also covers how prompt formulation affects responses, explores ethical considerations, and introduces tokenization and model constraints for better AI-human collaboration."
   },
   {
+    id: 2,
+    name: "Python for Data Science",
+    organization: "IBM",
+    issueDate: "2025-07-23",
+    expirationDate: "",
+    credentialUrl: "https://www.credly.com/badges/e01003eb-e425-4da6-a255-e5e9d51df6e0/linked_in_profile",
+    imageUrl: "assets/images/certificates/1.jpg",
+    category: "ai-ml",
+    skills: ["Python", "Data Science", "Pandas", "NumPy", "Matplotlib", "Jupyter Notebooks", "Data Wrangling"],
+    description: "This certificate from IBM introduces core Python programming for data science. It covered data manipulation using Pandas, numerical computation using NumPy, data visualization through Matplotlib, and interactive development with Jupyter notebooks. Learners also explored conditional logic, loops, functions, and real-world data workflows in data science projects."
+  },
+  {
     id: 3,
-    name: "Python 101 for Data Science",
-    organization: "IBM",
-    issueDate: "2025-07-23",
-    expirationDate: "",
-    credentialUrl: "https://courses.cognitiveclass.ai/certificates/464c6850b72949edb196c6aef6beec30",
-    imageUrl: "assets/images/certificates/3.jpg",
-    category: "programming",
-    skills: ["Python", "Variables", "Loops", "Functions", "Conditionals", "Data Types", "IDE Navigation"],
-    description: "An introductory course focused on Python syntax, control flow, functions, and scripting basics. The program is ideal for beginners in data science and emphasizes hands-on programming in Jupyter and Visual Studio Code. It concludes with mini-projects that apply logic, lists, and dictionaries for data-centric tasks."
-  },
-  {
-    id: 4,
-    name: "SQL and Relational Databases 101",
-    organization: "IBM",
-    issueDate: "2025-07-23",
-    expirationDate: "",
-    credentialUrl: "https://courses.cognitiveclass.ai/certificates/1a2f85833db24b3e8f0191b2515f4521",
-    imageUrl: "assets/images/certificates/4.jpg",
-    category: "database",
-    skills: ["SQL", "Database Design", "Normalization", "Joins", "Data Filtering", "CRUD Operations", "Relational Models"],
-    description: "This foundational course explains the structure of relational databases and covers core SQL syntax such as SELECT, INSERT, UPDATE, DELETE, JOIN, and GROUP BY. Learners practiced designing normalized tables, writing efficient queries, and understanding relational schemas for real-world database applications."
-  },
-  {
-    id: 5,
     name: "4 Day AI Workshop",
     organization: "Newton School of Technology",
     issueDate: "2025-05-08",
@@ -745,19 +719,7 @@ window.certificatesData = [
     description: "An intensive four-day workshop that introduced foundational AI and ML concepts including supervised and unsupervised learning, regression models, and neural networks. Participants used Python libraries like Scikit-learn and TensorFlow to build and evaluate models. Real-world case studies emphasized the ethical and societal impact of AI."
   },
   {
-    id: 6,
-    name: "Front-end Web Development",
-    organization: "Reliance Foundation",
-    issueDate: "2024-09-24",
-    expirationDate: "",
-    credentialUrl: "Credential ID: RFSA0007733",
-    imageUrl: "assets/images/certificates/6.jpg",
-    category: "web-design",
-    skills: ["HTML", "CSS", "JavaScript", "Bootstrap", "DOM Manipulation", "Responsive Design", "Web Accessibility"],
-    description: "This program offered hands-on training in front-end web technologies, focusing on the creation of responsive, accessible user interfaces. Participants built interactive pages using HTML5, styled them with CSS3 and Bootstrap, and brought them to life with JavaScript, covering events, form validation, and animations."
-  },
-  {
-    id: 7,
+    id: 4,
     name: "Security Analyst Certificate Programme",
     organization: "NSDC",
     issueDate: "2025-01-10",
@@ -769,7 +731,7 @@ window.certificatesData = [
     description: "This program equips students with practical cybersecurity skills to monitor, detect, and respond to cyber threats. It includes training on SOC tools, firewalls, identity management, and incident response. Participants gain the technical expertise to handle real-world security challenges effectively."
   },
   {
-    id: 8,
+    id: 5,
     name: "Security Analyst Certificate Programme",
     organization: "Reliance Foundation",
     issueDate: "2025-01-10",
@@ -781,16 +743,52 @@ window.certificatesData = [
     description: "Focused on practical knowledge in cybersecurity, this certification emphasized safeguarding networks, threat detection, and defensive strategies. It covered secure communication, encryption, vulnerability scanning, and exposure to incident management scenarios."
   },
   {
-    id: 9,
-    name: "Spoken English Course",
-    organization: "LearnVern",
-    issueDate: "2024-09-19",
+    id: 6,
+    name: "Python 101 for Data Science",
+    organization: "IBM",
+    issueDate: "2025-07-23",
     expirationDate: "",
-    credentialUrl: "https://www.learnvern.com/certificate?candidate_id=CAN_3492842&certificate_id=CAN_34928427160570",
-    imageUrl: "assets/images/certificates/9.jpg",
-    category: "soft-skills",
-    skills: ["Communication", "Fluency", "Pronunciation", "Body Language", "Listening", "Speaking", "Presentation"],
-    description: "A comprehensive program designed to improve verbal communication and pronunciation for academic and corporate settings. This course covered conversation techniques, confidence building, accent neutralization, and group discussion practice."
+    credentialUrl: "https://courses.cognitiveclass.ai/certificates/464c6850b72949edb196c6aef6beec30",
+    imageUrl: "assets/images/certificates/3.jpg",
+    category: "programming",
+    skills: ["Python", "Variables", "Loops", "Functions", "Conditionals", "Data Types", "IDE Navigation"],
+    description: "An introductory course focused on Python syntax, control flow, functions, and scripting basics. The program is ideal for beginners in data science and emphasizes hands-on programming in Jupyter and Visual Studio Code. It concludes with mini-projects that apply logic, lists, and dictionaries for data-centric tasks."
+  },
+  {
+    id: 7,
+    name: "SQL and Relational Databases 101",
+    organization: "IBM",
+    issueDate: "2025-07-23",
+    expirationDate: "",
+    credentialUrl: "https://courses.cognitiveclass.ai/certificates/1a2f85833db24b3e8f0191b2515f4521",
+    imageUrl: "assets/images/certificates/4.jpg",
+    category: "database",
+    skills: ["SQL", "Database Design", "Normalization", "Joins", "Data Filtering", "CRUD Operations", "Relational Models"],
+    description: "This foundational course explains the structure of relational databases and covers core SQL syntax such as SELECT, INSERT, UPDATE, DELETE, JOIN, and GROUP BY. Learners practiced designing normalized tables, writing efficient queries, and understanding relational schemas for real-world database applications."
+  },
+  {
+    id: 8,
+    name: "Front-end Web Development",
+    organization: "Reliance Foundation",
+    issueDate: "2024-09-24",
+    expirationDate: "",
+    credentialUrl: "Credential ID: RFSA0007733",
+    imageUrl: "assets/images/certificates/6.jpg",
+    category: "web-design",
+    skills: ["HTML", "CSS", "JavaScript", "Bootstrap", "DOM Manipulation", "Responsive Design", "Web Accessibility"],
+    description: "This program offered hands-on training in front-end web technologies, focusing on the creation of responsive, accessible user interfaces. Participants built interactive pages using HTML5, styled them with CSS3 and Bootstrap, and brought them to life with JavaScript, covering events, form validation, and animations."
+  },
+  {
+    id: 9,
+    name: "Mobile App Development - Android App Development for Beginners",
+    organization: "Simplilearn",
+    issueDate: "2024-08-27",
+    expirationDate: "",
+    credentialUrl: "Certificate Code: 7324099",
+    imageUrl: "assets/images/certificates/11.jpg",
+    category: "mobile-development",
+    skills: ["Android Studio", "Java", "Mobile UI Design", "Activity Lifecycle", "Intents", "API Integration", "App Publishing"],
+    description: "An entry-level certification focused on building Android apps using Java. The course includes hands-on development using Android Studio, UI/UX design, activity lifecycle management, and deploying apps to the Play Store with API connectivity."
   },
   {
     id: 10,
@@ -806,15 +804,15 @@ window.certificatesData = [
   },
   {
     id: 11,
-    name: "Mobile App Development - Android App Development for Beginners",
-    organization: "Simplilearn",
-    issueDate: "2024-08-27",
+    name: "Spoken English Course",
+    organization: "LearnVern",
+    issueDate: "2024-09-19",
     expirationDate: "",
-    credentialUrl: "Certificate Code: 7324099",
-    imageUrl: "assets/images/certificates/11.jpg",
-    category: "mobile-development",
-    skills: ["Android Studio", "Java", "Mobile UI Design", "Activity Lifecycle", "Intents", "API Integration", "App Publishing"],
-    description: "An entry-level certification focused on building Android apps using Java. The course includes hands-on development using Android Studio, UI/UX design, activity lifecycle management, and deploying apps to the Play Store with API connectivity."
+    credentialUrl: "https://www.learnvern.com/certificate?candidate_id=CAN_3492842&certificate_id=CAN_34928427160570",
+    imageUrl: "assets/images/certificates/9.jpg",
+    category: "soft-skills",
+    skills: ["Communication", "Fluency", "Pronunciation", "Body Language", "Listening", "Speaking", "Presentation"],
+    description: "A comprehensive program designed to improve verbal communication and pronunciation for academic and corporate settings. This course covered conversation techniques, confidence building, accent neutralization, and group discussion practice."
   }
 ];
 
