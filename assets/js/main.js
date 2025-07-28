@@ -1034,16 +1034,20 @@ function initializeCertificateModal() {
 function showCertificateModal(certificate) {
     const modal = document.getElementById('certificate-modal');
     const modalBody = document.getElementById('certificate-modal-body');
-
+    
     if (!modal || !modalBody) return;
-
+    
+    // Store current certificate ID for image viewer
+    window.currentModalCertificateId = certificate.id;
+    
     const expirationStatus = getCertificateExpirationStatus(certificate);
-
+    
     modalBody.innerHTML = `
         <div class="modal-certificate">
             <img src="${certificate.imageUrl || 'https://via.placeholder.com/150x150/6366f1/ffffff?text=CERT'}" 
                  alt="${certificate.name || 'Certificate'}" 
-                 class="modal-certificate-image">
+                 class="modal-certificate-image"
+                 title="Click to view full size">
             
             <div class="modal-certificate-content">
                 <h2>${certificate.name || 'Certificate Name'}</h2>
@@ -1084,7 +1088,7 @@ function showCertificateModal(certificate) {
             </div>
         </div>
     `;
-
+    
     modal.style.display = 'block';
 }
 
@@ -1105,5 +1109,177 @@ function initializeCertificateAnimations() {
     // Observe all animated elements
     document.querySelectorAll('.fade-in, .scale-in, .slide-in-left').forEach(element => {
         observer.observe(element);
+    });
+}
+
+// Add these functions to your main.js file
+
+// Global variable to track current image index
+let currentImageIndex = 0;
+let currentCertificates = [];
+
+// Initialize Image Viewer
+function initializeImageViewer() {
+    const imageViewer = document.getElementById('image-viewer');
+    const imageViewerClose = document.getElementById('image-viewer-close');
+    const imageViewerPrev = document.getElementById('image-viewer-prev');
+    const imageViewerNext = document.getElementById('image-viewer-next');
+    
+    if (!imageViewer) return;
+    
+    // Close image viewer
+    imageViewerClose?.addEventListener('click', closeImageViewer);
+    
+    // Close on clicking overlay
+    imageViewer.addEventListener('click', (e) => {
+        if (e.target === imageViewer) {
+            closeImageViewer();
+        }
+    });
+    
+    // Navigation controls
+    imageViewerPrev?.addEventListener('click', showPreviousImage);
+    imageViewerNext?.addEventListener('click', showNextImage);
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (imageViewer.style.display === 'block') {
+            switch (e.key) {
+                case 'Escape':
+                    closeImageViewer();
+                    break;
+                case 'ArrowLeft':
+                    showPreviousImage();
+                    break;
+                case 'ArrowRight':
+                    showNextImage();
+                    break;
+            }
+        }
+    });
+    
+    // Initialize click handlers for certificate images
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('certificate-image') ||
+            e.target.classList.contains('modal-certificate-image')) {
+            const certificateId = getCertificateIdFromImageClick(e.target);
+            if (certificateId) {
+                openImageViewer(certificateId);
+            }
+        }
+    });
+}
+
+function getCertificateIdFromImageClick(imageElement) {
+    // Try to find certificate ID from parent elements
+    let parent = imageElement.closest('.certificate-card');
+    if (parent) {
+        const detailsBtn = parent.querySelector('.view-certificate-details');
+        return detailsBtn ? parseInt(detailsBtn.getAttribute('data-certificate-id')) : null;
+    }
+    
+    // If clicked from modal, find from modal data
+    parent = imageElement.closest('.modal-certificate');
+    if (parent) {
+        // Get certificate ID from currently displayed modal
+        // We'll need to store this when opening the modal
+        return window.currentModalCertificateId || null;
+    }
+    
+    return null;
+}
+
+function openImageViewer(certificateId) {
+    const certificate = window.certificatesData?.find(c => c.id === certificateId);
+    if (!certificate) return;
+    
+    // Get currently visible certificates for navigation
+    const visibleCards = document.querySelectorAll('.certificate-card[style*="block"], .certificate-card:not([style*="none"])');
+    currentCertificates = Array.from(visibleCards).map(card => {
+        const detailsBtn = card.querySelector('.view-certificate-details');
+        const id = detailsBtn ? parseInt(detailsBtn.getAttribute('data-certificate-id')) : null;
+        return window.certificatesData?.find(c => c.id === id);
+    }).filter(Boolean);
+    
+    // Find current index
+    currentImageIndex = currentCertificates.findIndex(c => c.id === certificateId);
+    if (currentImageIndex === -1) {
+        // If not found in filtered results, show all certificates
+        currentCertificates = window.certificatesData || [];
+        currentImageIndex = currentCertificates.findIndex(c => c.id === certificateId);
+    }
+    
+    showImageInViewer(certificate);
+    document.getElementById('image-viewer').style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function showImageInViewer(certificate) {
+    const imageViewerImage = document.getElementById('image-viewer-image');
+    const imageViewerTitle = document.getElementById('image-viewer-title');
+    const imageViewerOrg = document.getElementById('image-viewer-org');
+    const imageViewerPrev = document.getElementById('image-viewer-prev');
+    const imageViewerNext = document.getElementById('image-viewer-next');
+    
+    if (!imageViewerImage) return;
+    
+    // Show loading state
+    imageViewerImage.src = '';
+    imageViewerImage.style.opacity = '0.5';
+    
+    // Update image info
+    if (imageViewerTitle) imageViewerTitle.textContent = certificate.name || 'Certificate';
+    if (imageViewerOrg) imageViewerOrg.textContent = certificate.organization || 'Organization';
+    
+    // Show/hide navigation buttons
+    if (imageViewerPrev) {
+        imageViewerPrev.style.display = currentCertificates.length > 1 ? 'flex' : 'none';
+    }
+    if (imageViewerNext) {
+        imageViewerNext.style.display = currentCertificates.length > 1 ? 'flex' : 'none';
+    }
+    
+    // Load image
+    const img = new Image();
+    img.onload = function() {
+        imageViewerImage.src = this.src;
+        imageViewerImage.style.opacity = '1';
+        imageViewerImage.alt = certificate.name || 'Certificate';
+    };
+    img.onerror = function() {
+        imageViewerImage.src = 'https://via.placeholder.com/800x600/6366f1/ffffff?text=Certificate+Image+Not+Found';
+        imageViewerImage.style.opacity = '1';
+    };
+    img.src = certificate.imageUrl || 'https://via.placeholder.com/800x600/6366f1/ffffff?text=CERT';
+}
+
+function showPreviousImage() {
+    if (currentCertificates.length <= 1) return;
+    
+    currentImageIndex = (currentImageIndex - 1 + currentCertificates.length) % currentCertificates.length;
+    showImageInViewer(currentCertificates[currentImageIndex]);
+}
+
+function showNextImage() {
+    if (currentCertificates.length <= 1) return;
+    
+    currentImageIndex = (currentImageIndex + 1) % currentCertificates.length;
+    showImageInViewer(currentCertificates[currentImageIndex]);
+}
+
+function closeImageViewer() {
+    const imageViewer = document.getElementById('image-viewer');
+    if (imageViewer) {
+        imageViewer.style.display = 'none';
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+}
+
+// Update the existing populateCertificatesPage function to add click titles
+function updateCertificateImages() {
+    // Add click hint to certificate images
+    document.querySelectorAll('.certificate-image').forEach(img => {
+        img.title = 'Click to view full size';
+        img.style.cursor = 'pointer';
     });
 }
