@@ -799,3 +799,311 @@ function applyBoldTextToBio() {
         });
     }
 }
+
+// Add these functions to your main.js file
+
+// Certificates Page Functions
+function populateCertificatesPage() {
+    if (!window.certificatesData || !window.certificateCategories) {
+        console.error('Certificates data not loaded');
+        return;
+    }
+
+    document.title = `Certificates - ${window.personalData?.name || 'Your Name'}`;
+
+    // Populate filters
+    const filtersContainer = document.getElementById('certificate-filters');
+    if (filtersContainer && window.certificateCategories) {
+        filtersContainer.innerHTML = '';
+        window.certificateCategories.forEach(category => {
+            const filterBtn = document.createElement('button');
+            filterBtn.className = `filter-btn ${category.id === 'all' ? 'active' : ''}`;
+            filterBtn.setAttribute('data-filter', category.id);
+            filterBtn.innerHTML = `<i class="${category.icon}"></i>${category.name}`;
+            filtersContainer.appendChild(filterBtn);
+        });
+    }
+
+    // Populate statistics
+    populateCertificateStats();
+
+    // Populate certificates grid
+    const certificatesContainer = document.getElementById('certificates-grid');
+    if (certificatesContainer && window.certificatesData) {
+        certificatesContainer.innerHTML = '';
+
+        window.certificatesData.forEach(cert => {
+            const certElement = document.createElement('div');
+            certElement.className = `certificate-card fade-in`;
+            certElement.setAttribute('data-category', cert.category || 'other');
+
+            const expirationStatus = getCertificateExpirationStatus(cert);
+            
+            certElement.innerHTML = `
+                <div class="certificate-header">
+                    <img src="${cert.imageUrl || 'https://via.placeholder.com/80x80/6366f1/ffffff?text=CERT'}" 
+                         alt="${cert.name || 'Certificate'}" 
+                         class="certificate-image">
+                    <div class="certificate-info">
+                        <h3>${cert.name || 'Certificate Name'}</h3>
+                        <div class="certificate-organization">${cert.organization || 'Organization'}</div>
+                        <div class="certificate-date">
+                            Issued: ${cert.issueDate ? formatDate(cert.issueDate) : 'Date not available'}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certificate-description">
+                    ${cert.description || 'Professional certification description'}
+                </div>
+                
+                ${cert.skills && cert.skills.length > 0 ? `
+                    <div class="certificate-skills">
+                        ${cert.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                    </div>
+                ` : ''}
+                
+                <div class="certificate-actions">
+                    ${cert.credentialUrl ? `
+                        <a href="${cert.credentialUrl}" target="_blank" rel="noopener noreferrer" class="cert-btn cert-btn-primary">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Certificate
+                        </a>
+                    ` : ''}
+                    <button class="cert-btn cert-btn-secondary view-certificate-details" data-certificate-id="${cert.id}">
+                        <i class="fas fa-info-circle"></i>
+                        Details
+                    </button>
+                    <div class="expiration-status ${expirationStatus.class}">
+                        <i class="${expirationStatus.icon}"></i>
+                        ${expirationStatus.text}
+                    </div>
+                </div>
+            `;
+            
+            certificatesContainer.appendChild(certElement);
+        });
+
+        // Initialize scroll animations
+        initializeCertificateAnimations();
+    }
+}
+
+function populateCertificateStats() {
+    const statsContainer = document.getElementById('certificates-stats');
+    if (!statsContainer || !window.certificatesData) return;
+
+    const totalCerts = window.certificatesData.length;
+    const activeCerts = window.certificatesData.filter(cert => {
+        if (!cert.expirationDate) return true;
+        return new Date(cert.expirationDate) > new Date();
+    }).length;
+    
+    const categoriesCount = [...new Set(window.certificatesData.map(cert => cert.category))].length;
+    const thisYearCerts = window.certificatesData.filter(cert => {
+        if (!cert.issueDate) return false;
+        return new Date(cert.issueDate).getFullYear() === new Date().getFullYear();
+    }).length;
+
+    statsContainer.innerHTML = `
+        <div class="stat-item scale-in">
+            <span class="stat-number">${totalCerts}</span>
+            <span class="stat-label">Total Certificates</span>
+        </div>
+        <div class="stat-item scale-in">
+            <span class="stat-number">${activeCerts}</span>
+            <span class="stat-label">Active Certificates</span>
+        </div>
+        <div class="stat-item scale-in">
+            <span class="stat-number">${categoriesCount}</span>
+            <span class="stat-label">Categories</span>
+        </div>
+        <div class="stat-item scale-in">
+            <span class="stat-number">${thisYearCerts}</span>
+            <span class="stat-label">This Year</span>
+        </div>
+    `;
+}
+
+function getCertificateExpirationStatus(cert) {
+    if (!cert.expirationDate) {
+        return {
+            class: 'status-no-expiry',
+            icon: 'fas fa-infinity',
+            text: 'No Expiry'
+        };
+    }
+
+    const now = new Date();
+    const expirationDate = new Date(cert.expirationDate);
+    const timeDiff = expirationDate.getTime() - now.getTime();
+    const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+    if (daysDiff < 0) {
+        return {
+            class: 'status-expired',
+            icon: 'fas fa-exclamation-triangle',
+            text: 'Expired'
+        };
+    } else if (daysDiff <= 30) {
+        return {
+            class: 'status-expiring',
+            icon: 'fas fa-clock',
+            text: `Expires in ${daysDiff} days`
+        };
+    } else {
+        return {
+            class: 'status-valid',
+            icon: 'fas fa-check-circle',
+            text: 'Valid'
+        };
+    }
+}
+
+function formatDate(dateString) {
+    if (!dateString) return 'Date not available';
+    
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+}
+
+function initializeCertificateFilters() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const certificateCards = document.querySelectorAll('.certificate-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const filter = button.getAttribute('data-filter');
+
+            // Filter certificates with animation
+            certificateCards.forEach((card, index) => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, index * 100);
+                } else {
+                    card.classList.remove('visible');
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+}
+
+function initializeCertificateModal() {
+    const modal = document.getElementById('certificate-modal');
+    const modalClose = document.querySelector('.modal-close');
+
+    if (!modal || !modalClose) return;
+
+    // Close modal
+    modalClose.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Open modal with certificate details
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.view-certificate-details')) {
+            const certificateId = parseInt(e.target.closest('.view-certificate-details').getAttribute('data-certificate-id'));
+            const certificate = window.certificatesData?.find(c => c.id === certificateId);
+
+            if (certificate) {
+                showCertificateModal(certificate);
+            }
+        }
+    });
+}
+
+function showCertificateModal(certificate) {
+    const modal = document.getElementById('certificate-modal');
+    const modalBody = document.getElementById('certificate-modal-body');
+
+    if (!modal || !modalBody) return;
+
+    const expirationStatus = getCertificateExpirationStatus(certificate);
+
+    modalBody.innerHTML = `
+        <div class="modal-certificate">
+            <img src="${certificate.imageUrl || 'https://via.placeholder.com/150x150/6366f1/ffffff?text=CERT'}" 
+                 alt="${certificate.name || 'Certificate'}" 
+                 class="modal-certificate-image">
+            
+            <div class="modal-certificate-content">
+                <h2>${certificate.name || 'Certificate Name'}</h2>
+                
+                <div class="modal-certificate-description">
+                    ${certificate.description || 'Professional certification description'}
+                </div>
+                
+                <div class="modal-certificate-meta">
+                    <p><strong>Organization:</strong> ${certificate.organization || 'Organization'}</p>
+                    <p><strong>Issue Date:</strong> ${certificate.issueDate ? formatDate(certificate.issueDate) : 'Date not available'}</p>
+                    ${certificate.expirationDate ? `<p><strong>Expiration Date:</strong> ${formatDate(certificate.expirationDate)}</p>` : '<p><strong>Validity:</strong> No expiration date</p>'}
+                    <p><strong>Status:</strong> 
+                        <span class="expiration-status ${expirationStatus.class}">
+                            <i class="${expirationStatus.icon}"></i>
+                            ${expirationStatus.text}
+                        </span>
+                    </p>
+                </div>
+                
+                ${certificate.skills && certificate.skills.length > 0 ? `
+                    <div class="modal-certificate-skills">
+                        <h3>Skills Covered</h3>
+                        <div class="certificate-skills">
+                            ${certificate.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                        </div>
+                    </div>
+                ` : ''}
+                
+                <div class="modal-certificate-actions">
+                    ${certificate.credentialUrl ? `
+                        <a href="${certificate.credentialUrl}" target="_blank" rel="noopener noreferrer" class="cert-btn cert-btn-primary">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Original Certificate
+                        </a>
+                    ` : ''}
+                </div>
+            </div>
+        </div>
+    `;
+
+    modal.style.display = 'block';
+}
+
+function initializeCertificateAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all animated elements
+    document.querySelectorAll('.fade-in, .scale-in, .slide-in-left').forEach(element => {
+        observer.observe(element);
+    });
+}
