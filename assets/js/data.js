@@ -234,13 +234,10 @@ window.projectsData = [
         technologies: ["PHP", "JavaScript", "MySQL", "HTML", "CSS"],
         category: "web",
         featured: true,
-        image: "assets/images/projects/1.jpg",
+        image: "assets/images/img.jpg",
         images: [
-    "assets/images/projects/1.jpg",
-    "assets/images/projects/2.jpg",
-    "assets/images/projects/3.jpg",
-    "assets/images/projects/4.jpg"
-],
+            "assets/images/img.jpg",
+        ],
         githubUrl: "",
         liveUrl: "",
         completedDate: "2025-03-30",
@@ -698,7 +695,8 @@ window.certificatesData = [
     imageUrl: "assets/images/certificates/2.jpg",
     category: "ai-ml",
     skills: ["Prompt Engineering", "AI Ethics", "NLP", "LLMs", "ChatGPT", "Instruction Tuning", "Tokenization"],
-    description: "This course provides an in-depth overview of prompt engineering, focusing on crafting effective instructions for large language models (LLMs) such as ChatGPT. It also covers how prompt formulation affects responses, explores ethical considerations, and introduces tokenization and model constraints for better AI-human collaboration."
+    shortDescription: "Comprehensive course on crafting effective prompts for large language models and AI ethics.",
+    fullDescription: "This course provides an in-depth overview of prompt engineering, focusing on crafting effective instructions for large language models (LLMs) such as ChatGPT. It also covers how prompt formulation affects responses, explores ethical considerations, and introduces tokenization and model constraints for better AI-human collaboration."
   },
   {
     id: 2,
@@ -710,7 +708,8 @@ window.certificatesData = [
     imageUrl: "assets/images/certificates/1.jpg",
     category: "ai-ml",
     skills: ["Python", "Data Science", "Pandas", "NumPy", "Matplotlib", "Jupyter Notebooks", "Data Wrangling"],
-    description: "This certificate from IBM introduces core Python programming for data science. It covered data manipulation using Pandas, numerical computation using NumPy, data visualization through Matplotlib, and interactive development with Jupyter notebooks. Learners also explored conditional logic, loops, functions, and real-world data workflows in data science projects."
+    shortDescription: "Core Python training tailored for data science including NumPy, Pandas, and visualization.",
+    fullDescription: "This certificate from IBM introduces core Python programming for data science. It covered data manipulation using Pandas, numerical computation using NumPy, data visualization through Matplotlib, and interactive development with Jupyter notebooks. Learners also explored conditional logic, loops, functions, and real-world data workflows in data science projects."
   },
   {
     id: 3,
@@ -722,7 +721,8 @@ window.certificatesData = [
     imageUrl: "assets/images/certificates/5.jpg",
     category: "ai-ml",
     skills: ["Artificial Intelligence", "Machine Learning", "Deep Learning", "Model Training", "Scikit-Learn", "AI Ethics", "Linear Regression"],
-    description: "An intensive four-day workshop that introduced foundational AI and ML concepts including supervised and unsupervised learning, regression models, and neural networks. Participants used Python libraries like Scikit-learn and TensorFlow to build and evaluate models. Real-world case studies emphasized the ethical and societal impact of AI."
+    shortDescription: "A 4-day hands-on workshop covering foundational AI/ML with real-world applications.",
+    fullDescription: "An intensive four-day workshop that introduced foundational AI and ML concepts including supervised and unsupervised learning, regression models, and neural networks. Participants used Python libraries like Scikit-learn and TensorFlow to build and evaluate models. Real-world case studies emphasized the ethical and societal impact of AI."
   },
   {
     id: 4,
@@ -734,7 +734,8 @@ window.certificatesData = [
     imageUrl: "assets/images/certificates/7.jpg",
     category: "cybersecurity",
     skills: ["Cybersecurity", "Threat Analysis", "Vulnerability Assessment", "Firewalls", "SIEM Tools", "Access Control", "Incident Response"],
-    description: "This program equips students with practical cybersecurity skills to monitor, detect, and respond to cyber threats. It includes training on SOC tools, firewalls, identity management, and incident response. Participants gain the technical expertise to handle real-world security challenges effectively."
+    shortDescription: "Professional cybersecurity training in threat detection, SIEM tools, and incident handling.",
+    fullDescription: "This program equips students with practical cybersecurity skills to monitor, detect, and respond to cyber threats. It includes training on SOC tools, firewalls, identity management, and incident response. Participants gain the technical expertise to handle real-world security challenges effectively."
   },
   {
     id: 5,
@@ -746,7 +747,8 @@ window.certificatesData = [
     imageUrl: "assets/images/certificates/8.jpg",
     category: "cybersecurity",
     skills: ["Network Security", "Cyber Threats", "Security Tools", "Data Protection", "Penetration Testing", "Cryptography", "Digital Forensics"],
-    description: "Focused on practical knowledge in cybersecurity, this certification emphasized safeguarding networks, threat detection, and defensive strategies. It covered secure communication, encryption, vulnerability scanning, and exposure to incident management scenarios."
+    shortDescription: "Hands-on training on network security, encryption, and incident response techniques.",
+    fullDescription: "Focused on practical knowledge in cybersecurity, this certification emphasized safeguarding networks, threat detection, and defensive strategies. It covered secure communication, encryption, vulnerability scanning, and exposure to incident management scenarios."
   },
   {
     id: 6,
@@ -758,7 +760,8 @@ window.certificatesData = [
     imageUrl: "assets/images/certificates/3.jpg",
     category: "programming",
     skills: ["Python", "Variables", "Loops", "Functions", "Conditionals", "Data Types", "IDE Navigation"],
-    description: "An introductory course focused on Python syntax, control flow, functions, and scripting basics. The program is ideal for beginners in data science and emphasizes hands-on programming in Jupyter and Visual Studio Code. It concludes with mini-projects that apply logic, lists, and dictionaries for data-centric tasks."
+    shortDescription: "Beginner-friendly Python course covering syntax, logic, and data handling basics.",
+    fullDescription: "An introductory course focused on Python syntax, control flow, functions, and scripting basics. The program is ideal for beginners in data science and emphasizes hands-on programming in Jupyter and Visual Studio Code. It concludes with mini-projects that apply logic, lists, and dictionaries for data-centric tasks."
   },
   {
     id: 7,
@@ -770,7 +773,8 @@ window.certificatesData = [
     imageUrl: "assets/images/certificates/4.jpg",
     category: "database",
     skills: ["SQL", "Database Design", "Normalization", "Joins", "Data Filtering", "CRUD Operations", "Relational Models"],
-    description: "This foundational course explains the structure of relational databases and covers core SQL syntax such as SELECT, INSERT, UPDATE, DELETE, JOIN, and GROUP BY. Learners practiced designing normalized tables, writing efficient queries, and understanding relational schemas for real-world database applications."
+    shortDescription: "Foundational course on SQL operations and designing normalized relational databases.",
+    fullDescription: "This foundational course explains the structure of relational databases and covers core SQL syntax such as SELECT, INSERT, UPDATE, DELETE, JOIN, and GROUP BY. Learners practiced designing normalized tables, writing efficient queries, and understanding relational schemas for real-world database applications."
   },
   {
     id: 8,
@@ -782,7 +786,8 @@ window.certificatesData = [
     imageUrl: "assets/images/certificates/6.jpg",
     category: "web-design",
     skills: ["HTML", "CSS", "JavaScript", "Bootstrap", "DOM Manipulation", "Responsive Design", "Web Accessibility"],
-    description: "This program offered hands-on training in front-end web technologies, focusing on the creation of responsive, accessible user interfaces. Participants built interactive pages using HTML5, styled them with CSS3 and Bootstrap, and brought them to life with JavaScript, covering events, form validation, and animations."
+    shortDescription: "Project-based learning of HTML, CSS, and JavaScript for responsive front-end design.",
+    fullDescription: "This program offered hands-on training in front-end web technologies, focusing on the creation of responsive, accessible user interfaces. Participants built interactive pages using HTML5, styled them with CSS3 and Bootstrap, and brought them to life with JavaScript, covering events, form validation, and animations."
   },
   {
     id: 9,
@@ -794,7 +799,8 @@ window.certificatesData = [
     imageUrl: "assets/images/certificates/11.jpg",
     category: "mobile-development",
     skills: ["Android Studio", "Java", "Mobile UI Design", "Activity Lifecycle", "Intents", "API Integration", "App Publishing"],
-    description: "An entry-level certification focused on building Android apps using Java. The course includes hands-on development using Android Studio, UI/UX design, activity lifecycle management, and deploying apps to the Play Store with API connectivity."
+    shortDescription: "Beginner Android development with Java, UI design, and Play Store deployment.",
+    fullDescription: "An entry-level certification focused on building Android apps using Java. The course includes hands-on development using Android Studio, UI/UX design, activity lifecycle management, and deploying apps to the Play Store with API connectivity."
   },
   {
     id: 10,
@@ -806,7 +812,8 @@ window.certificatesData = [
     imageUrl: "assets/images/certificates/10.jpg",
     category: "marketing",
     skills: ["ABM Strategy", "Lead Nurturing", "Sales Alignment", "Customer Segmentation", "B2B Marketing", "Campaign Planning", "CRM Tools"],
-    description: "Focused on personalized B2B marketing strategies, this course introduced the ABM framework, targeting tactics, and methods to align sales and marketing. Learners practiced lead scoring, segmentation, and automation strategies with tools like HubSpot and LinkedIn Ads."
+    shortDescription: "A specialized marketing course focusing on personalized B2B strategies using ABM.",
+    fullDescription: "Focused on personalized B2B marketing strategies, this course introduced the ABM framework, targeting tactics, and methods to align sales and marketing. Learners practiced lead scoring, segmentation, and automation strategies with tools like HubSpot and LinkedIn Ads."
   },
   {
     id: 11,
@@ -818,7 +825,8 @@ window.certificatesData = [
     imageUrl: "assets/images/certificates/9.jpg",
     category: "soft-skills",
     skills: ["Communication", "Fluency", "Pronunciation", "Body Language", "Listening", "Speaking", "Presentation"],
-    description: "A comprehensive program designed to improve verbal communication and pronunciation for academic and corporate settings. This course covered conversation techniques, confidence building, accent neutralization, and group discussion practice."
+    shortDescription: "Spoken English training to enhance communication, fluency, and confidence.",
+    fullDescription: "A comprehensive program designed to improve verbal communication and pronunciation for academic and corporate settings. This course covered conversation techniques, confidence building, accent neutralization, and group discussion practice."
   }
 ];
 
