@@ -234,7 +234,13 @@ window.projectsData = [
         technologies: ["PHP", "JavaScript", "MySQL", "HTML", "CSS"],
         category: "web",
         featured: true,
-        image: "https://via.placeholder.com/500x300/00599c/ffffff?text=PHP+Website",
+        image: "assets/images/projects/1.jpg",
+        images: [
+    "assets/images/projects/1.jpg",
+    "assets/images/projects/2.jpg",
+    "assets/images/projects/3.jpg",
+    "assets/images/projects/4.jpg"
+],
         githubUrl: "",
         liveUrl: "",
         completedDate: "2025-03-30",
