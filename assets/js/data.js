@@ -247,12 +247,48 @@ window.projectsData = [
     },
     {
         id: 2,
+        title: "AI Chatbot",
+        shortDescription: "Basic AI chatbot simulation using JS",
+        fullDescription: "Built a simple AI chatbot interface using HTML, CSS, and JavaScript. The bot uses predefined responses to mimic a conversational flow and dynamically renders replies.",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        category: "ai",
+        featured: true,
+        image: "https://via.placeholder.com/500x300/e83e8c/ffffff?text=AI+Chatbot",
+        githubUrl: "",
+        liveUrl: "",
+        completedDate: "2024-11-25",
+        highlights: [
+            "Conversation UI flow",
+            "Simulated text-based intelligence",
+            "Typing indicator feature"
+        ]
+    },
+    {
+        id: 3,
+        title: "AI Assistant",
+        shortDescription: "Basic AI-powered assistant prototype",
+        fullDescription: "A front-end simulation of an AI assistant that handles simple queries and responses. Built using JavaScript logic and styled for modern interaction.",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        category: "ai",
+        featured: true,
+        image: "https://via.placeholder.com/500x300/6f42c1/ffffff?text=AI+Assistant",
+        githubUrl: "",
+        liveUrl: "",
+        completedDate: "2024-11-20",
+        highlights: [
+            "Predefined AI-like command structure",
+            "Voice-like UI simulation",
+            "Smooth UI experience"
+        ]
+    },
+    {
+        id: 4,
         title: "Authentication Page (Login/Signup)",
         shortDescription: "A simple and secure authentication system",
         fullDescription: "Designed a lightweight authentication page using PHP, HTML, CSS, and JavaScript. Handles form submission, input validation, and login session initialization.",
         technologies: ["PHP", "JavaScript", "HTML", "CSS"],
         category: "web",
-        featured: false,
+        featured: true,
         image: "https://via.placeholder.com/500x300/222222/ffffff?text=Login+Page",
         githubUrl: "",
         liveUrl: "",
@@ -264,7 +300,7 @@ window.projectsData = [
         ]
     },
     {
-        id: 3,
+        id: 5,
         title: "Unit Converter Toolkit",
         shortDescription: "10 conversion tools built with PHP and JavaScript",
         fullDescription: "A suite of unit conversion tools including temperature, area, time, speed, length, volume, pressure, mass, energy, and storage. Each tool is built as an individual PHP-powered interface with dynamic JavaScript functionality.",
@@ -283,7 +319,7 @@ window.projectsData = [
         ]
     },
     {
-        id: 4,
+        id: 6,
         title: "Image Size Reducer (PHP)",
         shortDescription: "Compress images using PHP server-side scripting",
         fullDescription: "A simple web-based tool to upload and compress images using PHP and JavaScript. Reduces file size while preserving image quality.",
@@ -301,13 +337,13 @@ window.projectsData = [
         ]
     },
     {
-        id: 5,
+        id: 7,
         title: "Image to PDF Generator",
         shortDescription: "Convert uploaded images into downloadable PDFs",
         fullDescription: "This tool allows users to upload multiple images and convert them into a single PDF file using client-side scripting. Built using vanilla JS and styled for user simplicity.",
         technologies: ["HTML", "CSS", "JavaScript"],
         category: "tools",
-        featured: false,
+        featured: true,
         image: "https://via.placeholder.com/500x300/ffc107/000000?text=Image+to+PDF",
         githubUrl: "",
         liveUrl: "",
@@ -319,13 +355,13 @@ window.projectsData = [
         ]
     },
     {
-        id: 6,
+        id: 8,
         title: "Image Size Reducer (JS)",
         shortDescription: "Frontend image compression using JavaScript",
         fullDescription: "Client-side tool built to compress images before uploading. Great for optimizing uploads without needing a backend server.",
         technologies: ["HTML", "CSS", "JavaScript"],
         category: "tools",
-        featured: false,
+        featured: true,
         image: "https://via.placeholder.com/500x300/20c997/ffffff?text=JS+Reducer",
         githubUrl: "",
         liveUrl: "",
@@ -337,7 +373,7 @@ window.projectsData = [
         ]
     },
     {
-        id: 7,
+        id: 9,
         title: "HTML Colour Palette",
         shortDescription: "Explore and pick HTML-safe color palettes",
         fullDescription: "A UI tool to explore and select color palettes useful for HTML and web development. Includes hex and RGB previews.",
@@ -355,7 +391,7 @@ window.projectsData = [
         ]
     },
     {
-        id: 8,
+        id: 10,
         title: "Colour Code Picker",
         shortDescription: "Select colors and get corresponding code values",
         fullDescription: "Simple tool that allows developers to pick a color and receive its hex, RGB, and HSL values instantly.",
@@ -370,42 +406,6 @@ window.projectsData = [
             "Instant color preview",
             "Multiple format outputs",
             "Easy-to-use interface"
-        ]
-    },
-    {
-        id: 9,
-        title: "AI Chatbot",
-        shortDescription: "Basic AI chatbot simulation using JS",
-        fullDescription: "Built a simple AI chatbot interface using HTML, CSS, and JavaScript. The bot uses predefined responses to mimic a conversational flow and dynamically renders replies.",
-        technologies: ["HTML", "CSS", "JavaScript"],
-        category: "ai",
-        featured: false,
-        image: "https://via.placeholder.com/500x300/e83e8c/ffffff?text=AI+Chatbot",
-        githubUrl: "",
-        liveUrl: "",
-        completedDate: "2024-11-25",
-        highlights: [
-            "Conversation UI flow",
-            "Simulated text-based intelligence",
-            "Typing indicator feature"
-        ]
-    },
-    {
-        id: 10,
-        title: "AI Assistant",
-        shortDescription: "Basic AI-powered assistant prototype",
-        fullDescription: "A front-end simulation of an AI assistant that handles simple queries and responses. Built using JavaScript logic and styled for modern interaction.",
-        technologies: ["HTML", "CSS", "JavaScript"],
-        category: "ai",
-        featured: false,
-        image: "https://via.placeholder.com/500x300/6f42c1/ffffff?text=AI+Assistant",
-        githubUrl: "",
-        liveUrl: "",
-        completedDate: "2024-11-20",
-        highlights: [
-            "Predefined AI-like command structure",
-            "Voice-like UI simulation",
-            "Smooth UI experience"
         ]
     },
 {
