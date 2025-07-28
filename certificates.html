@@ -97,6 +97,24 @@
         </div>
     </div>
 
+    <!-- Full Screen Image Viewer -->
+    <div class="image-viewer-overlay" id="image-viewer">
+        <div class="image-viewer-content">
+            <span class="image-viewer-close" id="image-viewer-close">&times;</span>
+            <button class="image-viewer-controls image-viewer-prev" id="image-viewer-prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <img class="image-viewer-image" id="image-viewer-image" src="" alt="">
+            <button class="image-viewer-controls image-viewer-next" id="image-viewer-next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="image-viewer-info" id="image-viewer-info">
+                <div class="image-viewer-title" id="image-viewer-title"></div>
+                <div class="image-viewer-org" id="image-viewer-org"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Include Footer -->
     <div id="footer-placeholder"></div>
 
@@ -127,7 +145,8 @@
                             populateCertificatesPage();
                             initializeCertificateFilters();
                             initializeCertificateModal();
-                            console.log('Certificates page populated successfully');
+                            initializeImageViewer();
+                            updateCertificateImages();
                             
                             // Ensure footer is at bottom
                             const footer = document.getElementById('footer-placeholder');
@@ -151,6 +170,8 @@
                             populateCertificatesPage();
                             initializeCertificateFilters();
                             initializeCertificateModal();
+                            initializeImageViewer();
+                            updateCertificateImages();
                             
                             // Ensure footer is at bottom
                             const footer = document.getElementById('footer-placeholder');
