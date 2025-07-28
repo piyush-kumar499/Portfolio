@@ -427,13 +427,13 @@ function populateSkillCategory(containerId, skills) {
     });
 }
 
-// Projects Page Functions
+// Updated Projects Page Functions
 function populateProjectsPage() {
     if (!window.projectsData) {
         console.error('Projects data not loaded');
         return;
     }
-
+    
     document.title = `Projects - ${window.personalData?.name || 'Your Name'}`;
     
     const projectsContainer = document.getElementById('projects-grid');
@@ -449,11 +449,17 @@ function populateProjectsPage() {
         projectElement.innerHTML = `
             <div class="project-image">
                 <img src="${project.image || 'https://via.placeholder.com/500x300/007bff/ffffff?text=Project'}" alt="${project.title || 'Project'}">
+                
+                <!-- Info button positioned at top right, always visible -->
+                <button class="project-info-btn view-details" data-project-id="${project.id || 0}" title="View Project Details">
+                    <i class="fas fa-info-circle"></i>
+                </button>
+                
+                <!-- Overlay with only GitHub and Live demo links -->
                 <div class="project-overlay">
                     <div class="project-links">
-                        ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>` : ''}
-                        ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i></a>` : ''}
-                        <button class="project-link view-details" data-project-id="${project.id || 0}"><i class="fas fa-info-circle"></i></button>
+                        ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link" title="View Code"><i class="fab fa-github"></i></a>` : ''}
+                        ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>` : ''}
                     </div>
                 </div>
             </div>
@@ -1281,5 +1287,235 @@ function updateCertificateImages() {
     document.querySelectorAll('.certificate-image').forEach(img => {
         img.title = 'Click to view full size';
         img.style.cursor = 'pointer';
+    });
+}
+
+// Project Image Viewer Functions - Add to main.js
+
+// Global variables for project image viewer
+let currentProjectImages = [];
+let currentProjectImageIndex = 0;
+let currentProjectData = null;
+
+// Initialize Project Image Viewer
+function initializeProjectImageViewer() {
+    // Create image viewer HTML if it doesn't exist
+    createProjectImageViewerHTML();
+    
+    const viewer = document.getElementById('project-image-viewer');
+    const closeBtn = document.getElementById('project-viewer-close');
+    const prevBtn = document.getElementById('project-viewer-prev');
+    const nextBtn = document.getElementById('project-viewer-next');
+    
+    if (!viewer) return;
+    
+    // Close viewer
+    closeBtn?.addEventListener('click', closeProjectImageViewer);
+    
+    // Close on overlay click
+    viewer.addEventListener('click', (e) => {
+        if (e.target === viewer) {
+            closeProjectImageViewer();
+        }
+    });
+    
+    // Navigation
+    prevBtn?.addEventListener('click', showPrevProjectImage);
+    nextBtn?.addEventListener('click', showNextProjectImage);
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (viewer.style.display === 'block') {
+            switch (e.key) {
+                case 'Escape':
+                    closeProjectImageViewer();
+                    break;
+                case 'ArrowLeft':
+                    showPrevProjectImage();
+                    break;
+                case 'ArrowRight':
+                    showNextProjectImage();
+                    break;
+            }
+        }
+    });
+    
+    // Add click listeners to project images
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.project-image img')) {
+            const projectCard = e.target.closest('.project-card');
+            const projectId = getProjectIdFromCard(projectCard);
+            if (projectId) {
+                openProjectImageViewer(projectId, 0);
+            }
+        }
+    });
+}
+
+function createProjectImageViewerHTML() {
+    // Check if viewer already exists
+    if (document.getElementById('project-image-viewer')) return;
+    
+    const viewerHTML = `
+        <div class="project-image-viewer" id="project-image-viewer">
+            <div class="project-viewer-overlay"></div>
+            <div class="project-viewer-container">
+                <button class="project-viewer-close" id="project-viewer-close">&times;</button>
+                <button class="project-viewer-nav project-viewer-prev" id="project-viewer-prev">&#8249;</button>
+                <button class="project-viewer-nav project-viewer-next" id="project-viewer-next">&#8250;</button>
+                
+                <div class="project-viewer-content">
+                    <img class="project-viewer-image" id="project-viewer-image" src="" alt="">
+                    <div class="project-viewer-info">
+                        <h3 class="project-viewer-title" id="project-viewer-title"></h3>
+                        <div class="project-viewer-counter" id="project-viewer-counter"></div>
+                    </div>
+                </div>
+                
+                <div class="project-viewer-thumbnails" id="project-viewer-thumbnails"></div>
+            </div>
+        </div>
+    `;
+    
+    document.body.insertAdjacentHTML('beforeend', viewerHTML);
+}
+
+function getProjectIdFromCard(projectCard) {
+    if (!projectCard) return null;
+    
+    // Try to get from info button
+    const infoBtn = projectCard.querySelector('.view-details');
+    if (infoBtn) {
+        return parseInt(infoBtn.getAttribute('data-project-id'));
+    }
+    
+    // Alternative: find project by comparing title or other unique identifier
+    const titleElement = projectCard.querySelector('.project-content h3');
+    if (titleElement && window.projectsData) {
+        const title = titleElement.textContent.trim();
+        const project = window.projectsData.find(p => p.title === title);
+        return project ? project.id : null;
+    }
+    
+    return null;
+}
+
+function openProjectImageViewer(projectId, startIndex = 0) {
+    const project = window.projectsData?.find(p => p.id === projectId);
+    if (!project || !project.images || project.images.length === 0) return;
+    
+    currentProjectData = project;
+    currentProjectImages = project.images;
+    currentProjectImageIndex = startIndex;
+    
+    const viewer = document.getElementById('project-image-viewer');
+    if (!viewer) return;
+    
+    // Show viewer
+    viewer.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    
+    // Update content
+    updateProjectViewerContent();
+    createProjectThumbnails();
+}
+
+function updateProjectViewerContent() {
+    const image = document.getElementById('project-viewer-image');
+    const title = document.getElementById('project-viewer-title');
+    const counter = document.getElementById('project-viewer-counter');
+    const prevBtn = document.getElementById('project-viewer-prev');
+    const nextBtn = document.getElementById('project-viewer-next');
+    
+    if (!image || !currentProjectImages.length) return;
+    
+    // Update image
+    image.src = currentProjectImages[currentProjectImageIndex];
+    image.alt = `${currentProjectData.title} - Image ${currentProjectImageIndex + 1}`;
+    
+    // Update title
+    if (title) {
+        title.textContent = currentProjectData.title;
+    }
+    
+    // Update counter
+    if (counter) {
+        counter.textContent = `${currentProjectImageIndex + 1} / ${currentProjectImages.length}`;
+    }
+    
+    // Show/hide navigation buttons
+    const hasMultipleImages = currentProjectImages.length > 1;
+    if (prevBtn) prevBtn.style.display = hasMultipleImages ? 'block' : 'none';
+    if (nextBtn) nextBtn.style.display = hasMultipleImages ? 'block' : 'none';
+    
+    // Update thumbnails
+    updateThumbnailsActive();
+}
+
+function createProjectThumbnails() {
+    const thumbnailsContainer = document.getElementById('project-viewer-thumbnails');
+    if (!thumbnailsContainer || currentProjectImages.length <= 1) {
+        thumbnailsContainer.style.display = 'none';
+        return;
+    }
+    
+    thumbnailsContainer.style.display = 'flex';
+    thumbnailsContainer.innerHTML = '';
+    
+    currentProjectImages.forEach((imageSrc, index) => {
+        const thumbnail = document.createElement('div');
+        thumbnail.className = `project-thumbnail ${index === currentProjectImageIndex ? 'active' : ''}`;
+        thumbnail.innerHTML = `<img src="${imageSrc}" alt="Thumbnail ${index + 1}">`;
+        
+        thumbnail.addEventListener('click', () => {
+            currentProjectImageIndex = index;
+            updateProjectViewerContent();
+        });
+        
+        thumbnailsContainer.appendChild(thumbnail);
+    });
+}
+
+function updateThumbnailsActive() {
+    const thumbnails = document.querySelectorAll('.project-thumbnail');
+    thumbnails.forEach((thumb, index) => {
+        thumb.classList.toggle('active', index === currentProjectImageIndex);
+    });
+}
+
+function showPrevProjectImage() {
+    if (currentProjectImages.length <= 1) return;
+    
+    currentProjectImageIndex = (currentProjectImageIndex - 1 + currentProjectImages.length) % currentProjectImages.length;
+    updateProjectViewerContent();
+}
+
+function showNextProjectImage() {
+    if (currentProjectImages.length <= 1) return;
+    
+    currentProjectImageIndex = (currentProjectImageIndex + 1) % currentProjectImages.length;
+    updateProjectViewerContent();
+}
+
+function closeProjectImageViewer() {
+    const viewer = document.getElementById('project-image-viewer');
+    if (viewer) {
+        viewer.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    
+    // Reset variables
+    currentProjectImages = [];
+    currentProjectImageIndex = 0;
+    currentProjectData = null;
+}
+
+// Update the populateProjectsPage function to include image click functionality
+function updatePopulateProjectsPageForImages() {
+    // This function should be called after populateProjectsPage()
+    // Add click cursor to project images
+    document.querySelectorAll('.project-image img').forEach(img => {
+        img.style.cursor = 'pointer';
+        img.title = 'Click to view all images';
     });
 }
