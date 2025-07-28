@@ -846,45 +846,45 @@ function populateCertificatesPage() {
             const expirationStatus = getCertificateExpirationStatus(cert);
             
             certElement.innerHTML = `
-                <div class="certificate-header">
-                    <img src="${cert.imageUrl || 'https://via.placeholder.com/80x80/6366f1/ffffff?text=CERT'}" 
-                         alt="${cert.name || 'Certificate'}" 
-                         class="certificate-image">
-                    <div class="certificate-info">
-                        <h3>${cert.name || 'Certificate Name'}</h3>
-                        <div class="certificate-organization">${cert.organization || 'Organization'}</div>
-                        <div class="certificate-date">
-                            Issued: ${cert.issueDate ? formatDate(cert.issueDate) : 'Date not available'}
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="certificate-description">
-                    ${cert.description || 'Professional certification description'}
-                </div>
-                
-                ${cert.skills && cert.skills.length > 0 ? `
-                    <div class="certificate-skills">
-                        ${cert.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
-                    </div>
-                ` : ''}
-                
-                <div class="certificate-actions">
-                    ${cert.credentialUrl ? `
-                        <a href="${cert.credentialUrl}" target="_blank" rel="noopener noreferrer" class="cert-btn cert-btn-primary">
-                            <i class="fas fa-external-link-alt"></i>
-                            View Certificate
-                        </a>
-                    ` : ''}
-                    <button class="cert-btn cert-btn-secondary view-certificate-details" data-certificate-id="${cert.id}">
-                        <i class="fas fa-info-circle"></i>
-                        Details
-                    </button>
-                    <div class="expiration-status ${expirationStatus.class}">
-                        <i class="${expirationStatus.icon}"></i>
-                        ${expirationStatus.text}
-                    </div>
-                </div>
+    <div class="certificate-header">
+        <img src="${cert.imageUrl || 'https://via.placeholder.com/80x80/6366f1/ffffff?text=CERT'}" 
+             alt="${cert.name || 'Certificate'}" 
+             class="certificate-image">
+        <div class="certificate-info">
+            <h3>${cert.name || 'Certificate Name'}</h3>
+            <div class="certificate-organization">${cert.organization || 'Organization'}</div>
+            <div class="certificate-date">
+                Issued: ${cert.issueDate ? formatDate(cert.issueDate) : 'Date not available'}
+            </div>
+        </div>
+    </div>
+    
+    <div class="certificate-description">
+    ${getCertificateShortDescription(cert)}
+</div>
+    
+    ${cert.skills && cert.skills.length > 0 ? `
+        <div class="certificate-skills">
+            ${cert.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+        </div>
+    ` : ''}
+    
+    <div class="certificate-actions">
+        ${cert.credentialUrl ? `
+            <a href="${cert.credentialUrl}" target="_blank" rel="noopener noreferrer" class="cert-btn cert-btn-primary">
+                <i class="fas fa-external-link-alt"></i>
+                View Certificate
+            </a>
+        ` : ''}
+        <button class="cert-btn cert-btn-secondary view-certificate-details" data-certificate-id="${cert.id}">
+            <i class="fas fa-info-circle"></i>
+            Details
+        </button>
+        <div class="expiration-status ${expirationStatus.class}">
+            <i class="${expirationStatus.icon}"></i>
+            ${expirationStatus.text}
+        </div>
+    </div>
             `;
             
             certificatesContainer.appendChild(certElement);
@@ -1059,8 +1059,8 @@ function showCertificateModal(certificate) {
                 <h2>${certificate.name || 'Certificate Name'}</h2>
                 
                 <div class="modal-certificate-description">
-                    ${certificate.description || 'Professional certification description'}
-                </div>
+    ${getCertificateFullDescription(certificate)}
+</div>
                 
                 <div class="modal-certificate-meta">
                     <p><strong>Organization:</strong> ${certificate.organization || 'Organization'}</p>
@@ -1096,6 +1096,30 @@ function showCertificateModal(certificate) {
     `;
     
     modal.style.display = 'block';
+}
+
+// Add this helper function to main.js (place it near other utility functions)
+
+function getCertificateShortDescription(certificate) {
+    // Priority: shortDescription -> description (first 100 chars) -> fallback
+    if (certificate.shortDescription) {
+        return certificate.shortDescription;
+    } else if (certificate.description) {
+        // If only old description exists, truncate it for card display
+        return certificate.description.length > 100 ?
+            certificate.description.substring(0, 100) + '...' :
+            certificate.description;
+    } else {
+        return 'Professional certification description';
+    }
+}
+
+function getCertificateFullDescription(certificate) {
+    // Priority: fullDescription -> description -> shortDescription -> fallback
+    return certificate.fullDescription ||
+        certificate.description ||
+        certificate.shortDescription ||
+        'Professional certification description';
 }
 
 function initializeCertificateAnimations() {
