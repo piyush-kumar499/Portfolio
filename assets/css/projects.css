@@ -3,7 +3,10 @@
 /* Import shared styles */
 @import url('home.css');
 
-/* Projects Hero Section */
+/* ========================================
+   HERO SECTION STYLES
+======================================== */
+
 .projects-hero {
     padding: 10rem 0 4rem; /* Add top padding for fixed header */
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -29,7 +32,10 @@
     z-index: 2;
 }
 
-/* Project Filters */
+/* ========================================
+   PROJECT FILTERS STYLES
+======================================== */
+
 .project-filters {
     display: flex;
     justify-content: center;
@@ -58,7 +64,10 @@
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
-/* Projects Section */
+/* ========================================
+   PROJECTS SECTION STYLES
+======================================== */
+
 .projects-section {
     padding: 5rem 0;
     background: #f8f9fa;
@@ -70,6 +79,10 @@
     gap: 2.5rem;
 }
 
+/* ========================================
+   PROJECT CARD STYLES
+======================================== */
+
 .project-card {
     background: white;
     border-radius: 1.5rem;
@@ -78,6 +91,7 @@
     transition: all 0.4s ease;
     border: 1px solid rgba(0, 0, 0, 0.05);
     position: relative;
+    animation: fadeInUp 0.6s ease forwards;
 }
 
 .project-card:hover {
@@ -97,39 +111,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 123, 255, 0.9), rgba(102, 126, 234, 0.9));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    backdrop-filter: blur(5px);
-    z-index: 10;
-    pointer-events: none;
-}
-
-.project-links:hover~.project-overlay,
-.project-overlay:hover {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.project-links {
-    display: flex;
-    gap: 1rem;
-    transform: translateY(20px);
-    transition: transform 0.4s ease;
-    z-index: 15;
-    position: relative;
 }
 
 .project-card:hover .project-links {
@@ -245,7 +226,130 @@
     box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
 }
 
-/* Project Modal */
+/* Info button positioned at top right, always visible with enhanced animations */
+.project-info-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 123, 255, 0.95);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 20;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.2);
+    border: 2px solid rgba(0, 123, 255, 0.1);
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.project-info-btn:hover {
+    background: #007bff;
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0 8px 30px rgba(0, 123, 255, 0.3);
+    animation: none;
+}
+
+.project-info-btn:active {
+    transform: scale(1.1) rotate(2deg);
+    transition: all 0.1s ease;
+}
+
+.project-info-btn i {
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.project-info-btn:hover i {
+    transform: scale(1.1);
+    color: #0056b3;
+}
+
+/* Additional hover effect for the entire project card */
+.project-card:hover .project-action-btn,
+.project-card:hover .project-info-btn {
+    animation: bounce 0.6s ease;
+}
+
+/* Additional hover effect for the entire project card */
+.project-card:hover .project-info-btn {
+    animation: bounce 0.6s ease;
+}
+
+/* Add new action buttons styling */
+.project-action-buttons {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 20;
+}
+
+.project-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.github-btn {
+    background: rgba(33, 37, 41, 0.95);
+    color: white;
+}
+
+.github-btn:hover {
+    background: #24292e;
+    transform: scale(1.2) rotate(-5deg);
+    box-shadow: 0 8px 30px rgba(33, 37, 41, 0.3);
+    animation: none;
+}
+
+.live-btn {
+    background: rgba(40, 167, 69, 0.95);
+    color: white;
+}
+
+.live-btn:hover {
+    background: #28a745;
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0 8px 30px rgba(40, 167, 69, 0.3);
+    animation: none;
+}
+
+.project-action-btn:active {
+    transform: scale(1.1);
+    transition: all 0.1s ease;
+}
+
+.project-action-btn i {
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.project-action-btn:hover i {
+    transform: scale(1.1);
+}
+
+/* ========================================
+   PROJECT MODAL STYLES
+======================================== */
+
 .modal {
     display: none;
     position: fixed;
@@ -412,276 +516,10 @@
     color: #333;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+/* ========================================
+   PROJECT IMAGE VIEWER STYLES
+======================================== */
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Filter Animation */
-.project-card {
-    animation: fadeInUp 0.6s ease forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .projects-hero {
-        padding: 8rem 0 3rem;
-    }
-    
-    .page-title {
-        font-size: 2.5rem;
-    }
-    
-    .project-filters {
-        gap: 0.5rem;
-    }
-    
-    .filter-btn {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-    }
-    
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .project-content {
-        padding: 2rem;
-    }
-    
-    .project-content h3 {
-        font-size: 1.3rem;
-    }
-    
-    .modal {
-        padding-top: 70px;
-    }
-    
-    .modal-content {
-        width: 95%;
-        margin: 1rem auto;
-        max-height: calc(100vh - 90px);
-    }
-    
-    .modal-project-content {
-        padding: 2rem;
-    }
-    
-    .modal-project-content h2 {
-        font-size: 1.7rem;
-    }
-    
-    .modal-project-image {
-        height: 250px;
-    }
-    
-    .project-info-btn {
-        width: 45px;
-        height: 45px;
-        top: 0.75rem;
-        right: 0.75rem;
-    }
-    
-    .project-info-btn i {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .projects-hero {
-        padding: 7rem 0 2rem;
-    }
-    
-    .page-title {
-        font-size: 2rem;
-    }
-    
-    .project-filters {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .filter-btn {
-        padding: 0.5rem 1rem;
-        font-size: 0.85rem;
-    }
-    
-    .project-content {
-        padding: 1.5rem;
-    }
-    
-    .project-links {
-        gap: 0.75rem;
-    }
-    
-    .project-link {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .project-link i {
-        font-size: 1.1rem;
-    }
-    
-    .modal {
-        padding-top: 60px; 
-    }
-    
-    .modal-content {
-        margin: 0.5rem auto;
-        border-radius: 1rem;
-        max-height: calc(100vh - 80px);
-    }
-    
-    .modal-project-content {
-        padding: 1.5rem;
-    }
-    
-    .modal-project-content h2 {
-        font-size: 1.5rem;
-    }
-    
-    .modal-project-image {
-        height: 200px;
-        border-radius: 1rem 1rem 0 0;
-    }
-    
-    .modal-project-links {
-        flex-direction: column;
-    }
-    
-    .project-info-btn {
-        width: 42px;
-        height: 42px;
-        top: 0.75rem;
-        right: 0.75rem;
-    }
-    
-    .project-info-btn i {
-        font-size: 1.1rem;
-    }
-    
-    .project-info-btn:hover {
-        transform: scale(1.15) rotate(3deg);
-    }
-    
-    @keyframes pulseGlow {
-        0%, 100% {
-            box-shadow: 0 2px 15px rgba(0, 123, 255, 0.2);
-            transform: scale(1);
-        }
-        50% {
-            box-shadow: 0 2px 20px rgba(0, 123, 255, 0.3);
-            transform: scale(1.03);
-        }
-    }
-}
-
-/* Info button positioned at top right, always visible with enhanced animations */
-.project-info-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.95);
-    color: #007bff;
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 20;
-    backdrop-filter: blur(15px);
-    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.2);
-    border: 2px solid rgba(0, 123, 255, 0.1);
-    animation: pulseGlow 2s ease-in-out infinite;
-}
-
-.project-info-btn:hover {
-    background: white;
-    transform: scale(1.2) rotate(5deg);
-    box-shadow: 0 8px 30px rgba(0, 123, 255, 0.3);
-    border-color: rgba(0, 123, 255, 0.3);
-    animation: none;
-}
-
-.project-info-btn:active {
-    transform: scale(1.1) rotate(2deg);
-    transition: all 0.1s ease;
-}
-
-.project-info-btn i {
-    font-size: 1.4rem;
-    transition: all 0.3s ease;
-}
-
-.project-info-btn:hover i {
-    transform: scale(1.1);
-    color: #0056b3;
-}
-
-/* Pulse glow animation */
-@keyframes pulseGlow {
-    0%, 100% {
-        box-shadow: 0 4px 20px rgba(0, 123, 255, 0.2);
-        transform: scale(1);
-    }
-    50% {
-        box-shadow: 0 4px 25px rgba(0, 123, 255, 0.4);
-        transform: scale(1.05);
-    }
-}
-
-/* Additional hover effect for the entire project card */
-.project-card:hover .project-info-btn {
-    animation: bounce 0.6s ease;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: scale(1);
-    }
-    25% {
-        transform: scale(1.1) rotate(-3deg);
-    }
-    50% {
-        transform: scale(1.15) rotate(3deg);
-    }
-    75% {
-        transform: scale(1.05) rotate(-1deg);
-    }
-}
-
-/* Project Image Viewer CSS - Add to your projects.css */
-
-/* Project Image Viewer */
 .project-image-viewer {
     display: none;
     position: fixed;
@@ -834,8 +672,139 @@
     object-fit: cover;
 }
 
-/* Mobile responsive */
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pulse glow animation */
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(0, 123, 255, 0.2);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(0, 123, 255, 0.4);
+        transform: scale(1.05);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1) rotate(-3deg);
+    }
+    50% {
+        transform: scale(1.15) rotate(3deg);
+    }
+    75% {
+        transform: scale(1.05) rotate(-1deg);
+    }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE STYLES
+======================================== */
+
 @media (max-width: 768px) {
+    /* Hero Section Mobile */
+    .projects-hero {
+        padding: 8rem 0 3rem;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    /* Filters Mobile */
+    .project-filters {
+        gap: 0.5rem;
+    }
+    
+    .filter-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Projects Grid Mobile */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    /* Project Card Mobile */
+    .project-content {
+        padding: 2rem;
+    }
+    
+    .project-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Info Button Mobile */
+    .project-info-btn {
+        width: 45px;
+        height: 45px;
+        top: 0.75rem;
+        right: 0.75rem;
+    }
+    
+    .project-info-btn i {
+        font-size: 1.2rem;
+    }
+    
+    /* Modal Mobile */
+    .modal {
+        padding-top: 70px;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 1rem auto;
+        max-height: calc(100vh - 90px);
+    }
+    
+    .modal-project-content {
+        padding: 2rem;
+    }
+    
+    .modal-project-content h2 {
+        font-size: 1.7rem;
+    }
+    
+    .modal-project-image {
+        height: 250px;
+    }
+    
+    /* Image Viewer Mobile */
     .project-viewer-close {
         top: 15px;
         right: 15px;
@@ -882,6 +851,89 @@
 }
 
 @media (max-width: 480px) {
+    /* Hero Section Small Mobile */
+    .projects-hero {
+        padding: 7rem 0 2rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    /* Filters Small Mobile */
+    .project-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Project Card Small Mobile */
+    .project-content {
+        padding: 1.5rem;
+    }
+    
+    .project-links {
+        gap: 0.75rem;
+    }
+    
+    .project-link {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .project-link i {
+        font-size: 1.1rem;
+    }
+    
+    /* Info Button Small Mobile */
+    .project-info-btn {
+        width: 42px;
+        height: 42px;
+        top: 0.75rem;
+        right: 0.75rem;
+    }
+    
+    .project-info-btn i {
+        font-size: 1.1rem;
+    }
+    
+    .project-info-btn:hover {
+        transform: scale(1.15) rotate(3deg);
+    }
+    
+    /* Modal Small Mobile */
+    .modal {
+        padding-top: 60px; 
+    }
+    
+    .modal-content {
+        margin: 0.5rem auto;
+        border-radius: 1rem;
+        max-height: calc(100vh - 80px);
+    }
+    
+    .modal-project-content {
+        padding: 1.5rem;
+    }
+    
+    .modal-project-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-project-image {
+        height: 200px;
+        border-radius: 1rem 1rem 0 0;
+    }
+    
+    .modal-project-links {
+        flex-direction: column;
+    }
+    
+    /* Image Viewer Small Mobile */
     .project-viewer-container {
         padding: 10px;
     }
@@ -911,5 +963,17 @@
     .project-thumbnail {
         width: 50px;
         height: 38px;
+    }
+    
+    /* Additional Small Mobile Animation */
+    @keyframes pulseGlow {
+        0%, 100% {
+            box-shadow: 0 2px 15px rgba(0, 123, 255, 0.2);
+            transform: scale(1);
+        }
+        50% {
+            box-shadow: 0 2px 20px rgba(0, 123, 255, 0.3);
+            transform: scale(1.03);
+        }
     }
 }
