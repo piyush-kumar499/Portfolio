@@ -446,35 +446,35 @@ function populateProjectsPage() {
         projectElement.className = `project-card ${project.category || 'other'}`;
         projectElement.setAttribute('data-category', project.category || 'other');
         
-        projectElement.innerHTML = `
-            <div class="project-image">
-                <img src="${project.image || 'https://via.placeholder.com/500x300/007bff/ffffff?text=Project'}" alt="${project.title || 'Project'}">
-                
-                <!-- Info button positioned at top right, always visible -->
-                <button class="project-info-btn view-details" data-project-id="${project.id || 0}" title="View Project Details">
-                    <i class="fas fa-info-circle"></i>
-                </button>
-                
-                <!-- Overlay with only GitHub and Live demo links -->
-                <div class="project-overlay">
-                    <div class="project-links">
-                        ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link" title="View Code"><i class="fab fa-github"></i></a>` : ''}
-                        ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>` : ''}
-                    </div>
-                </div>
-            </div>
-            <div class="project-content">
-                <h3>${project.title || 'Project Title'}</h3>
-                <p>${project.shortDescription || 'Project description'}</p>
-                <div class="project-tech">
-                    ${(project.technologies || []).map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-                </div>
-                <div class="project-meta">
-                    <span class="project-date">${project.completedDate ? new Date(project.completedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long' }) : 'Date'}</span>
-                    ${project.featured ? '<span class="featured-badge">Featured</span>' : ''}
-                </div>
-            </div>
-        `;
+        // Update the populateProjectsPage function - replace the project card innerHTML with this:
+
+projectElement.innerHTML = `
+    <div class="project-image">
+        <img src="${project.image || 'https://via.placeholder.com/500x300/007bff/ffffff?text=Project'}" alt="${project.title || 'Project'}">
+        
+        <!-- Info button positioned at top right, always visible -->
+        <button class="project-info-btn view-details" data-project-id="${project.id || 0}" title="View Project Details">
+            <i class="fas fa-info-circle"></i>
+        </button>
+        
+        <!-- GitHub and Live URL buttons positioned at top left, always visible -->
+        <div class="project-action-buttons">
+            ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-action-btn github-btn" title="View Code"><i class="fab fa-github"></i></a>` : ''}
+            ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-action-btn live-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>` : ''}
+        </div>
+    </div>
+    <div class="project-content">
+        <h3>${project.title || 'Project Title'}</h3>
+        <p>${project.shortDescription || 'Project description'}</p>
+        <div class="project-tech">
+            ${(project.technologies || []).map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+        </div>
+        <div class="project-meta">
+            <span class="project-date">${project.completedDate ? new Date(project.completedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long' }) : 'Date'}</span>
+            ${project.featured ? '<span class="featured-badge">Featured</span>' : ''}
+        </div>
+    </div>
+`;
         projectsContainer.appendChild(projectElement);
     });
 }
@@ -540,9 +540,16 @@ function showProjectModal(project) {
     
     if (!modal || !modalBody) return;
     
+    // Store the current project ID for image viewer access
+    window.currentModalProjectId = project.id;
+    
     modalBody.innerHTML = `
         <div class="modal-project">
-            <img src="${project.image || 'https://via.placeholder.com/500x300/007bff/ffffff?text=Project'}" alt="${project.title || 'Project'}" class="modal-project-image">
+            <img src="${project.image || 'https://via.placeholder.com/500x300/007bff/ffffff?text=Project'}" 
+                 alt="${project.title || 'Project'}" 
+                 class="modal-project-image"
+                 style="cursor: pointer;"
+                 title="Click to view all project images">
             <div class="modal-project-content">
                 <h2>${project.title || 'Project Title'}</h2>
                 <p class="modal-project-description">${project.fullDescription || project.shortDescription || 'Project description'}</p>
@@ -563,6 +570,22 @@ function showProjectModal(project) {
                     </div>
                 ` : ''}
                 
+                ${project.images && project.images.length > 1 ? `
+                    <div class="modal-project-gallery">
+                        <h3>Project Gallery</h3>
+                        <div class="modal-gallery-grid">
+                            ${project.images.map((image, index) => `
+                                <img src="${image}" 
+                                     alt="${project.title} - Image ${index + 1}" 
+                                     class="modal-gallery-image"
+                                     data-image-index="${index}"
+                                     style="cursor: pointer;"
+                                     title="Click to view full size">
+                            `).join('')}
+                        </div>
+                    </div>
+                ` : ''}
+                
                 <div class="modal-project-links">
                     ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fab fa-github"></i> View Code</a>` : ''}
                     ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fas fa-external-link-alt"></i> Live Demo</a>` : ''}
@@ -577,6 +600,9 @@ function showProjectModal(project) {
     `;
     
     modal.style.display = 'block';
+    
+    // Add click listeners to gallery images
+    addGalleryImageListeners();
 }
 
 // Contact Page Functions
@@ -1314,7 +1340,12 @@ function updateCertificateImages() {
     });
 }
 
-// Project Image Viewer Functions - Add to main.js
+
+
+
+
+
+// Enhanced Project Image Viewer Functions - Updated main.js
 
 // Global variables for project image viewer
 let currentProjectImages = [];
@@ -1364,13 +1395,58 @@ function initializeProjectImageViewer() {
         }
     });
     
-    // Add click listeners to project images
+    // Add click listeners to project images (both in cards and modals)
     document.addEventListener('click', (e) => {
+        // Handle clicks on project card images
         if (e.target.closest('.project-image img')) {
             const projectCard = e.target.closest('.project-card');
             const projectId = getProjectIdFromCard(projectCard);
             if (projectId) {
                 openProjectImageViewer(projectId, 0);
+            }
+        }
+        
+        // Handle clicks on modal images
+        if (e.target.closest('.modal-project-image')) {
+            const modalElement = e.target.closest('.modal');
+            if (modalElement && modalElement.style.display === 'block') {
+                // Get project ID from the currently open modal
+                const projectId = getCurrentModalProjectId();
+                if (projectId) {
+                    openProjectImageViewer(projectId, 0);
+                }
+            }
+        }
+    });
+}
+
+// Helper function to get current modal project ID
+function getCurrentModalProjectId() {
+    // Check if we have stored the current project ID when modal was opened
+    if (window.currentModalProjectId) {
+        return window.currentModalProjectId;
+    }
+    
+    // Fallback: try to extract from modal content
+    const modalTitle = document.querySelector('#modal-body h2');
+    if (modalTitle && window.projectsData) {
+        const title = modalTitle.textContent.trim();
+        const project = window.projectsData.find(p => p.title === title);
+        return project ? project.id : null;
+    }
+    
+    return null;
+}
+
+// Add click listeners to gallery images in modal
+function addGalleryImageListeners() {
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.modal-gallery-image')) {
+            const imageIndex = parseInt(e.target.getAttribute('data-image-index'));
+            const projectId = window.currentModalProjectId;
+            
+            if (projectId && !isNaN(imageIndex)) {
+                openProjectImageViewer(projectId, imageIndex);
             }
         }
     });
@@ -1426,11 +1502,20 @@ function getProjectIdFromCard(projectCard) {
 
 function openProjectImageViewer(projectId, startIndex = 0) {
     const project = window.projectsData?.find(p => p.id === projectId);
-    if (!project || !project.images || project.images.length === 0) return;
+    
+    // Handle projects with single image or images array
+    let projectImages = [];
+    if (project.images && Array.isArray(project.images)) {
+        projectImages = project.images;
+    } else if (project.image) {
+        projectImages = [project.image];
+    }
+    
+    if (!project || projectImages.length === 0) return;
     
     currentProjectData = project;
-    currentProjectImages = project.images;
-    currentProjectImageIndex = startIndex;
+    currentProjectImages = projectImages;
+    currentProjectImageIndex = Math.max(0, Math.min(startIndex, projectImages.length - 1));
     
     const viewer = document.getElementById('project-image-viewer');
     if (!viewer) return;
@@ -1479,7 +1564,7 @@ function updateProjectViewerContent() {
 function createProjectThumbnails() {
     const thumbnailsContainer = document.getElementById('project-viewer-thumbnails');
     if (!thumbnailsContainer || currentProjectImages.length <= 1) {
-        thumbnailsContainer.style.display = 'none';
+        if (thumbnailsContainer) thumbnailsContainer.style.display = 'none';
         return;
     }
     
@@ -1532,14 +1617,4 @@ function closeProjectImageViewer() {
     currentProjectImages = [];
     currentProjectImageIndex = 0;
     currentProjectData = null;
-}
-
-// Update the populateProjectsPage function to include image click functionality
-function updatePopulateProjectsPageForImages() {
-    // This function should be called after populateProjectsPage()
-    // Add click cursor to project images
-    document.querySelectorAll('.project-image img').forEach(img => {
-        img.style.cursor = 'pointer';
-        img.title = 'Click to view all images';
-    });
 }
