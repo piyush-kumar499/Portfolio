@@ -565,9 +565,9 @@ window.projectsData = [
     technologies: ["PHP", "JavaScript", "HTML", "CSS"],
     category: "tools",
     featured: false,
-    image: "assets/images/projects/Weightmass/1.svg",
+    image: "assets/images/projects/Weightmass/2.svg",
   images: [
-    "assets/images/projects/Weightmass/1.svg",
+    "assets/images/projects/Weightmass/2.svg",
     "assets/images/projects/Weightmass/2.jpg",
     "assets/images/projects/Weightmass/3.jpg"
   ],
