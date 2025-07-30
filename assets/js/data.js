@@ -234,10 +234,12 @@ window.projectsData = [
         technologies: ["PHP", "JavaScript", "MySQL", "HTML", "CSS"],
         category: "web",
         featured: true,
-        image: "assets/images/projects/1.jpg",
-        images: [
-            "assets/images/projects/1.jpg",
-        ],
+        image: "assets/images/projects/lengdjdth/1.svg",
+  images: [
+    "assets/images/projects/ajjajajja/1.svg",
+    "assets/images/projects/lenghsjsth/2.jpg",
+    "assets/images/projects/lengwuth/3.jpg"
+  ],
         githubUrl: "https://piyush-kumar499.github.io/portfolio/",
         liveUrl: "https://piyush-kumar499.github.io/portfolio/",
         completedDate: "2025-03-30",
@@ -256,7 +258,12 @@ window.projectsData = [
         technologies: ["HTML", "CSS", "JavaScript"],
         category: "ai",
         featured: true,
-        image: "https://via.placeholder.com/500x300/e83e8c/ffffff?text=AI+Chatbot",
+        image: "assets/images/projects/lengdjdth/1.svg",
+  images: [
+    "assets/images/projects/ajjajajja/1.svg",
+    "assets/images/projects/lenghsjsth/2.jpg",
+    "assets/images/projects/lengwuth/3.jpg"
+  ],
         githubUrl: "",
         liveUrl: "",
         completedDate: "2024-11-25",
@@ -274,7 +281,12 @@ window.projectsData = [
         technologies: ["HTML", "CSS", "JavaScript"],
         category: "ai",
         featured: true,
-        image: "https://via.placeholder.com/500x300/6f42c1/ffffff?text=AI+Assistant",
+        image: "assets/images/projects/lengdjdth/1.svg",
+  images: [
+    "assets/images/projects/ajjajajja/1.svg",
+    "assets/images/projects/lenghsjsth/2.jpg",
+    "assets/images/projects/lengwuth/3.jpg"
+  ],
         githubUrl: "",
         liveUrl: "",
         completedDate: "2024-11-20",
@@ -292,7 +304,12 @@ window.projectsData = [
         technologies: ["PHP", "JavaScript", "HTML", "CSS"],
         category: "web",
         featured: true,
-        image: "https://via.placeholder.com/500x300/222222/ffffff?text=Login+Page",
+        image: "assets/images/projects/lengdjdth/1.svg",
+  images: [
+    "assets/images/projects/ajjajajja/1.svg",
+    "assets/images/projects/lenghsjsth/2.jpg",
+    "assets/images/projects/lengwuth/3.jpg"
+  ],
         githubUrl: "",
         liveUrl: "",
         completedDate: "2024-12-15",
@@ -310,7 +327,12 @@ window.projectsData = [
         technologies: ["PHP", "JavaScript", "HTML", "CSS"],
         category: "tools",
         featured: false,
-        image: "https://via.placeholder.com/500x300/007bff/ffffff?text=Converters",
+        image: "assets/images/projects/lengdjdth/1.svg",
+  images: [
+    "assets/images/projects/ajjajajja/1.svg",
+    "assets/images/projects/lenghsjsth/2.jpg",
+    "assets/images/projects/lengwuth/3.jpg"
+  ],
         githubUrl: "",
         liveUrl: "",
         completedDate: "2025-07-15",
@@ -329,7 +351,12 @@ window.projectsData = [
         technologies: ["PHP", "JavaScript", "HTML", "CSS"],
         category: "tools",
         featured: false,
-        image: "https://via.placeholder.com/500x300/17a2b8/ffffff?text=Image+Reducer",
+        image: "assets/images/projects/lengdjdth/1.svg",
+  images: [
+    "assets/images/projects/ajjajajja/1.svg",
+    "assets/images/projects/lenghsjsth/2.jpg",
+    "assets/images/projects/lengwuth/3.jpg"
+  ],
         githubUrl: "",
         liveUrl: "",
         completedDate: "2025-05-10",
@@ -347,7 +374,12 @@ window.projectsData = [
         technologies: ["HTML", "CSS", "JavaScript"],
         category: "tools",
         featured: true,
-        image: "https://via.placeholder.com/500x300/ffc107/000000?text=Image+to+PDF",
+        image: "assets/images/projects/lengdjdth/1.svg",
+  images: [
+    "assets/images/projects/ajjajajja/1.svg",
+    "assets/images/projects/lenghsjsth/2.jpg",
+    "assets/images/projects/lengwuth/3.jpg"
+  ],
         githubUrl: "",
         liveUrl: "",
         completedDate: "2025-04-20",
@@ -365,7 +397,12 @@ window.projectsData = [
         technologies: ["HTML", "CSS", "JavaScript"],
         category: "tools",
         featured: true,
-        image: "https://via.placeholder.com/500x300/20c997/ffffff?text=JS+Reducer",
+        image: "assets/images/projects/lengdjdth/1.svg",
+  images: [
+    "assets/images/projects/ajjajajja/1.svg",
+    "assets/images/projects/lenghsjsth/2.jpg",
+    "assets/images/projects/lengwuth/3.jpg"
+  ],
         githubUrl: "",
         liveUrl: "",
         completedDate: "2025-01-10",
@@ -383,7 +420,12 @@ window.projectsData = [
         technologies: ["HTML", "CSS", "JavaScript"],
         category: "tools",
         featured: false,
-        image: "https://via.placeholder.com/500x300/fd7e14/ffffff?text=Color+Palette",
+        image: "assets/images/projects/lengdjdth/1.svg",
+  images: [
+    "assets/images/projects/ajjajajja/1.svg",
+    "assets/images/projects/lenghsjsth/2.jpg",
+    "assets/images/projects/lengwuth/3.jpg"
+  ],
         githubUrl: "",
         liveUrl: "",
         completedDate: "2025-01-05",
@@ -401,7 +443,12 @@ window.projectsData = [
         technologies: ["HTML", "CSS", "JavaScript"],
         category: "tools",
         featured: false,
-        image: "https://via.placeholder.com/500x300/6f42c1/ffffff?text=Color+Picker",
+        image: "assets/images/projects/lengdjdth/1.svg",
+  images: [
+    "assets/images/projects/ajjajajja/1.svg",
+    "assets/images/projects/lenghsjsth/2.jpg",
+    "assets/images/projects/lengwuth/3.jpg"
+  ],
         githubUrl: "",
         liveUrl: "",
         completedDate: "2024-12-20",
@@ -419,7 +466,12 @@ window.projectsData = [
     technologies: ["HTML", "CSS", "JavaScript"],
     category: "tools",
     featured: false,
-    image: "https://via.placeholder.com/500x300/007bff/ffffff?text=Basic+Calculator",
+    image: "assets/images/projects/lengdjdth/1.svg",
+  images: [
+    "assets/images/projects/ajjajajja/1.svg",
+    "assets/images/projects/lenghsjsth/2.jpg",
+    "assets/images/projects/lengwuth/3.jpg"
+  ],
     githubUrl: "",
     liveUrl: "",
     completedDate: "2024-07-15",
@@ -437,7 +489,12 @@ window.projectsData = [
     technologies: ["HTML", "CSS", "JavaScript"],
     category: "tools",
     featured: false,
-    image: "https://via.placeholder.com/500x300/17a2b8/ffffff?text=Mortgage+Calculator",
+    image: "assets/images/projects/lengdjdth/1.svg",
+  images: [
+    "assets/images/projects/ajjajajja/1.svg",
+    "assets/images/projects/lenghsjsth/2.jpg",
+    "assets/images/projects/lengwuth/3.jpg"
+  ],
     githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/Advance%20Mortgage%20Calculator",
     liveUrl: "",
     completedDate: "2024-07-10",
@@ -455,7 +512,12 @@ window.projectsData = [
     technologies: ["HTML", "CSS", "JavaScript"],
     category: "tools",
     featured: false,
-    image: "https://via.placeholder.com/500x300/28a745/ffffff?text=BMI+Calculator",
+    image: "assets/images/projects/lengdjdth/1.svg",
+  images: [
+    "assets/images/projects/ajjajajja/1.svg",
+    "assets/images/projects/lenghsjsth/2.jpg",
+    "assets/images/projects/lengwuth/3.jpg"
+  ],
     githubUrl: "",
     liveUrl: "",
     completedDate: "2024-06-20",
@@ -473,11 +535,11 @@ window.projectsData = [
     technologies: ["HTML", "CSS", "JavaScript"],
     category: "tools",
     featured: false,
-    image: "assets/images/projects/timeconverter/1.svg",
+    image: "assets/images/projects/lengdjdth/1.svg",
   images: [
-    "assets/images/projects/timeconverter/1.svg",
-    "assets/images/projects/timeconverter/2.jpg",
-    "assets/images/projects/timeconverter/3.jpg"
+    "assets/images/projects/ajjajajja/1.svg",
+    "assets/images/projects/lenghsjsth/2.jpg",
+    "assets/images/projects/lengwuth/3.jpg"
   ],
     githubUrl: "",
     liveUrl: "",
@@ -496,11 +558,11 @@ window.projectsData = [
     technologies: ["HTML", "CSS", "JavaScript"],
     category: "tools",
     featured: false,
-    image: "assets/images/projects/Weightmass/1.svg",
+    image: "assets/images/projects/lengdjdth/1.svg",
   images: [
-    "assets/images/projects/timeconverter/1.svg",
-    "assets/images/projects/timeconverter/2.jpg",
-    "assets/images/projects/timeconverter/3.jpg"
+    "assets/images/projects/ajjajajja/1.svg",
+    "assets/images/projects/lenghsjsth/2.jpg",
+    "assets/images/projects/lengwuth/3.jpg"
   ],
     githubUrl: "",
     liveUrl: "",
@@ -565,11 +627,11 @@ window.projectsData = [
     technologies: ["PHP", "JavaScript", "HTML", "CSS"],
     category: "tools",
     featured: false,
-    image: "assets/images/projects/digitalstorage/1.svg",
+    image: "assets/images/projects/massconverter/1.svg",
   images: [
-    "assets/images/projects/digitalstorage/1.svg",
-    "assets/images/projects/digitalstorage/2.jpg",
-    "assets/images/projects/digitalstorage/3.jpg"
+    "assets/images/projects/massconverter/1.svg",
+    "assets/images/projects/massconverter/2.jpg",
+    "assets/images/projects/massconverter/3.jpg"
   ],
     githubUrl: "",
     liveUrl: "",
@@ -635,7 +697,7 @@ window.projectsData = [
     category: "tools",
     featured: false,
     image: "assets/images/projects/length/1.svg",
-  images: [
+    images: [
     "assets/images/projects/length/1.svg",
     "assets/images/projects/length/2.jpg",
     "assets/images/projects/length/3.jpg"
