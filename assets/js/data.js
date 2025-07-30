@@ -234,12 +234,12 @@ window.projectsData = [
         technologies: ["PHP", "JavaScript", "MySQL", "HTML", "CSS"],
         category: "web",
         featured: true,
-        image: "assets/images/img.jpg",
+        image: "assets/images/projects/1.jpg",
         images: [
-            "assets/images/img.jpg",
+            "assets/images/projects/1.jpg",
         ],
-        githubUrl: "",
-        liveUrl: "",
+        githubUrl: "https://piyush-kumar499.github.io/portfolio/",
+        liveUrl: "https://piyush-kumar499.github.io/portfolio/",
         completedDate: "2025-03-30",
         highlights: [
             "Secure authentication system",
@@ -473,7 +473,12 @@ window.projectsData = [
     technologies: ["HTML", "CSS", "JavaScript"],
     category: "tools",
     featured: false,
-    image: "https://via.placeholder.com/500x300/fd7e14/ffffff?text=EMI+Calculator",
+    image: "assets/images/projects/timeconverter/1.svg",
+  images: [
+    "assets/images/projects/timeconverter/1.svg",
+    "assets/images/projects/timeconverter/2.jpg",
+    "assets/images/projects/timeconverter/3.jpg"
+  ],
     githubUrl: "",
     liveUrl: "",
     completedDate: "2024-05-25",
@@ -491,7 +496,12 @@ window.projectsData = [
     technologies: ["HTML", "CSS", "JavaScript"],
     category: "tools",
     featured: false,
-    image: "https://via.placeholder.com/500x300/6f42c1/ffffff?text=Age+Calculator",
+    image: "assets/images/projects/timeconverter/1.svg",
+  images: [
+    "assets/images/projects/timeconverter/1.svg",
+    "assets/images/projects/timeconverter/2.jpg",
+    "assets/images/projects/timeconverter/3.jpg"
+  ],
     githubUrl: "",
     liveUrl: "",
     completedDate: "2024-05-10",
@@ -509,7 +519,12 @@ window.projectsData = [
     technologies: ["PHP", "JavaScript", "HTML", "CSS"],
     category: "tools",
     featured: false,
-    image: "https://via.placeholder.com/500x300/ffc107/000000?text=Area+Converter",
+    image: "assets/images/projects/area/1.svg",
+  images: [
+    "assets/images/projects/area/1.svg",
+    "assets/images/projects/area/2.jpg",
+    "assets/images/projects/area/3.jpg"
+  ],
     githubUrl: "",
     liveUrl: "",
     completedDate: "2025-04-10",
@@ -527,7 +542,12 @@ window.projectsData = [
     technologies: ["PHP", "JavaScript", "HTML", "CSS"],
     category: "tools",
     featured: false,
-    image: "https://via.placeholder.com/500x300/17a2b8/ffffff?text=Temp+Converter",
+    image: "assets/images/projects/Temperature/1.svg",
+  images: [
+    "assets/images/projects/Temperature/1.svg",
+    "assets/images/projects/Temperature/2.jpg",
+    "assets/images/projects/Temperature/3.jpg"
+  ],
     githubUrl: "",
     liveUrl: "",
     completedDate: "2025-04-12",
@@ -545,7 +565,12 @@ window.projectsData = [
     technologies: ["PHP", "JavaScript", "HTML", "CSS"],
     category: "tools",
     featured: false,
-    image: "https://via.placeholder.com/500x300/28a745/ffffff?text=Mass+Converter",
+    image: "assets/images/projects/Weightmass/1.svg",
+  images: [
+    "assets/images/projects/Weightmass/1.svg",
+    "assets/images/projects/Weightmass/2.jpg",
+    "assets/images/projects/Weightmass/3.jpg"
+  ],
     githubUrl: "",
     liveUrl: "",
     completedDate: "2025-04-18",
@@ -563,7 +588,12 @@ window.projectsData = [
     technologies: ["PHP", "JavaScript", "HTML", "CSS"],
     category: "tools",
     featured: false,
-    image: "https://via.placeholder.com/500x300/007bff/ffffff?text=Storage+Converter",
+    image: "assets/images/projects/digitalstorage/1.svg",
+  images: [
+    "assets/images/projects/digitalstorage/1.svg",
+    "assets/images/projects/digitalstorage/2.jpg",
+    "assets/images/projects/digitalstorage/3.jpg"
+  ],
     githubUrl: "",
     liveUrl: "",
     completedDate: "2025-04-22",
@@ -581,7 +611,12 @@ window.projectsData = [
     technologies: ["PHP", "JavaScript", "HTML", "CSS"],
     category: "tools",
     featured: false,
-    image: "https://via.placeholder.com/500x300/fd7e14/ffffff?text=Energy+Converter",
+    image: "assets/images/projects/energy/1.svg",
+  images: [
+    "assets/images/projects/energy/1.svg",
+    "assets/images/projects/energy/2.jpg",
+    "assets/images/projects/energy/3.jpg"
+  ],
     githubUrl: "",
     liveUrl: "",
     completedDate: "2025-05-01",
@@ -599,7 +634,12 @@ window.projectsData = [
     technologies: ["PHP", "JavaScript", "HTML", "CSS"],
     category: "tools",
     featured: false,
-    image: "https://via.placeholder.com/500x300/20c997/ffffff?text=Length+Converter",
+    image: "assets/images/projects/length/1.svg",
+  images: [
+    "assets/images/projects/length/1.svg",
+    "assets/images/projects/length/2.jpg",
+    "assets/images/projects/length/3.jpg"
+  ],
     githubUrl: "",
     liveUrl: "",
     completedDate: "2025-05-08",
@@ -617,7 +657,12 @@ window.projectsData = [
     technologies: ["PHP", "JavaScript", "HTML", "CSS"],
     category: "tools",
     featured: false,
-    image: "https://via.placeholder.com/500x300/e83e8c/ffffff?text=Pressure+Converter",
+    image: "assets/images/projects/pressure/1.svg",
+  images: [
+    "assets/images/projects/pressure/1.svg",
+    "assets/images/projects/pressure/2.jpg",
+    "assets/images/projects/pressure/3.jpg"
+  ],
     githubUrl: "",
     liveUrl: "",
     completedDate: "2025-05-15",
@@ -635,7 +680,12 @@ window.projectsData = [
     technologies: ["PHP", "JavaScript", "HTML", "CSS"],
     category: "tools",
     featured: false,
-    image: "https://via.placeholder.com/500x300/6f42c1/ffffff?text=Speed+Converter",
+    image: "assets/images/projects/speed/1.svg",
+  images: [
+    "assets/images/projects/speed/1.svg",
+    "assets/images/projects/speed/2.jpg",
+    "assets/images/projects/speed/3.jpg"
+  ],
     githubUrl: "",
     liveUrl: "",
     completedDate: "2025-05-22",
@@ -653,7 +703,13 @@ window.projectsData = [
     technologies: ["PHP", "JavaScript", "HTML", "CSS"],
     category: "tools",
     featured: false,
-    image: "https://via.placeholder.com/500x300/28a745/ffffff?text=Time+Converter",
+    image: "assets/images/projects/timeconverter/1.svg",
+    images: [
+        "assets/images/projects/timeconverter/1.svg",
+        "assets/images/projects/timeconverter/2.jpg",
+        "assets/images/projects/timeconverter/3.jpg"
+    ],
+    
     githubUrl: "",
     liveUrl: "",
     completedDate: "2025-06-01",
@@ -671,7 +727,12 @@ window.projectsData = [
     technologies: ["PHP", "JavaScript", "HTML", "CSS"],
     category: "tools",
     featured: false,
-    image: "https://via.placeholder.com/500x300/fd7e14/ffffff?text=Volume+Converter",
+    image: "assets/images/projects/volumeconverter/1.svg",
+  images: [
+    "assets/images/projects/volumeconverter/1.svg",
+    "assets/images/projects/volumeconverter/2.jpg",
+    "assets/images/projects/volumeconverter/3.jpg"
+  ],
     githubUrl: "",
     liveUrl: "",
     completedDate: "2025-07-01",
