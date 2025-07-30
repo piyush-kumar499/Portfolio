@@ -1,0 +1,84 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f9fa" />
+      <stop offset="100%" stop-color="#e9ecef" />
+    </linearGradient>
+    <linearGradient id="liquidGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#0096c7" />
+      <stop offset="100%" stop-color="#48cae4" />
+    </linearGradient>
+    <filter id="dropShadow5" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="2" dy="2" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="800" height="450" fill="url(#bgGradient5)" rx="8" ry="8" />
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="380" r="60" fill="#48cae4" opacity="0.15" />
+  <circle cx="700" cy="80" r="80" fill="#0096c7" opacity="0.1" />
+  
+  <!-- Title -->
+  <text x="400" y="70" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#212529">Volume Converter</text>
+  
+  <!-- Volume containers illustration -->
+  <g transform="translate(200, 200)">
+    <!-- Liter container -->
+    <path d="M-60,-70 L-20,-70 L-15,-60 L-15,50 L-65,50 L-65,-60 Z" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" />
+    <path d="M-63,-20 L-17,-20 L-17,47 L-63,47 Z" fill="url(#liquidGradient)" opacity="0.8" />
+    <text x="-40" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#212529">Liter</text>
+    
+    <!-- Measurement lines -->
+    <line x1="-65" y1="-40" x2="-60" y2="-40" stroke="#6c757d" stroke-width="1" />
+    <line x1="-65" y1="-20" x2="-60" y2="-20" stroke="#6c757d" stroke-width="1" />
+    <line x1="-65" y1="0" x2="-60" y2="0" stroke="#6c757d" stroke-width="1" />
+    <line x1="-65" y1="20" x2="-60" y2="20" stroke="#6c757d" stroke-width="1" />
+    <line x1="-65" y1="40" x2="-60" y2="40" stroke="#6c757d" stroke-width="1" />
+    
+    <text x="-70" y="-40" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#6c757d">1.0</text>
+    <text x="-70" y="-20" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#6c757d">0.8</text>
+    <text x="-70" y="0" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#6c757d">0.6</text>
+    <text x="-70" y="20" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#6c757d">0.4</text>
+    <text x="-70" y="40" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#6c757d">0.2</text>
+  </g>
+  
+  <!-- Conversion arrow -->
+  <path d="M280 200 L500 200 L480 185 M500 200 L480 215" fill="none" stroke="#212529" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <g transform="translate(600, 200)">
+    <!-- Gallon container -->
+    <path d="M-40,-70 L40,-70 L45,-60 L45,50 L-45,50 L-45,-60 Z" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" />
+    <path d="M-42,-20 L42,-20 L42,47 L-42,47 Z" fill="url(#liquidGradient)" opacity="0.8" />
+    <text x="0" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#212529">Gallon</text>
+    
+    <!-- Measurement lines -->
+    <line x1="45" y1="-40" x2="40" y2="-40" stroke="#6c757d" stroke-width="1" />
+    <line x1="45" y1="-20" x2="40" y2="-20" stroke="#6c757d" stroke-width="1" />
+    <line x1="45" y1="0" x2="40" y2="0" stroke="#6c757d" stroke-width="1" />
+    <line x1="45" y1="20" x2="40" y2="20" stroke="#6c757d" stroke-width="1" />
+    <line x1="45" y1="40" x2="40" y2="40" stroke="#6c757d" stroke-width="1" />
+    
+    <text x="50" y="-40" font-family="Arial, sans-serif" font-size="10" text-anchor="start" fill="#6c757d">1.0</text>
+    <text x="50" y="-20" font-family="Arial, sans-serif" font-size="10" text-anchor="start" fill="#6c757d">0.8</text>
+    <text x="50" y="0" font-family="Arial, sans-serif" font-size="10" text-anchor="start" fill="#6c757d">0.6</text>
+    <text x="50" y="20" font-family="Arial, sans-serif" font-size="10" text-anchor="start" fill="#6c757d">0.4</text>
+    <text x="50" y="40" font-family="Arial, sans-serif" font-size="10" text-anchor="start" fill="#6c757d">0.2</text>
+  </g>
+  
+  <!-- Conversion examples -->
+  <text x="400" y="300" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#212529">1 Liter = 0.264172 Gallons</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="370" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#6c757d">Convert between liters, gallons, cups, and more</text>
+</svg>
