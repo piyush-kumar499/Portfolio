@@ -496,7 +496,7 @@ window.projectsData = [
     technologies: ["HTML", "CSS", "JavaScript"],
     category: "tools",
     featured: false,
-    image: "assets/images/projects/timeconverter/1.svg",
+    image: "assets/images/projects/Weightmass/1.svg",
   images: [
     "assets/images/projects/timeconverter/1.svg",
     "assets/images/projects/timeconverter/2.jpg",
