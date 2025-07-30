@@ -281,13 +281,19 @@ window.projectsData = [
         technologies: ["HTML", "CSS", "JavaScript"],
         category: "ai",
         featured: true,
-        image: "assets/images/projects/lengdjdth/1.svg",
+        image: "assets/images/projects/aiassistant/0.svg",
   images: [
-    "assets/images/projects/ajjajajja/1.svg",
-    "assets/images/projects/lenghsjsth/2.jpg",
-    "assets/images/projects/lengwuth/3.jpg"
+"assets/images/projects/aiassistant/0.svg",
+"assets/images/projects/aiassistant/1.svg",
+"assets/images/projects/aiassistant/2.jpg",
+"assets/images/projects/aiassistant/3.jpg",
+"assets/images/projects/aiassistant/4.svg",
+"assets/images/projects/aiassistant/5.jpg",
+"assets/images/projects/aiassistant/6.jpg",
+"assets/images/projects/aiassistant/7.jpg",
+"assets/images/projects/aiassistant/8.jpg"
   ],
-        githubUrl: "",
+        githubUrl: "https://github.com/piyush-kumar499/AI-Projects/tree/main/AI%20Assistant",
         liveUrl: "",
         completedDate: "2024-11-20",
         highlights: [
