@@ -565,11 +565,11 @@ window.projectsData = [
     technologies: ["PHP", "JavaScript", "HTML", "CSS"],
     category: "tools",
     featured: false,
-    image: "assets/images/projects/Weightmass/2.svg",
+    image: "assets/images/projects/digitalstorage/1.svg",
   images: [
-    "assets/images/projects/Weightmass/2.svg",
-    "assets/images/projects/Weightmass/2.jpg",
-    "assets/images/projects/Weightmass/3.jpg"
+    "assets/images/projects/digitalstorage/1.svg",
+    "assets/images/projects/digitalstorage/2.jpg",
+    "assets/images/projects/digitalstorage/3.jpg"
   ],
     githubUrl: "",
     liveUrl: "",
