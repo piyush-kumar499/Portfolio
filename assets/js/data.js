@@ -472,7 +472,7 @@ window.projectsData = [
     "assets/images/projects/lenghsjsth/2.jpg",
     "assets/images/projects/lengwuth/3.jpg"
   ],
-    githubUrl: "",
+    githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/Basic%20Calculator",
     liveUrl: "",
     completedDate: "2024-07-15",
     highlights: [
@@ -518,7 +518,7 @@ window.projectsData = [
     "assets/images/projects/lenghsjsth/2.jpg",
     "assets/images/projects/lengwuth/3.jpg"
   ],
-    githubUrl: "",
+    githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/BMI%20Calculator",
     liveUrl: "",
     completedDate: "2024-06-20",
     highlights: [
@@ -541,7 +541,7 @@ window.projectsData = [
     "assets/images/projects/lenghsjsth/2.jpg",
     "assets/images/projects/lengwuth/3.jpg"
   ],
-    githubUrl: "",
+    githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/EMI%20Calculator%20v2.0",
     liveUrl: "",
     completedDate: "2024-05-25",
     highlights: [
@@ -564,7 +564,7 @@ window.projectsData = [
     "assets/images/projects/lenghsjsth/2.jpg",
     "assets/images/projects/lengwuth/3.jpg"
   ],
-    githubUrl: "",
+    githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/Age%20Calculator",
     liveUrl: "",
     completedDate: "2024-05-10",
     highlights: [
@@ -587,7 +587,7 @@ window.projectsData = [
     "assets/images/projects/area/2.jpg",
     "assets/images/projects/area/3.jpg"
   ],
-    githubUrl: "",
+    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Area%20Converter",
     liveUrl: "",
     completedDate: "2025-04-10",
     highlights: [
@@ -610,7 +610,7 @@ window.projectsData = [
     "assets/images/projects/Temperature/2.jpg",
     "assets/images/projects/Temperature/3.jpg"
   ],
-    githubUrl: "",
+    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Temperature%20Converter",
     liveUrl: "",
     completedDate: "2025-04-12",
     highlights: [
@@ -633,7 +633,7 @@ window.projectsData = [
     "assets/images/projects/massconverter/2.jpg",
     "assets/images/projects/massconverter/3.jpg"
   ],
-    githubUrl: "",
+    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Weight%20and%20Mass%20Converter",
     liveUrl: "",
     completedDate: "2025-04-18",
     highlights: [
@@ -656,7 +656,7 @@ window.projectsData = [
     "assets/images/projects/digitalstorage/2.jpg",
     "assets/images/projects/digitalstorage/3.jpg"
   ],
-    githubUrl: "",
+    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Digital%20Storage%20Converter",
     liveUrl: "",
     completedDate: "2025-04-22",
     highlights: [
@@ -679,7 +679,7 @@ window.projectsData = [
     "assets/images/projects/energy/2.jpg",
     "assets/images/projects/energy/3.jpg"
   ],
-    githubUrl: "",
+    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Energy%20Converter",
     liveUrl: "",
     completedDate: "2025-05-01",
     highlights: [
@@ -702,7 +702,7 @@ window.projectsData = [
     "assets/images/projects/length/2.jpg",
     "assets/images/projects/length/3.jpg"
   ],
-    githubUrl: "",
+    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Length%20Converter",
     liveUrl: "",
     completedDate: "2025-05-08",
     highlights: [
@@ -725,7 +725,7 @@ window.projectsData = [
     "assets/images/projects/pressure/2.jpg",
     "assets/images/projects/pressure/3.jpg"
   ],
-    githubUrl: "",
+    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Pressure%20Converter",
     liveUrl: "",
     completedDate: "2025-05-15",
     highlights: [
@@ -748,7 +748,7 @@ window.projectsData = [
     "assets/images/projects/speed/2.jpg",
     "assets/images/projects/speed/3.jpg"
   ],
-    githubUrl: "",
+    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Speed%20Converter",
     liveUrl: "",
     completedDate: "2025-05-22",
     highlights: [
@@ -772,7 +772,7 @@ window.projectsData = [
         "assets/images/projects/timeconverter/3.jpg"
     ],
     
-    githubUrl: "",
+    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Time%20Converter",
     liveUrl: "",
     completedDate: "2025-06-01",
     highlights: [
@@ -795,7 +795,7 @@ window.projectsData = [
     "assets/images/projects/volumeconverter/2.jpg",
     "assets/images/projects/volumeconverter/3.jpg"
   ],
-    githubUrl: "",
+    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Volume%20Converter",
     liveUrl: "",
     completedDate: "2025-07-01",
     highlights: [
