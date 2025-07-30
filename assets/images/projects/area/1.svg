@@ -1,0 +1,74 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f9fa" />
+      <stop offset="100%" stop-color="#e9ecef" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4361ee" />
+      <stop offset="100%" stop-color="#3a0ca3" />
+    </linearGradient>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="2" dy="2" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="800" height="450" fill="url(#bgGradient)" rx="8" ry="8" />
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="380" r="60" fill="#4cc9f0" opacity="0.15" />
+  <circle cx="700" cy="80" r="80" fill="#4361ee" opacity="0.1" />
+  
+  <!-- Main content area -->
+  <rect x="120" y="100" width="560" height="250" fill="white" rx="12" ry="12" filter="url(#dropShadow)" />
+  
+  <!-- Calculator/converter symbol -->
+  <rect x="170" y="150" width="180" height="150" fill="#f8f9fa" rx="8" ry="8" stroke="#dee2e6" stroke-width="2" />
+  <rect x="190" y="170" width="140" height="30" fill="white" rx="4" ry="4" stroke="#ced4da" stroke-width="1" />
+  <text x="320" y="190" font-family="Arial, sans-serif" font-size="14" text-anchor="end" fill="#495057">1 acre</text>
+  
+  <!-- Grid lines on calculator -->
+  <line x1="170" y1="210" x2="350" y2="210" stroke="#dee2e6" stroke-width="1" />
+  <line x1="260" y1="150" x2="260" y2="300" stroke="#dee2e6" stroke-width="1" />
+  
+  <!-- Calculator buttons -->
+  <rect x="190" y="220" width="50" height="30" fill="white" rx="4" ry="4" stroke="#ced4da" stroke-width="1" />
+  <text x="215" y="240" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#495057">m²</text>
+  
+  <rect x="250" y="220" width="50" height="30" fill="white" rx="4" ry="4" stroke="#ced4da" stroke-width="1" />
+  <text x="275" y="240" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#495057">ft²</text>
+  
+  <rect x="190" y="260" width="50" height="30" fill="white" rx="4" ry="4" stroke="#ced4da" stroke-width="1" />
+  <text x="215" y="280" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#495057">ha</text>
+  
+  <rect x="250" y="260" width="50" height="30" fill="url(#accentGradient)" rx="4" ry="4" stroke="#3a0ca3" stroke-width="1" />
+  <text x="275" y="280" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">acre</text>
+  
+  <!-- Conversion arrow -->
+  <path d="M370 200 L440 200 L420 185 M440 200 L420 215" fill="none" stroke="#4361ee" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Result box -->
+  <rect x="460" y="150" width="180" height="150" fill="#f8f9fa" rx="8" ry="8" stroke="#dee2e6" stroke-width="2" />
+  <rect x="480" y="170" width="140" height="30" fill="white" rx="4" ry="4" stroke="#ced4da" stroke-width="1" />
+  <text x="610" y="190" font-family="Arial, sans-serif" font-size="14" text-anchor="end" fill="#495057">4,046.86 m²</text>
+  
+  <!-- Area visualization -->
+  <rect x="480" y="220" width="100" height="65" fill="#4cc9f0" opacity="0.2" rx="4" ry="4" stroke="#4cc9f0" stroke-width="2" />
+  <text x="530" y="255" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#495057">Area</text>
+  
+  <!-- Title -->
+  <text x="400" y="70" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#212529">Area Converter Tool</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="370" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#6c757d">Convert between any area units instantly</text>
+</svg>
