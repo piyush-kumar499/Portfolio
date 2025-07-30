@@ -1,1 +1,118 @@
-
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Main gradient for the robot head -->
+    <linearGradient id="robotGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Secondary gradient for accents -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#feca57;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#48dbfb;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0abde3;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+    
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle with glow -->
+  <circle cx="100" cy="100" r="95" fill="url(#glowGradient)" opacity="0.2" filter="url(#glow)"/>
+  
+  <!-- Main robot head -->
+  <path d="M60 80 Q60 50 90 50 L110 50 Q140 50 140 80 L140 120 Q140 150 110 150 L90 150 Q60 150 60 120 Z" 
+        fill="url(#robotGradient)" 
+        filter="url(#shadow)"/>
+  
+  <!-- Robot antenna -->
+  <rect x="97" y="35" width="6" height="15" fill="url(#accentGradient)" rx="3"/>
+  <circle cx="100" cy="30" r="5" fill="url(#accentGradient)" filter="url(#glow)"/>
+  
+  <!-- Eyes -->
+  <circle cx="85" cy="85" r="8" fill="#ffffff"/>
+  <circle cx="115" cy="85" r="8" fill="#ffffff"/>
+  <circle cx="85" cy="85" r="5" fill="url(#accentGradient)"/>
+  <circle cx="115" cy="85" r="5" fill="url(#accentGradient)"/>
+  <circle cx="87" cy="83" r="2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="117" cy="83" r="2" fill="#ffffff" opacity="0.8"/>
+  
+  <!-- Mouth/Speaker grille -->
+  <rect x="80" y="110" width="40" height="12" fill="#2c3e50" rx="6"/>
+  <rect x="82" y="112" width="6" height="8" fill="url(#accentGradient)" rx="1"/>
+  <rect x="90" y="112" width="6" height="8" fill="url(#accentGradient)" rx="1"/>
+  <rect x="98" y="112" width="6" height="8" fill="url(#accentGradient)" rx="1"/>
+  <rect x="106" y="112" width="6" height="8" fill="url(#accentGradient)" rx="1"/>
+  <rect x="114" y="112" width="4" height="8" fill="url(#accentGradient)" rx="1"/>
+  
+  <!-- Side panels -->
+  <rect x="45" y="75" width="15" height="30" fill="url(#robotGradient)" rx="7" opacity="0.8"/>
+  <rect x="140" y="75" width="15" height="30" fill="url(#robotGradient)" rx="7" opacity="0.8"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="52" cy="90" r="3" fill="url(#accentGradient)"/>
+  <circle cx="148" cy="90" r="3" fill="url(#accentGradient)"/>
+  
+  <!-- Voice wave indicators -->
+  <g opacity="0.6">
+    <path d="M25 90 Q30 85 35 90 Q30 95 25 90" fill="none" stroke="url(#accentGradient)" stroke-width="2">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M20 90 Q27 80 34 90 Q27 100 20 90" fill="none" stroke="url(#accentGradient)" stroke-width="2">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+    </path>
+    <path d="M15 90 Q25 75 35 90 Q25 105 15 90" fill="none" stroke="url(#accentGradient)" stroke-width="2">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin="1s"/>
+    </path>
+  </g>
+  
+  <!-- Right side voice waves -->
+  <g opacity="0.6">
+    <path d="M175 90 Q170 85 165 90 Q170 95 175 90" fill="none" stroke="url(#accentGradient)" stroke-width="2">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin="0.2s"/>
+    </path>
+    <path d="M180 90 Q173 80 166 90 Q173 100 180 90" fill="none" stroke="url(#accentGradient)" stroke-width="2">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin="0.7s"/>
+    </path>
+    <path d="M185 90 Q175 75 165 90 Q175 105 185 90" fill="none" stroke="url(#accentGradient)" stroke-width="2">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin="1.2s"/>
+    </path>
+  </g>
+  
+  <!-- Bottom microphone icon -->
+  <g transform="translate(100, 160)">
+    <rect x="-8" y="-15" width="16" height="20" fill="url(#robotGradient)" rx="8"/>
+    <rect x="-6" y="-12" width="12" height="14" fill="#ffffff" rx="6"/>
+    <rect x="-4" y="-10" width="8" height="10" fill="url(#accentGradient)" rx="4"/>
+    <line x1="0" y1="5" x2="0" y2="15" stroke="url(#robotGradient)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="-8" y1="15" x2="8" y2="15" stroke="url(#robotGradient)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Subtle tech pattern overlay -->
+  <g opacity="0.1">
+    <circle cx="70" cy="70" r="1" fill="#ffffff"/>
+    <circle cx="130" cy="70" r="1" fill="#ffffff"/>
+    <circle cx="70" cy="130" r="1" fill="#ffffff"/>
+    <circle cx="130" cy="130" r="1" fill="#ffffff"/>
+    <line x1="70" y1="70" x2="130" y2="70" stroke="#ffffff" stroke-width="0.5"/>
+    <line x1="70" y1="130" x2="130" y2="130" stroke="#ffffff" stroke-width="0.5"/>
+    <line x1="70" y1="70" x2="70" y2="130" stroke="#ffffff" stroke-width="0.5"/>
+    <line x1="130" y1="70" x2="130" y2="130" stroke="#ffffff" stroke-width="0.5"/>
+  </g>
+</svg>
