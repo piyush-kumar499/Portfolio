@@ -457,7 +457,7 @@ window.projectsData = [
             "assets/images/projects/colourcode/5.jpg",
             "assets/images/projects/colourcode/6.jpg"
         ],
-        githubUrl: "",
+        githubUrl: "https://github.com/piyush-kumar499/Tool-Projects/tree/main/Colour%20Code%20Selector",
         liveUrl: "",
         completedDate: "2024-12-20",
         highlights: [
