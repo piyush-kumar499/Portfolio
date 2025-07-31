@@ -496,11 +496,10 @@ window.projectsData = [
     technologies: ["HTML", "CSS", "JavaScript"],
     category: "tools",
     featured: false,
-    image: "assets/images/projects/lengdjdth/1.svg",
+    image: "assets/images/projects/basic-calculator/1.svg",
   images: [
-    "assets/images/projects/ajjajajja/1.svg",
-    "assets/images/projects/lenghsjsth/2.jpg",
-    "assets/images/projects/lengwuth/3.jpg"
+    "assets/images/projects/basic-calculator/1.svg",
+    "assets/images/projects/basic-calculator/2.jpg"
   ],
     githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/Basic%20Calculator",
     liveUrl: "",
@@ -519,11 +518,11 @@ window.projectsData = [
     technologies: ["HTML", "CSS", "JavaScript"],
     category: "tools",
     featured: false,
-    image: "assets/images/projects/lengdjdth/1.svg",
+    image: "assets/images/projects/mortgage/1.svg",
   images: [
-    "assets/images/projects/ajjajajja/1.svg",
-    "assets/images/projects/lenghsjsth/2.jpg",
-    "assets/images/projects/lengwuth/3.jpg"
+    "assets/images/projects/mortgage/1.svg",
+    "assets/images/projects/mortgage/2.jpg",
+    "assets/images/projects/mortgage/3.jpg"
   ],
     githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/Advance%20Mortgage%20Calculator",
     liveUrl: "",
@@ -542,11 +541,14 @@ window.projectsData = [
     technologies: ["HTML", "CSS", "JavaScript"],
     category: "tools",
     featured: false,
-    image: "assets/images/projects/lengdjdth/1.svg",
+    image: "assets/images/projects/bmi/1.svg",
   images: [
-    "assets/images/projects/ajjajajja/1.svg",
-    "assets/images/projects/lenghsjsth/2.jpg",
-    "assets/images/projects/lengwuth/3.jpg"
+    "assets/images/projects/bmi/1.svg",
+    "assets/images/projects/bmi/2.jpg",
+    "assets/images/projects/bmi/3.jpg",
+    "assets/images/projects/bmi/4.jpg",
+    "assets/images/projects/bmi/5.jpg",
+    "assets/images/projects/bmi/6.jpg"
   ],
     githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/BMI%20Calculator",
     liveUrl: "",
