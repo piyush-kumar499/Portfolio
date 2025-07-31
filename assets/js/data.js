@@ -305,10 +305,10 @@ window.projectsData = [
         image: "assets/images/projects/aiassistant/0.svg",
   images: [
 "assets/images/projects/aiassistant/0.svg",
-"assets/images/projects/aiassistant/1.svg",
+"assets/images/projects/aiassistant/1.jpg",
 "assets/images/projects/aiassistant/2.jpg",
 "assets/images/projects/aiassistant/3.jpg",
-"assets/images/projects/aiassistant/4.svg",
+"assets/images/projects/aiassistant/4.jpg",
 "assets/images/projects/aiassistant/5.jpg",
 "assets/images/projects/aiassistant/6.jpg",
 "assets/images/projects/aiassistant/7.jpg",
