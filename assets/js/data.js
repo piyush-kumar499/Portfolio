@@ -281,7 +281,7 @@ window.projectsData = [
         featured: true,
         image: "assets/images/projects/aichatbot/0.svg",
   images: [
-"assets/images/projects/aichatbot/0.svg"
+"assets/images/projects/aichatbot/0.svg",
 "assets/images/projects/aichatbot/1.jpg",
 "assets/images/projects/aichatbot/2.jpg",
 "assets/images/projects/aichatbot/3.jpg",
