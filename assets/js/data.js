@@ -279,11 +279,14 @@ window.projectsData = [
         technologies: ["HTML", "CSS", "JavaScript"],
         category: "ai",
         featured: true,
-        image: "assets/images/projects/lengdjdth/1.svg",
+        image: "assets/images/projects/aichatbot/0.svg",
   images: [
-    "assets/images/projects/ajjajajja/1.svg",
-    "assets/images/projects/lenghsjsth/2.jpg",
-    "assets/images/projects/lengwuth/3.jpg"
+"assets/images/projects/aichatbot/0.svg"
+"assets/images/projects/aichatbot/1.jpg",
+"assets/images/projects/aichatbot/2.jpg",
+"assets/images/projects/aichatbot/3.jpg",
+"assets/images/projects/aichatbot/4.jpg",
+"assets/images/projects/aichatbot/5.jpg",
   ],
         githubUrl: "",
         liveUrl: "",
