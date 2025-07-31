@@ -234,7 +234,7 @@ window.projectsData = [
         technologies: ["PHP", "JavaScript", "MySQL", "HTML", "CSS"],
         category: "web",
         featured: true,
-        image: "assets/images/projects/phpwebsite/2.jpg",
+        image: "assets/images/projects/phpwebsite/1.svg",
   images: [
 "assets/images/projects/phpwebsite/1.svg",
 "assets/images/projects/phpwebsite/2.jpg",
