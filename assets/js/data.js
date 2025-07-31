@@ -496,7 +496,7 @@ window.projectsData = [
     technologies: ["HTML", "CSS", "JavaScript"],
     category: "tools",
     featured: false,
-    image: "assets/images/projects/basic-calculator/1.svg",
+    image: "assets/images/projects/basic-calculator/2.svg",
   images: [
     "assets/images/projects/basic-calculator/1.svg",
     "assets/images/projects/basic-calculator/2.jpg"
@@ -518,9 +518,10 @@ window.projectsData = [
     technologies: ["HTML", "CSS", "JavaScript"],
     category: "tools",
     featured: false,
-    image: "assets/images/projects/mortgage/1.svg",
+    image: "assets/images/projects/mortgage/0.svg",
   images: [
-    "assets/images/projects/mortgage/1.svg",
+    "assets/images/projects/mortgage/0.svg",
+    "assets/images/projects/mortgage/1.jpg",
     "assets/images/projects/mortgage/2.jpg",
     "assets/images/projects/mortgage/3.jpg"
   ],
