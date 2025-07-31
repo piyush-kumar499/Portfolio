@@ -1,0 +1,158 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Drop shadow filter -->
+    <filter id="dropshadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    
+    <!-- Clock animation -->
+    <animateTransform id="clockRotation" attributeName="transform" type="rotate" 
+                     values="0 200 150;360 200 150" dur="10s" repeatCount="indefinite"/>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bgGradient)"/>
+  
+  <!-- Calendar illustration -->
+  <g transform="translate(40, 60)">
+    <!-- Calendar base -->
+    <rect x="0" y="20" width="120" height="140" rx="8" fill="#ffffff" stroke="#28a745" stroke-width="3" filter="url(#dropshadow)"/>
+    
+    <!-- Calendar header -->
+    <rect x="0" y="20" width="120" height="30" rx="8" fill="#28a745"/>
+    <rect x="0" y="35" width="120" height="15" fill="#28a745"/>
+    
+    <!-- Calendar rings -->
+    <circle cx="25" cy="15" r="4" fill="#666666"/>
+    <rect x="21" y="5" width="8" height="20" fill="#666666"/>
+    <circle cx="95" cy="15" r="4" fill="#666666"/>
+    <rect x="91" y="5" width="8" height="20" fill="#666666"/>
+    
+    <!-- Month/Year text -->
+    <text x="60" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">JAN 2024</text>
+    
+    <!-- Calendar grid -->
+    <g transform="translate(10, 60)">
+      <!-- Week days -->
+      <text x="15" y="15" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="8">S</text>
+      <text x="30" y="15" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="8">M</text>
+      <text x="45" y="15" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="8">T</text>
+      <text x="60" y="15" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="8">W</text>
+      <text x="75" y="15" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="8">T</text>
+      <text x="90" y="15" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="8">F</text>
+      
+      <!-- Sample dates -->
+      <circle cx="15" cy="35" r="8" fill="#28a745"/>
+      <text x="15" y="39" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">15</text>
+      
+      <text x="30" y="39" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="8">16</text>
+      <text x="45" y="39" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="8">17</text>
+      <text x="60" y="39" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="8">18</text>
+      
+      <!-- More dates -->
+      <text x="15" y="55" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="8">22</text>
+      <text x="30" y="55" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="8">23</text>
+      <text x="45" y="55" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="8">24</text>
+      <text x="60" y="55" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="8">25</text>
+    </g>
+  </g>
+  
+  <!-- Clock illustration -->
+  <g transform="translate(250, 80)">
+    <!-- Clock face -->
+    <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#28a745" stroke-width="4" filter="url(#dropshadow)"/>
+    
+    <!-- Clock numbers -->
+    <text x="50" y="20" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="14" font-weight="bold">12</text>
+    <text x="80" y="55" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="12" font-weight="bold">3</text>
+    <text x="50" y="85" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="12" font-weight="bold">6</text>
+    <text x="25" y="55" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="12" font-weight="bold">9</text>
+    
+    <!-- Hour markers -->
+    <g transform="translate(50, 50)">
+      <line x1="0" y1="-40" x2="0" y2="-35" stroke="#666" stroke-width="2"/>
+      <line x1="35" y1="-20" x2="30" y2="-17" stroke="#666" stroke-width="1"/>
+      <line x1="35" y1="20" x2="30" y2="17" stroke="#666" stroke-width="1"/>
+      <line x1="0" y1="40" x2="0" y2="35" stroke="#666" stroke-width="2"/>
+      <line x1="-35" y1="20" x2="-30" y2="17" stroke="#666" stroke-width="1"/>
+      <line x1="-35" y1="-20" x2="-30" y2="-17" stroke="#666" stroke-width="1"/>
+    </g>
+    
+    <!-- Clock hands -->
+    <g transform="translate(50, 50)">
+      <!-- Hour hand -->
+      <line x1="0" y1="0" x2="0" y2="-20" stroke="#333" stroke-width="3" stroke-linecap="round"/>
+      <!-- Minute hand -->
+      <line x1="0" y1="0" x2="15" y2="-25" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+      <!-- Center dot -->
+      <circle cx="0" cy="0" r="3" fill="#28a745"/>
+    </g>
+  </g>
+  
+  <!-- Calculator interface -->
+  <g transform="translate(170, 180)">
+    <!-- Calculator screen -->
+    <rect x="0" y="0" width="160" height="90" rx="8" fill="#ffffff" stroke="#28a745" stroke-width="3" filter="url(#dropshadow)"/>
+    
+    <!-- Screen header -->
+    <rect x="10" y="10" width="140" height="20" rx="4" fill="#28a745"/>
+    <text x="80" y="23" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">AGE RESULT</text>
+    
+    <!-- Age display -->
+    <text x="80" y="45" text-anchor="middle" fill="#28a745" font-family="Arial, sans-serif" font-size="16" font-weight="bold">25 Years</text>
+    <text x="80" y="60" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="10">3 Months, 15 Days</text>
+    
+    <!-- Total stats -->
+    <text x="80" y="75" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="8">9,237 Days • 221,688 Hours</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="35" text-anchor="middle" fill="#28a745" font-family="Arial, sans-serif" font-size="28" font-weight="bold">AGE CALCULATOR</text>
+  
+  <!-- Subtitle -->
+  <text x="200" y="55" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="14">Calculate Your Exact Age</text>
+  
+  <!-- Decorative elements -->
+  <g transform="translate(30, 30)">
+    <!-- Birthday cake icon -->
+    <rect x="0" y="10" width="30" height="15" rx="2" fill="#ffc107" stroke="#ff8f00" stroke-width="1"/>
+    <rect x="5" y="5" width="20" height="20" rx="2" fill="#ff6b6b" stroke="#e55555" stroke-width="1"/>
+    
+    <!-- Candles -->
+    <line x1="10" y1="5" x2="10" y2="0" stroke="#333" stroke-width="2"/>
+    <line x1="15" y1="5" x2="15" y2="0" stroke="#333" stroke-width="2"/>
+    <line x1="20" y1="5" x2="20" y2="0" stroke="#333" stroke-width="2"/>
+    
+    <!-- Flames -->
+    <ellipse cx="10" cy="-1" rx="2" ry="3" fill="#ff8f00"/>
+    <ellipse cx="15" cy="-1" rx="2" ry="3" fill="#ff8f00"/>
+    <ellipse cx="20" cy="-1" rx="2" ry="3" fill="#ff8f00"/>
+  </g>
+  
+  <!-- Age progression arrows -->
+  <g transform="translate(120, 200)" opacity="0.6">
+    <path d="M 0 10 L 20 10 L 15 5 M 20 10 L 15 15" stroke="#28a745" stroke-width="2" fill="none"/>
+    <text x="25" y="15" fill="#28a745" font-family="Arial, sans-serif" font-size="10">Time</text>
+  </g>
+  
+  <!-- Features list -->
+  <g transform="translate(20, 220)">
+    <rect x="0" y="0" width="140" height="50" rx="8" fill="rgba(40, 167, 69, 0.1)" stroke="#28a745" stroke-width="1"/>
+    <text x="70" y="15" text-anchor="middle" fill="#28a745" font-family="Arial, sans-serif" font-size="10" font-weight="bold">✓ Years, Months, Days</text>
+    <text x="70" y="28" text-anchor="middle" fill="#28a745" font-family="Arial, sans-serif" font-size="10" font-weight="bold">✓ Total Hours & Minutes</text>
+    <text x="70" y="41" text-anchor="middle" fill="#28a745" font-family="Arial, sans-serif" font-size="10" font-weight="bold">✓ Precise Calculations</text>
+  </g>
+  
+  <!-- Fun stats decoration -->
+  <g transform="translate(300, 30)" opacity="0.7">
+    <text x="0" y="0" fill="#28a745" font-family="Arial, sans-serif" font-size="12" font-weight="bold">🎂</text>
+    <text x="0" y="20" fill="#28a745" font-family="Arial, sans-serif" font-size="12" font-weight="bold">⏰</text>
+    <text x="0" y="40" fill="#28a745" font-family="Arial, sans-serif" font-size="12" font-weight="bold">📅</text>
+  </g>
+</svg>
