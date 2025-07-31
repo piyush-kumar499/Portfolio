@@ -1,87 +1,59 @@
-<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background gradient -->
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
     </linearGradient>
-    
-    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95" />
-      <stop offset="100%" style="stop-color:#f8fafc;stop-opacity:0.9" />
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#f8fafc" stop-opacity="0.9"/>
     </linearGradient>
-    
-    <filter id="shadow">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.2"/>
-    </filter>
   </defs>
   
-  <!-- Background -->
-  <rect width="400" height="300" fill="url(#bgGradient)"/>
+  <rect width="400" height="300" fill="url(#bg)"/>
   
-  <!-- Browser window mockup -->
-  <rect x="30" y="40" width="340" height="220" rx="12" fill="url(#cardGradient)" filter="url(#shadow)"/>
+  <rect x="30" y="40" width="340" height="220" rx="12" fill="url(#card)" stroke="#e2e8f0" stroke-width="1"/>
   
-  <!-- Browser header -->
   <rect x="30" y="40" width="340" height="35" rx="12" fill="#f1f5f9"/>
   <rect x="30" y="62" width="340" height="2" fill="#e2e8f0"/>
   
-  <!-- Browser dots -->
   <circle cx="50" cy="57" r="4" fill="#ef4444"/>
   <circle cx="70" cy="57" r="4" fill="#f59e0b"/>
   <circle cx="90" cy="57" r="4" fill="#10b981"/>
   
-  <!-- URL bar -->
   <rect x="120" y="50" width="120" height="14" rx="7" fill="#e2e8f0"/>
-  <text x="125" y="60" font-family="Arial, sans-serif" font-size="8" fill="#64748b">my-php-website.com</text>
+  <text x="125" y="60" font-family="Arial,sans-serif" font-size="8" fill="#64748b">my-php-website.com</text>
   
-  <!-- PHP logo -->
-  <g transform="translate(320, 45)">
-    <ellipse cx="12" cy="12" rx="18" ry="12" fill="#777bb4"/>
-    <text x="12" y="16" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">PHP</text>
-  </g>
+  <ellipse cx="332" cy="57" rx="18" ry="12" fill="#777bb4"/>
+  <text x="332" y="61" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">PHP</text>
   
-  <!-- Main content area -->
-  <rect x="50" y="90" width="300" height="40" rx="6" fill="#667eea" opacity="0.1"/>
-  <text x="200" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Modern Web Application</text>
-  <text x="200" y="120" font-family="Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Built with PHP & Modern Technologies</text>
+  <rect x="50" y="90" width="300" height="40" rx="6" fill="#667eea" fill-opacity="0.1"/>
+  <text x="200" y="105" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Modern Web Application</text>
+  <text x="200" y="120" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Built with PHP and Modern Technologies</text>
   
-  <!-- Feature cards -->
-  <rect x="60" y="145" width="80" height="60" rx="8" fill="white" filter="url(#shadow)" opacity="0.9"/>
-  <rect x="160" y="145" width="80" height="60" rx="8" fill="white" filter="url(#shadow)" opacity="0.9"/>
-  <rect x="260" y="145" width="80" height="60" rx="8" fill="white" filter="url(#shadow)" opacity="0.9"/>
+  <rect x="60" y="145" width="80" height="60" rx="8" fill="white" fill-opacity="0.9" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="160" y="145" width="80" height="60" rx="8" fill="white" fill-opacity="0.9" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="260" y="145" width="80" height="60" rx="8" fill="white" fill-opacity="0.9" stroke="#e2e8f0" stroke-width="1"/>
   
-  <!-- Icons in cards -->
-  <!-- Database icon -->
-  <g transform="translate(85, 160)">
-    <rect x="0" y="5" width="30" height="20" rx="15" fill="#667eea" opacity="0.2"/>
-    <ellipse cx="15" cy="8" rx="12" ry="3" fill="#667eea"/>
-    <ellipse cx="15" cy="12" rx="12" ry="3" fill="#667eea"/>
-    <ellipse cx="15" cy="16" rx="12" ry="3" fill="#667eea"/>
-  </g>
-  <text x="100" y="195" font-family="Arial, sans-serif" font-size="8" fill="#64748b" text-anchor="middle">Database</text>
+  <rect x="85" y="165" width="30" height="20" rx="15" fill="#667eea" fill-opacity="0.2"/>
+  <ellipse cx="100" cy="168" rx="12" ry="3" fill="#667eea"/>
+  <ellipse cx="100" cy="172" rx="12" ry="3" fill="#667eea"/>
+  <ellipse cx="100" cy="176" rx="12" ry="3" fill="#667eea"/>
+  <text x="100" y="195" font-family="Arial,sans-serif" font-size="8" fill="#64748b" text-anchor="middle">Database</text>
   
-  <!-- User icon -->
-  <g transform="translate(185, 160)">
-    <circle cx="15" cy="12" r="6" fill="#10b981" opacity="0.7"/>
-    <path d="M5 25 Q15 20 25 25" stroke="#10b981" stroke-width="3" fill="none" opacity="0.7"/>
-  </g>
-  <text x="200" y="195" font-family="Arial, sans-serif" font-size="8" fill="#64748b" text-anchor="middle">Users</text>
+  <circle cx="200" cy="172" r="6" fill="#10b981" fill-opacity="0.7"/>
+  <path d="M190 185 Q200 180 210 185" stroke="#10b981" stroke-width="3" fill="none" stroke-opacity="0.7"/>
+  <text x="200" y="195" font-family="Arial,sans-serif" font-size="8" fill="#64748b" text-anchor="middle">Users</text>
   
-  <!-- Settings icon -->
-  <g transform="translate(285, 160)">
-    <circle cx="15" cy="15" r="8" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.7"/>
-    <circle cx="15" cy="15" r="3" fill="#f59e0b" opacity="0.7"/>
-    <line x1="15" y1="2" x2="15" y2="6" stroke="#f59e0b" stroke-width="2" opacity="0.7"/>
-    <line x1="15" y1="24" x2="15" y2="28" stroke="#f59e0b" stroke-width="2" opacity="0.7"/>
-    <line x1="28" y1="15" x2="24" y2="15" stroke="#f59e0b" stroke-width="2" opacity="0.7"/>
-    <line x1="6" y1="15" x2="2" y2="15" stroke="#f59e0b" stroke-width="2" opacity="0.7"/>
-  </g>
-  <text x="300" y="195" font-family="Arial, sans-serif" font-size="8" fill="#64748b" text-anchor="middle">Settings</text>
+  <circle cx="300" cy="175" r="8" fill="none" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.7"/>
+  <circle cx="300" cy="175" r="3" fill="#f59e0b" fill-opacity="0.7"/>
+  <line x1="300" y1="162" x2="300" y2="166" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.7"/>
+  <line x1="300" y1="184" x2="300" y2="188" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.7"/>
+  <line x1="313" y1="175" x2="309" y2="175" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.7"/>
+  <line x1="291" y1="175" x2="287" y2="175" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.7"/>
+  <text x="300" y="195" font-family="Arial,sans-serif" font-size="8" fill="#64748b" text-anchor="middle">Settings</text>
   
-  <!-- Bottom accent -->
-  <rect x="50" y="220" width="300" height="3" rx="1.5" fill="url(#bgGradient)"/>
+  <rect x="50" y="220" width="300" height="3" rx="1.5" fill="url(#bg)"/>
   
-  <!-- Project label -->
-  <text x="200" y="280" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle" opacity="0.9">PHP Web Project</text>
+  <text x="200" y="280" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle" fill-opacity="0.9">PHP Web Project</text>
 </svg>
