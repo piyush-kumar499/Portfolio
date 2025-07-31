@@ -496,9 +496,9 @@ window.projectsData = [
     technologies: ["HTML", "CSS", "JavaScript"],
     category: "tools",
     featured: false,
-    image: "assets/images/projects/basic-calculator/2.svg",
+    image: "assets/images/projects/basic-calculator/1.jpg",
   images: [
-    "assets/images/projects/basic-calculator/1.svg",
+    "assets/images/projects/basic-calculator/1.jpg",
     "assets/images/projects/basic-calculator/2.jpg"
   ],
     githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/Basic%20Calculator",
