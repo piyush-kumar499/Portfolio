@@ -235,32 +235,32 @@ window.projectsData = [
         category: "web",
         featured: true,
         image: "assets/images/projects/phpwebsite/1.svg",
-  images: [
-"assets/images/projects/phpwebsite/1.svg",
-"assets/images/projects/phpwebsite/2.jpg",
-"assets/images/projects/phpwebsite/3.jpg",
-"assets/images/projects/phpwebsite/4.jpg",
-"assets/images/projects/phpwebsite/5.jpg",
-"assets/images/projects/phpwebsite/6.jpg",
-"assets/images/projects/phpwebsite/7.jpg",
-"assets/images/projects/phpwebsite/8.jpg",
-"assets/images/projects/phpwebsite/9.jpg",
-"assets/images/projects/phpwebsite/10.jpg",
-"assets/images/projects/phpwebsite/11.jpg",
-"assets/images/projects/phpwebsite/12.jpg",
-"assets/images/projects/phpwebsite/13.jpg",
-"assets/images/projects/phpwebsite/14.jpg",
-"assets/images/projects/phpwebsite/15.jpg",
-"assets/images/projects/phpwebsite/16.jpg",
-"assets/images/projects/phpwebsite/17.jpg",
-"assets/images/projects/phpwebsite/18.jpg",
-"assets/images/projects/phpwebsite/19.jpg",
-"assets/images/projects/phpwebsite/20.jpg",
-"assets/images/projects/phpwebsite/21.jpg",
-"assets/images/projects/phpwebsite/22.jpg",
-"assets/images/projects/phpwebsite/23.jpg",
-"assets/images/projects/phpwebsite/24.jpg"
-  ],
+        images: [
+            "assets/images/projects/phpwebsite/1.svg",
+            "assets/images/projects/phpwebsite/2.jpg",
+            "assets/images/projects/phpwebsite/3.jpg",
+            "assets/images/projects/phpwebsite/4.jpg",
+            "assets/images/projects/phpwebsite/5.jpg",
+            "assets/images/projects/phpwebsite/6.jpg",
+            "assets/images/projects/phpwebsite/7.jpg",
+            "assets/images/projects/phpwebsite/8.jpg",
+            "assets/images/projects/phpwebsite/9.jpg",
+            "assets/images/projects/phpwebsite/10.jpg",
+            "assets/images/projects/phpwebsite/11.jpg",
+            "assets/images/projects/phpwebsite/12.jpg",
+            "assets/images/projects/phpwebsite/13.jpg",
+            "assets/images/projects/phpwebsite/14.jpg",
+            "assets/images/projects/phpwebsite/15.jpg",
+            "assets/images/projects/phpwebsite/16.jpg",
+            "assets/images/projects/phpwebsite/17.jpg",
+            "assets/images/projects/phpwebsite/18.jpg",
+            "assets/images/projects/phpwebsite/19.jpg",
+            "assets/images/projects/phpwebsite/20.jpg",
+            "assets/images/projects/phpwebsite/21.jpg",
+            "assets/images/projects/phpwebsite/22.jpg",
+            "assets/images/projects/phpwebsite/23.jpg",
+            "assets/images/projects/phpwebsite/24.jpg"
+        ],
         githubUrl: "https://github.com/piyush-kumar499/PHP-Website",
         liveUrl: "",
         completedDate: "2025-03-30",
@@ -280,14 +280,14 @@ window.projectsData = [
         category: "ai",
         featured: true,
         image: "assets/images/projects/aichatbot/0.svg",
-  images: [
-"assets/images/projects/aichatbot/0.svg",
-"assets/images/projects/aichatbot/1.jpg",
-"assets/images/projects/aichatbot/2.jpg",
-"assets/images/projects/aichatbot/3.jpg",
-"assets/images/projects/aichatbot/4.jpg",
-"assets/images/projects/aichatbot/5.jpg",
-  ],
+        images: [
+            "assets/images/projects/aichatbot/0.svg",
+            "assets/images/projects/aichatbot/1.jpg",
+            "assets/images/projects/aichatbot/2.jpg",
+            "assets/images/projects/aichatbot/3.jpg",
+            "assets/images/projects/aichatbot/4.jpg",
+            "assets/images/projects/aichatbot/5.jpg"
+        ],
         githubUrl: "https://github.com/piyush-kumar499/AI-Projects/tree/main/AI%20Chatbot",
         liveUrl: "",
         completedDate: "2024-11-25",
@@ -306,17 +306,17 @@ window.projectsData = [
         category: "ai",
         featured: true,
         image: "assets/images/projects/aiassistant/0.svg",
-  images: [
-"assets/images/projects/aiassistant/0.svg",
-"assets/images/projects/aiassistant/1.jpg",
-"assets/images/projects/aiassistant/2.jpg",
-"assets/images/projects/aiassistant/3.jpg",
-"assets/images/projects/aiassistant/4.jpg",
-"assets/images/projects/aiassistant/5.jpg",
-"assets/images/projects/aiassistant/6.jpg",
-"assets/images/projects/aiassistant/7.jpg",
-"assets/images/projects/aiassistant/8.jpg"
-  ],
+        images: [
+            "assets/images/projects/aiassistant/0.svg",
+            "assets/images/projects/aiassistant/1.jpg",
+            "assets/images/projects/aiassistant/2.jpg",
+            "assets/images/projects/aiassistant/3.jpg",
+            "assets/images/projects/aiassistant/4.jpg",
+            "assets/images/projects/aiassistant/5.jpg",
+            "assets/images/projects/aiassistant/6.jpg",
+            "assets/images/projects/aiassistant/7.jpg",
+            "assets/images/projects/aiassistant/8.jpg"
+        ],
         githubUrl: "https://github.com/piyush-kumar499/AI-Projects/tree/main/AI%20Assistant",
         liveUrl: "",
         completedDate: "2024-11-20",
@@ -335,11 +335,11 @@ window.projectsData = [
         category: "web",
         featured: true,
         image: "assets/images/projects/lengdjdth/1.svg",
-  images: [
-    "assets/images/projects/ajjajajja/1.svg",
-    "assets/images/projects/lenghsjsth/2.jpg",
-    "assets/images/projects/lengwuth/3.jpg"
-  ],
+        images: [
+            "assets/images/projects/ajjajajja/1.svg",
+            "assets/images/projects/lenghsjsth/2.jpg",
+            "assets/images/projects/lengwuth/3.jpg"
+        ],
         githubUrl: "",
         liveUrl: "",
         completedDate: "2024-12-15",
@@ -358,9 +358,9 @@ window.projectsData = [
         category: "tools",
         featured: false,
         image: "assets/images/projects/unittoolkit/1.svg",
-  images: [
-    "assets/images/projects/unittoolkit/1.svg"
-  ],
+        images: [
+            "assets/images/projects/unittoolkit/1.svg"
+        ],
         githubUrl: "https://github.com/piyush-kumar499/Converter-tools",
         liveUrl: "",
         completedDate: "2025-07-15",
@@ -380,11 +380,11 @@ window.projectsData = [
         category: "tools",
         featured: false,
         image: "assets/images/projects/lengdjdth/1.svg",
-  images: [
-    "assets/images/projects/ajjajajja/1.svg",
-    "assets/images/projects/lenghsjsth/2.jpg",
-    "assets/images/projects/lengwuth/3.jpg"
-  ],
+        images: [
+            "assets/images/projects/ajjajajja/1.svg",
+            "assets/images/projects/lenghsjsth/2.jpg",
+            "assets/images/projects/lengwuth/3.jpg"
+        ],
         githubUrl: "",
         liveUrl: "",
         completedDate: "2025-05-10",
@@ -403,11 +403,11 @@ window.projectsData = [
         category: "tools",
         featured: true,
         image: "assets/images/projects/lengdjdth/1.svg",
-  images: [
-    "assets/images/projects/ajjajajja/1.svg",
-    "assets/images/projects/lenghsjsth/2.jpg",
-    "assets/images/projects/lengwuth/3.jpg"
-  ],
+        images: [
+            "assets/images/projects/ajjajajja/1.svg",
+            "assets/images/projects/lenghsjsth/2.jpg",
+            "assets/images/projects/lengwuth/3.jpg"
+        ],
         githubUrl: "",
         liveUrl: "",
         completedDate: "2025-04-20",
@@ -426,11 +426,11 @@ window.projectsData = [
         category: "tools",
         featured: true,
         image: "assets/images/projects/lengdjdth/1.svg",
-  images: [
-    "assets/images/projects/ajjajajja/1.svg",
-    "assets/images/projects/lenghsjsth/2.jpg",
-    "assets/images/projects/lengwuth/3.jpg"
-  ],
+        images: [
+            "assets/images/projects/ajjajajja/1.svg",
+            "assets/images/projects/lenghsjsth/2.jpg",
+            "assets/images/projects/lengwuth/3.jpg"
+        ],
         githubUrl: "",
         liveUrl: "",
         completedDate: "2025-01-10",
@@ -449,11 +449,11 @@ window.projectsData = [
         category: "tools",
         featured: false,
         image: "assets/images/projects/lengdjdth/1.svg",
-  images: [
-    "assets/images/projects/ajjajajja/1.svg",
-    "assets/images/projects/lenghsjsth/2.jpg",
-    "assets/images/projects/lengwuth/3.jpg"
-  ],
+        images: [
+            "assets/images/projects/ajjajajja/1.svg",
+            "assets/images/projects/lenghsjsth/2.jpg",
+            "assets/images/projects/lengwuth/3.jpg"
+        ],
         githubUrl: "",
         liveUrl: "",
         completedDate: "2025-01-05",
@@ -472,11 +472,11 @@ window.projectsData = [
         category: "tools",
         featured: false,
         image: "assets/images/projects/lengdjdth/1.svg",
-  images: [
-    "assets/images/projects/ajjajajja/1.svg",
-    "assets/images/projects/lenghsjsth/2.jpg",
-    "assets/images/projects/lengwuth/3.jpg"
-  ],
+        images: [
+            "assets/images/projects/ajjajajja/1.svg",
+            "assets/images/projects/lenghsjsth/2.jpg",
+            "assets/images/projects/lengwuth/3.jpg"
+        ],
         githubUrl: "",
         liveUrl: "",
         completedDate: "2024-12-20",
@@ -486,353 +486,352 @@ window.projectsData = [
             "Easy-to-use interface"
         ]
     },
-{
-    id: 11,
-    title: "Basic Calculator",
-    shortDescription: "Perform basic arithmetic operations easily",
-    fullDescription: "A user-friendly calculator to perform basic arithmetic operations including addition, subtraction, multiplication, and division using JavaScript and responsive layout.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    category: "tools",
-    featured: false,
-    image: "assets/images/projects/basic-calculator/1.jpg",
-  images: [
-    "assets/images/projects/basic-calculator/1.jpg",
-    "assets/images/projects/basic-calculator/2.jpg"
-  ],
-    githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/Basic%20Calculator",
-    liveUrl: "",
-    completedDate: "2024-07-15",
-    highlights: [
-        "Simple and intuitive UI",
-        "Handles basic arithmetic operations",
-        "Responsive layout for mobile users"
-    ]
-},
-{
-    id: 12,
-    title: "Advanced Mortgage Calculator",
-    shortDescription: "Calculate mortgage details with advanced breakdowns",
-    fullDescription: "An advanced mortgage calculator allowing users to calculate monthly payments, loan amortization, interest, and total cost. Suitable for both home buyers and finance learners.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    category: "tools",
-    featured: false,
-    image: "assets/images/projects/mortgage/0.svg",
-  images: [
-    "assets/images/projects/mortgage/0.svg",
-    "assets/images/projects/mortgage/1.jpg",
-    "assets/images/projects/mortgage/2.jpg",
-    "assets/images/projects/mortgage/3.jpg"
-  ],
-    githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/Advance%20Mortgage%20Calculator",
-    liveUrl: "",
-    completedDate: "2024-07-10",
-    highlights: [
-        "Interest breakdown calculations",
-        "EMI and total cost preview",
-        "Responsive and clean UI"
-    ]
-},
-{
-    id: 13,
-    title: "BMI Calculator",
-    shortDescription: "Calculate Body Mass Index quickly and accurately",
-    fullDescription: "A lightweight and responsive tool for calculating Body Mass Index (BMI) based on user-provided height and weight. Provides instant feedback on health categories.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    category: "tools",
-    featured: false,
-    image: "assets/images/projects/bmi/1.svg",
-  images: [
-    "assets/images/projects/bmi/1.svg",
-    "assets/images/projects/bmi/2.jpg",
-    "assets/images/projects/bmi/3.jpg",
-    "assets/images/projects/bmi/4.jpg",
-    "assets/images/projects/bmi/5.jpg",
-    "assets/images/projects/bmi/6.jpg"
-  ],
-    githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/BMI%20Calculator",
-    liveUrl: "",
-    completedDate: "2024-06-20",
-    highlights: [
-        "Health classification results",
-        "Interactive and responsive layout",
-        "Real-time result generation"
-    ]
-},
-{
-    id: 14,
-    title: "EMI Calculator",
-    shortDescription: "Compute loan EMI, total interest and repayment details",
-    fullDescription: "This EMI Calculator helps users calculate the monthly installment, interest payable, and total payment for a loan. Useful for financial planning and budgeting.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    category: "tools",
-    featured: false,
-    image: "assets/images/projects/emicalculator/1.svg",
-  images: [
-    "assets/images/projects/emicalculator/1.svg",
-    "assets/images/projects/emicalculator/2.jpg"
-  ],
-    githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/EMI%20Calculator%20v2.0",
-    liveUrl: "",
-    completedDate: "2024-05-25",
-    highlights: [
-        "Supports principal/interest/tenure inputs",
-        "Real-time EMI and total cost output",
-        "User-friendly and minimal design"
-    ]
-},
-{
-    id: 15,
-    title: "Age Calculator",
-    shortDescription: "Calculate exact age in years, months and days",
-    fullDescription: "This tool calculates the exact age of a person from their date of birth. Displays the result in years, months, and days. Built with pure JavaScript and fully responsive.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    category: "tools",
-    featured: false,
-    image: "assets/images/projects/agecalculator/1.svg",
-  images: [
-    "assets/images/projects/agecalculator/1.svg",
-    "assets/images/projects/agecalculator/2.jpg"
-  ],
-    githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/Age%20Calculator",
-    liveUrl: "",
-    completedDate: "2024-05-10",
-    highlights: [
-        "Precise date-based age calculation",
-        "Supports leap years and date edge cases",
-        "Smooth UX with live results"
-    ]
-},
-{
-    id: 16,
-    title: "Area Converter Tool",
-    shortDescription: "Convert between different units of area quickly",
-    fullDescription: "This area converter allows users to switch between various area measurement units such as square meters, square feet, hectares, and acres. Developed as part of a unit converter toolkit.",
-    technologies: ["PHP", "JavaScript", "HTML", "CSS"],
-    category: "tools",
-    featured: false,
-    image: "assets/images/projects/area/1.svg",
-  images: [
-    "assets/images/projects/area/1.svg",
-    "assets/images/projects/area/2.jpg",
-    "assets/images/projects/area/3.jpg"
-  ],
-    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Area%20Converter",
-    liveUrl: "",
-    completedDate: "2025-04-10",
-    highlights: [
-        "Supports multiple area units",
-        "Built for real-time conversion",
-        "Responsive and easy to use"
-    ]
-},
-{
-    id: 17,
-    title: "Temperature Converter Tool",
-    shortDescription: "Convert temperatures between Celsius, Fahrenheit, and Kelvin",
-    fullDescription: "This tool enables conversion between Celsius, Fahrenheit, and Kelvin with accurate precision. Designed for both academic and practical use.",
-    technologies: ["PHP", "JavaScript", "HTML", "CSS"],
-    category: "tools",
-    featured: false,
-    image: "assets/images/projects/Temperature/1.svg",
-  images: [
-    "assets/images/projects/Temperature/1.svg",
-    "assets/images/projects/Temperature/2.jpg",
-    "assets/images/projects/Temperature/3.jpg"
-  ],
-    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Temperature%20Converter",
-    liveUrl: "",
-    completedDate: "2025-04-12",
-    highlights: [
-        "Handles decimal inputs",
-        "Real-time calculation",
-        "Mobile-friendly UI"
-    ]
-},
-{
-    id: 18,
-    title: "Weight/Mass Converter Tool",
-    shortDescription: "Switch between common mass and weight units",
-    fullDescription: "A weight converter tool supporting units like grams, kilograms, pounds, and ounces. Offers instant conversion results for daily use or academic purposes.",
-    technologies: ["PHP", "JavaScript", "HTML", "CSS"],
-    category: "tools",
-    featured: false,
-    image: "assets/images/projects/massconverter/1.svg",
-  images: [
-    "assets/images/projects/massconverter/1.svg",
-    "assets/images/projects/massconverter/2.jpg",
-    "assets/images/projects/massconverter/3.jpg"
-  ],
-    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Weight%20and%20Mass%20Converter",
-    liveUrl: "",
-    completedDate: "2025-04-18",
-    highlights: [
-        "Supports metric and imperial units",
-        "Live unit-to-unit conversion",
-        "Clean UI with dropdown selector"
-    ]
-},
-{
-    id: 19,
-    title: "Digital Storage Converter Tool",
-    shortDescription: "Convert between bytes, kilobytes, megabytes, and more",
-    fullDescription: "Designed to convert storage units such as bytes, KB, MB, GB, and TB. Useful for developers, engineers, and students handling data size comparisons.",
-    technologies: ["PHP", "JavaScript", "HTML", "CSS"],
-    category: "tools",
-    featured: false,
-    image: "assets/images/projects/digitalstorage/1.svg",
-  images: [
-    "assets/images/projects/digitalstorage/1.svg",
-    "assets/images/projects/digitalstorage/2.jpg",
-    "assets/images/projects/digitalstorage/3.jpg"
-  ],
-    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Digital%20Storage%20Converter",
-    liveUrl: "",
-    completedDate: "2025-04-22",
-    highlights: [
-        "Covers binary and decimal units",
-        "Responsive table of values",
-        "Optimized for performance"
-    ]
-},
-{
-    id: 20,
-    title: "Energy Converter Tool",
-    shortDescription: "Convert between Joules, Calories, and Kilowatt-hours",
-    fullDescription: "A compact tool to convert energy measurements commonly used in physics and electrical systems. Built for students and professionals alike.",
-    technologies: ["PHP", "JavaScript", "HTML", "CSS"],
-    category: "tools",
-    featured: false,
-    image: "assets/images/projects/energy/1.svg",
-  images: [
-    "assets/images/projects/energy/1.svg",
-    "assets/images/projects/energy/2.jpg",
-    "assets/images/projects/energy/3.jpg"
-  ],
-    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Energy%20Converter",
-    liveUrl: "",
-    completedDate: "2025-05-01",
-    highlights: [
-        "Supports all standard energy units",
-        "Includes tooltip definitions for each unit",
-        "Instant responsive results"
-    ]
-},
-{
-    id: 21,
-    title: "Length Converter Tool",
-    shortDescription: "Convert lengths between meters, inches, feet, and more",
-    fullDescription: "A tool designed to convert between various length units such as meters, kilometers, inches, feet, and miles. Built with responsiveness and simplicity in mind.",
-    technologies: ["PHP", "JavaScript", "HTML", "CSS"],
-    category: "tools",
-    featured: false,
-    image: "assets/images/projects/length/1.svg",
-    images: [
-    "assets/images/projects/length/1.svg",
-    "assets/images/projects/length/2.jpg",
-    "assets/images/projects/length/3.jpg"
-  ],
-    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Length%20Converter",
-    liveUrl: "",
-    completedDate: "2025-05-08",
-    highlights: [
-        "Metric and imperial unit support",
-        "Real-time conversions",
-        "Mobile-optimized design"
-    ]
-},
-{
-    id: 22,
-    title: "Pressure Converter Tool",
-    shortDescription: "Convert between different pressure units accurately",
-    fullDescription: "A handy utility for converting pressure values among units like Pascal, Bar, PSI, and atm. Ideal for scientific and mechanical applications.",
-    technologies: ["PHP", "JavaScript", "HTML", "CSS"],
-    category: "tools",
-    featured: false,
-    image: "assets/images/projects/pressure/1.svg",
-  images: [
-    "assets/images/projects/pressure/1.svg",
-    "assets/images/projects/pressure/2.jpg",
-    "assets/images/projects/pressure/3.jpg"
-  ],
-    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Pressure%20Converter",
-    liveUrl: "",
-    completedDate: "2025-05-15",
-    highlights: [
-        "Supports scientific and daily units",
-        "Built with conversion formulas",
-        "Interactive dropdown and input"
-    ]
-},
-{
-    id: 23,
-    title: "Speed Converter Tool",
-    shortDescription: "Convert between various speed units easily",
-    fullDescription: "This tool enables users to convert between speed units such as km/h, m/s, mph, and knots. Designed for transportation and physics use cases.",
-    technologies: ["PHP", "JavaScript", "HTML", "CSS"],
-    category: "tools",
-    featured: false,
-    image: "assets/images/projects/speed/1.svg",
-  images: [
-    "assets/images/projects/speed/1.svg",
-    "assets/images/projects/speed/2.jpg",
-    "assets/images/projects/speed/3.jpg"
-  ],
-    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Speed%20Converter",
-    liveUrl: "",
-    completedDate: "2025-05-22",
-    highlights: [
-        "Fast and accurate conversions",
-        "Dropdown for selecting input/output units",
-        "Optimized for all screen sizes"
-    ]
-},
-{
-    id: 24,
-    title: "Time Converter Tool",
-    shortDescription: "Convert between time formats and units",
-    fullDescription: "Convert between seconds, minutes, hours, days, and weeks. Built as part of the comprehensive unit converter series using PHP and JavaScript.",
-    technologies: ["PHP", "JavaScript", "HTML", "CSS"],
-    category: "tools",
-    featured: false,
-    image: "assets/images/projects/timeconverter/1.svg",
-    images: [
-        "assets/images/projects/timeconverter/1.svg",
-        "assets/images/projects/timeconverter/2.jpg",
-        "assets/images/projects/timeconverter/3.jpg"
-    ],
-    
-    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Time%20Converter",
-    liveUrl: "",
-    completedDate: "2025-06-01",
-    highlights: [
-        "Flexible unit conversion",
-        "Responsive inputs and outputs",
-        "Lightweight and fast loading"
-    ]
-},
-{
-    id: 25,
-    title: "Volume Converter Tool",
-    shortDescription: "Convert volume units like liters, gallons, and milliliters",
-    fullDescription: "A conversion utility to convert volumes between liters, milliliters, cubic meters, gallons, and more. Designed for practical kitchen, academic, and scientific purposes.",
-    technologies: ["PHP", "JavaScript", "HTML", "CSS"],
-    category: "tools",
-    featured: false,
-    image: "assets/images/projects/volumeconverter/1.svg",
-  images: [
-    "assets/images/projects/volumeconverter/1.svg",
-    "assets/images/projects/volumeconverter/2.jpg",
-    "assets/images/projects/volumeconverter/3.jpg"
-  ],
-    githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Volume%20Converter",
-    liveUrl: "",
-    completedDate: "2025-07-01",
-    highlights: [
-        "Covers kitchen to scientific units",
-        "Intuitive design with unit info",
-        "Real-time result updates"
-    ]
-}
+    {
+        id: 11,
+        title: "Basic Calculator",
+        shortDescription: "Perform basic arithmetic operations easily",
+        fullDescription: "A user-friendly calculator to perform basic arithmetic operations including addition, subtraction, multiplication, and division using JavaScript and responsive layout.",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        category: "tools",
+        featured: false,
+        image: "assets/images/projects/basic-calculator/1.jpg",
+        images: [
+            "assets/images/projects/basic-calculator/1.jpg",
+            "assets/images/projects/basic-calculator/2.jpg"
+        ],
+        githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/Basic%20Calculator",
+        liveUrl: "",
+        completedDate: "2024-07-15",
+        highlights: [
+            "Simple and intuitive UI",
+            "Handles basic arithmetic operations",
+            "Responsive layout for mobile users"
+        ]
+    },
+    {
+        id: 12,
+        title: "Advanced Mortgage Calculator",
+        shortDescription: "Calculate mortgage details with advanced breakdowns",
+        fullDescription: "An advanced mortgage calculator allowing users to calculate monthly payments, loan amortization, interest, and total cost. Suitable for both home buyers and finance learners.",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        category: "tools",
+        featured: false,
+        image: "assets/images/projects/mortgage/0.svg",
+        images: [
+            "assets/images/projects/mortgage/0.svg",
+            "assets/images/projects/mortgage/1.jpg",
+            "assets/images/projects/mortgage/2.jpg",
+            "assets/images/projects/mortgage/3.jpg"
+        ],
+        githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/Advance%20Mortgage%20Calculator",
+        liveUrl: "",
+        completedDate: "2024-07-10",
+        highlights: [
+            "Interest breakdown calculations",
+            "EMI and total cost preview",
+            "Responsive and clean UI"
+        ]
+    },
+    {
+        id: 13,
+        title: "BMI Calculator",
+        shortDescription: "Calculate Body Mass Index quickly and accurately",
+        fullDescription: "A lightweight and responsive tool for calculating Body Mass Index (BMI) based on user-provided height and weight. Provides instant feedback on health categories.",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        category: "tools",
+        featured: false,
+        image: "assets/images/projects/bmi/1.svg",
+        images: [
+            "assets/images/projects/bmi/1.svg",
+            "assets/images/projects/bmi/2.jpg",
+            "assets/images/projects/bmi/3.jpg",
+            "assets/images/projects/bmi/4.jpg",
+            "assets/images/projects/bmi/5.jpg",
+            "assets/images/projects/bmi/6.jpg"
+        ],
+        githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/BMI%20Calculator",
+        liveUrl: "",
+        completedDate: "2024-06-20",
+        highlights: [
+            "Health classification results",
+            "Interactive and responsive layout",
+            "Real-time result generation"
+        ]
+    },
+    {
+        id: 14,
+        title: "EMI Calculator",
+        shortDescription: "Compute loan EMI, total interest and repayment details",
+        fullDescription: "This EMI Calculator helps users calculate the monthly installment, interest payable, and total payment for a loan. Useful for financial planning and budgeting.",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        category: "tools",
+        featured: false,
+        image: "assets/images/projects/emicalculator/1.svg",
+        images: [
+            "assets/images/projects/emicalculator/1.svg",
+            "assets/images/projects/emicalculator/2.jpg"
+        ],
+        githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/EMI%20Calculator%20v2.0",
+        liveUrl: "",
+        completedDate: "2024-05-25",
+        highlights: [
+            "Supports principal/interest/tenure inputs",
+            "Real-time EMI and total cost output",
+            "User-friendly and minimal design"
+        ]
+    },
+    {
+        id: 15,
+        title: "Age Calculator",
+        shortDescription: "Calculate exact age in years, months and days",
+        fullDescription: "This tool calculates the exact age of a person from their date of birth. Displays the result in years, months, and days. Built with pure JavaScript and fully responsive.",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        category: "tools",
+        featured: false,
+        image: "assets/images/projects/agecalculator/1.svg",
+        images: [
+            "assets/images/projects/agecalculator/1.svg",
+            "assets/images/projects/agecalculator/2.jpg"
+        ],
+        githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/Age%20Calculator",
+        liveUrl: "",
+        completedDate: "2024-05-10",
+        highlights: [
+            "Precise date-based age calculation",
+            "Supports leap years and date edge cases",
+            "Smooth UX with live results"
+        ]
+    },
+    {
+        id: 16,
+        title: "Area Converter Tool",
+        shortDescription: "Convert between different units of area quickly",
+        fullDescription: "This area converter allows users to switch between various area measurement units such as square meters, square feet, hectares, and acres. Developed as part of a unit converter toolkit.",
+        technologies: ["PHP", "JavaScript", "HTML", "CSS"],
+        category: "tools",
+        featured: false,
+        image: "assets/images/projects/area/1.svg",
+        images: [
+            "assets/images/projects/area/1.svg",
+            "assets/images/projects/area/2.jpg",
+            "assets/images/projects/area/3.jpg"
+        ],
+        githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Area%20Converter",
+        liveUrl: "",
+        completedDate: "2025-04-10",
+        highlights: [
+            "Supports multiple area units",
+            "Built for real-time conversion",
+            "Responsive and easy to use"
+        ]
+    },
+    {
+        id: 17,
+        title: "Temperature Converter Tool",
+        shortDescription: "Convert temperatures between Celsius, Fahrenheit, and Kelvin",
+        fullDescription: "This tool enables conversion between Celsius, Fahrenheit, and Kelvin with accurate precision. Designed for both academic and practical use.",
+        technologies: ["PHP", "JavaScript", "HTML", "CSS"],
+        category: "tools",
+        featured: false,
+        image: "assets/images/projects/Temperature/1.svg",
+        images: [
+            "assets/images/projects/Temperature/1.svg",
+            "assets/images/projects/Temperature/2.jpg",
+            "assets/images/projects/Temperature/3.jpg"
+        ],
+        githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Temperature%20Converter",
+        liveUrl: "",
+        completedDate: "2025-04-12",
+        highlights: [
+            "Handles decimal inputs",
+            "Real-time calculation",
+            "Mobile-friendly UI"
+        ]
+    },
+    {
+        id: 18,
+        title: "Weight/Mass Converter Tool",
+        shortDescription: "Switch between common mass and weight units",
+        fullDescription: "A weight converter tool supporting units like grams, kilograms, pounds, and ounces. Offers instant conversion results for daily use or academic purposes.",
+        technologies: ["PHP", "JavaScript", "HTML", "CSS"],
+        category: "tools",
+        featured: false,
+        image: "assets/images/projects/massconverter/1.svg",
+        images: [
+            "assets/images/projects/massconverter/1.svg",
+            "assets/images/projects/massconverter/2.jpg",
+            "assets/images/projects/massconverter/3.jpg"
+        ],
+        githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Weight%20and%20Mass%20Converter",
+        liveUrl: "",
+        completedDate: "2025-04-18",
+        highlights: [
+            "Supports metric and imperial units",
+            "Live unit-to-unit conversion",
+            "Clean UI with dropdown selector"
+        ]
+    },
+    {
+        id: 19,
+        title: "Digital Storage Converter Tool",
+        shortDescription: "Convert between bytes, kilobytes, megabytes, and more",
+        fullDescription: "Designed to convert storage units such as bytes, KB, MB, GB, and TB. Useful for developers, engineers, and students handling data size comparisons.",
+        technologies: ["PHP", "JavaScript", "HTML", "CSS"],
+        category: "tools",
+        featured: false,
+        image: "assets/images/projects/digitalstorage/1.svg",
+        images: [
+            "assets/images/projects/digitalstorage/1.svg",
+            "assets/images/projects/digitalstorage/2.jpg",
+            "assets/images/projects/digitalstorage/3.jpg"
+        ],
+        githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Digital%20Storage%20Converter",
+        liveUrl: "",
+        completedDate: "2025-04-22",
+        highlights: [
+            "Covers binary and decimal units",
+            "Responsive table of values",
+            "Optimized for performance"
+        ]
+    },
+    {
+        id: 20,
+        title: "Energy Converter Tool",
+        shortDescription: "Convert between Joules, Calories, and Kilowatt-hours",
+        fullDescription: "A compact tool to convert energy measurements commonly used in physics and electrical systems. Built for students and professionals alike.",
+        technologies: ["PHP", "JavaScript", "HTML", "CSS"],
+        category: "tools",
+        featured: false,
+        image: "assets/images/projects/energy/1.svg",
+        images: [
+            "assets/images/projects/energy/1.svg",
+            "assets/images/projects/energy/2.jpg",
+            "assets/images/projects/energy/3.jpg"
+        ],
+        githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Energy%20Converter",
+        liveUrl: "",
+        completedDate: "2025-05-01",
+        highlights: [
+            "Supports all standard energy units",
+            "Includes tooltip definitions for each unit",
+            "Instant responsive results"
+        ]
+    },
+    {
+        id: 21,
+        title: "Length Converter Tool",
+        shortDescription: "Convert lengths between meters, inches, feet, and more",
+        fullDescription: "A tool designed to convert between various length units such as meters, kilometers, inches, feet, and miles. Built with responsiveness and simplicity in mind.",
+        technologies: ["PHP", "JavaScript", "HTML", "CSS"],
+        category: "tools",
+        featured: false,
+        image: "assets/images/projects/length/1.svg",
+        images: [
+            "assets/images/projects/length/1.svg",
+            "assets/images/projects/length/2.jpg",
+            "assets/images/projects/length/3.jpg"
+        ],
+        githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Length%20Converter",
+        liveUrl: "",
+        completedDate: "2025-05-08",
+        highlights: [
+            "Metric and imperial unit support",
+            "Real-time conversions",
+            "Mobile-optimized design"
+        ]
+    },
+    {
+        id: 22,
+        title: "Pressure Converter Tool",
+        shortDescription: "Convert between different pressure units accurately",
+        fullDescription: "A handy utility for converting pressure values among units like Pascal, Bar, PSI, and atm. Ideal for scientific and mechanical applications.",
+        technologies: ["PHP", "JavaScript", "HTML", "CSS"],
+        category: "tools",
+        featured: false,
+        image: "assets/images/projects/pressure/1.svg",
+        images: [
+            "assets/images/projects/pressure/1.svg",
+            "assets/images/projects/pressure/2.jpg",
+            "assets/images/projects/pressure/3.jpg"
+        ],
+        githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Pressure%20Converter",
+        liveUrl: "",
+        completedDate: "2025-05-15",
+        highlights: [
+            "Supports scientific and daily units",
+            "Built with conversion formulas",
+            "Interactive dropdown and input"
+        ]
+    },
+    {
+        id: 23,
+        title: "Speed Converter Tool",
+        shortDescription: "Convert between various speed units easily",
+        fullDescription: "This tool enables users to convert between speed units such as km/h, m/s, mph, and knots. Designed for transportation and physics use cases.",
+        technologies: ["PHP", "JavaScript", "HTML", "CSS"],
+        category: "tools",
+        featured: false,
+        image: "assets/images/projects/speed/1.svg",
+        images: [
+            "assets/images/projects/speed/1.svg",
+            "assets/images/projects/speed/2.jpg",
+            "assets/images/projects/speed/3.jpg"
+        ],
+        githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Speed%20Converter",
+        liveUrl: "",
+        completedDate: "2025-05-22",
+        highlights: [
+            "Fast and accurate conversions",
+            "Dropdown for selecting input/output units",
+            "Optimized for all screen sizes"
+        ]
+    },
+    {
+        id: 24,
+        title: "Time Converter Tool",
+        shortDescription: "Convert between time formats and units",
+        fullDescription: "Convert between seconds, minutes, hours, days, and weeks. Built as part of the comprehensive unit converter series using PHP and JavaScript.",
+        technologies: ["PHP", "JavaScript", "HTML", "CSS"],
+        category: "tools",
+        featured: false,
+        image: "assets/images/projects/timeconverter/1.svg",
+        images: [
+            "assets/images/projects/timeconverter/1.svg",
+            "assets/images/projects/timeconverter/2.jpg",
+            "assets/images/projects/timeconverter/3.jpg"
+        ],
+        githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Time%20Converter",
+        liveUrl: "",
+        completedDate: "2025-06-01",
+        highlights: [
+            "Flexible unit conversion",
+            "Responsive inputs and outputs",
+            "Lightweight and fast loading"
+        ]
+    },
+    {
+        id: 25,
+        title: "Volume Converter Tool",
+        shortDescription: "Convert volume units like liters, gallons, and milliliters",
+        fullDescription: "A conversion utility to convert volumes between liters, milliliters, cubic meters, gallons, and more. Designed for practical kitchen, academic, and scientific purposes.",
+        technologies: ["PHP", "JavaScript", "HTML", "CSS"],
+        category: "tools",
+        featured: false,
+        image: "assets/images/projects/volumeconverter/1.svg",
+        images: [
+            "assets/images/projects/volumeconverter/1.svg",
+            "assets/images/projects/volumeconverter/2.jpg",
+            "assets/images/projects/volumeconverter/3.jpg"
+        ],
+        githubUrl: "https://github.com/piyush-kumar499/Converter-tools/tree/main/Volume%20Converter",
+        liveUrl: "",
+        completedDate: "2025-07-01",
+        highlights: [
+            "Covers kitchen to scientific units",
+            "Intuitive design with unit info",
+            "Real-time result updates"
+        ]
+    }
 ];
 
 // Certificates and Achievements Data
