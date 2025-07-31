@@ -471,11 +471,14 @@ window.projectsData = [
         technologies: ["HTML", "CSS", "JavaScript"],
         category: "tools",
         featured: false,
-        image: "assets/images/projects/lengdjdth/1.svg",
+        image: "assets/images/projects/colourcode/1.svg",
         images: [
-            "assets/images/projects/ajjajajja/1.svg",
-            "assets/images/projects/lenghsjsth/2.jpg",
-            "assets/images/projects/lengwuth/3.jpg"
+            "assets/images/projects/colourcode/1.svg",
+            "assets/images/projects/colourcode/2.jpg",
+            "assets/images/projects/colourcode/3.jpg",
+            "assets/images/projects/colourcode/4.jpg",
+            "assets/images/projects/colourcode/5.jpg",
+            "assets/images/projects/colourcode/6.jpg"
         ],
         githubUrl: "",
         liveUrl: "",
