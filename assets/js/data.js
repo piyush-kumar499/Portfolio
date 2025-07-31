@@ -442,9 +442,9 @@ window.projectsData = [
     },
     {
         id: 9,
-        title: "HTML Colour Palette",
-        shortDescription: "Explore and pick HTML-safe color palettes",
-        fullDescription: "A UI tool to explore and select color palettes useful for HTML and web development. Includes hex and RGB previews.",
+        title: "Colour Code Picker",
+        shortDescription: "Select colors and get corresponding code values",
+        fullDescription: "Simple tool that allows developers to pick a color and receive its hex, RGB, and HSL values instantly.",
         technologies: ["HTML", "CSS", "JavaScript"],
         category: "tools",
         featured: false,
@@ -456,37 +456,34 @@ window.projectsData = [
         ],
         githubUrl: "",
         liveUrl: "",
-        completedDate: "2025-01-05",
-        highlights: [
-            "Hex and RGB color preview",
-            "Copy-to-clipboard support",
-            "Color swatch viewer"
-        ]
-    },
-    {
-        id: 10,
-        title: "Colour Code Picker",
-        shortDescription: "Select colors and get corresponding code values",
-        fullDescription: "Simple tool that allows developers to pick a color and receive its hex, RGB, and HSL values instantly.",
-        technologies: ["HTML", "CSS", "JavaScript"],
-        category: "tools",
-        featured: false,
-        image: "assets/images/projects/colourcode/1.svg",
-        images: [
-            "assets/images/projects/colourcode/1.svg",
-            "assets/images/projects/colourcode/2.jpg",
-            "assets/images/projects/colourcode/3.jpg",
-            "assets/images/projects/colourcode/4.jpg",
-            "assets/images/projects/colourcode/5.jpg",
-            "assets/images/projects/colourcode/6.jpg"
-        ],
-        githubUrl: "https://github.com/piyush-kumar499/Tool-Projects/tree/main/Colour%20Code%20Selector",
-        liveUrl: "",
         completedDate: "2024-12-20",
         highlights: [
             "Instant color preview",
             "Multiple format outputs",
             "Easy-to-use interface"
+        ]
+    },
+    {
+    id: 10,
+    title: "Smart Tip Calculator",
+    shortDescription: "Calculate restaurant tips with intelligent rounding",
+    fullDescription: "Smart Tip Calculator allows users to quickly calculate the tip amount based on the bill total and desired tip percentage. The tool includes intelligent rounding and allows bill splitting between people, making it ideal for group dining situations.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    category: "tools",
+    featured: false,
+    image: "assets/images/projects/tipcalculator/1.svg",
+    images: [
+        "assets/images/projects/tipcalculator/1.svg",
+        "assets/images/projects/tipcalculator/2.jpg",
+    ],
+    githubUrl: "https://github.com/piyush-kumar499/Calculator-Projects/tree/main/Smart%20Tip%20Calculator",
+    liveUrl: "",
+    completedDate: "2024-08-05",
+    highlights: [
+        "Custom tip percentage input",
+        "Split bill feature with per-person breakdown",
+        "Smart rounding of totals",
+        "Responsive layout for mobile devices"
         ]
     },
     {
