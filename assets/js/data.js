@@ -288,7 +288,7 @@ window.projectsData = [
 "assets/images/projects/aichatbot/4.jpg",
 "assets/images/projects/aichatbot/5.jpg",
   ],
-        githubUrl: "",
+        githubUrl: "https://github.com/piyush-kumar499/AI-Projects/tree/main/AI%20Chatbot",
         liveUrl: "",
         completedDate: "2024-11-25",
         highlights: [
