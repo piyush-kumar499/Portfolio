@@ -261,8 +261,8 @@ window.projectsData = [
 "assets/images/projects/phpwebsite/23.jpg",
 "assets/images/projects/phpwebsite/24.jpg"
   ],
-        githubUrl: "https://piyush-kumar499.github.io/portfolio/",
-        liveUrl: "https://piyush-kumar499.github.io/portfolio/",
+        githubUrl: "https://github.com/piyush-kumar499/PHP-Website",
+        liveUrl: "",
         completedDate: "2025-03-30",
         highlights: [
             "Secure authentication system",
