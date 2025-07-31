@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Icon gradients -->
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.7" />
+    </linearGradient>
+    
+    <!-- Text shadow filter -->
+    <filter id="textShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="200" fill="url(#bgGradient)" rx="10" ry="10"/>
+  
+  <!-- Main conversion arrows (center) -->
+  <g transform="translate(200, 100)">
+    <!-- Circular arrow indicating conversion -->
+    <circle cx="0" cy="0" r="35" fill="none" stroke="url(#iconGradient)" stroke-width="3" opacity="0.8"/>
+    
+    <!-- Arrow pointing right -->
+    <path d="M -25 -8 L 5 -8 L 5 -15 L 25 0 L 5 15 L 5 8 L -25 8 Z" fill="url(#iconGradient)" opacity="0.9"/>
+    
+    <!-- Arrow pointing left (below) -->
+    <path d="M 25 12 L -5 12 L -5 19 L -25 4 L -5 -11 L -5 -4 L 25 -4 Z" fill="url(#iconGradient)" opacity="0.9"/>
+  </g>
+  
+  <!-- Unit symbols around the conversion arrows -->
+  <!-- Temperature -->
+  <g transform="translate(120, 60)">
+    <circle cx="0" cy="0" r="12" fill="url(#iconGradient)" opacity="0.7"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#667eea">°C</text>
+  </g>
+  
+  <!-- Length -->
+  <g transform="translate(280, 60)">
+    <rect x="-10" y="-6" width="20" height="12" fill="url(#iconGradient)" opacity="0.7" rx="2"/>
+    <text x="0" y="4" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#667eea">m</text>
+  </g>
+  
+  <!-- Weight -->
+  <g transform="translate(120, 140)">
+    <circle cx="0" cy="0" r="12" fill="url(#iconGradient)" opacity="0.7"/>
+    <text x="0" y="4" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#667eea">kg</text>
+  </g>
+  
+  <!-- Volume -->
+  <g transform="translate(280, 140)">
+    <rect x="-10" y="-6" width="20" height="12" fill="url(#iconGradient)" opacity="0.7" rx="2"/>
+    <text x="0" y="4" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#667eea">L</text>
+  </g>
+  
+  <!-- Decorative connecting lines -->
+  <g stroke="url(#iconGradient)" stroke-width="1" opacity="0.4" fill="none">
+    <line x1="132" y1="68" x2="165" y2="85"/>
+    <line x1="268" y1="68" x2="235" y2="85"/>
+    <line x1="132" y1="132" x2="165" y2="115"/>
+    <line x1="268" y1="132" x2="235" y2="115"/>
+  </g>
+  
+  <!-- Main title -->
+  <text x="200" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" filter="url(#textShadow)">Unit Converter</text>
+  
+  <!-- Subtitle -->
+  <text x="200" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="white" opacity="0.9" filter="url(#textShadow)">Toolkit</text>
+  
+  <!-- Small descriptive text -->
+  <text x="200" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" opacity="0.8">Temperature • Length • Mass • Volume • Speed • Energy</text>
+  
+  <!-- Corner accent elements -->
+  <circle cx="30" cy="30" r="3" fill="white" opacity="0.3"/>
+  <circle cx="370" cy="30" r="3" fill="white" opacity="0.3"/>
+  <circle cx="30" cy="170" r="3" fill="white" opacity="0.3"/>
+  <circle cx="370" cy="170" r="3" fill="white" opacity="0.3"/>
+</svg>
