@@ -334,13 +334,17 @@ window.projectsData = [
         technologies: ["PHP", "JavaScript", "HTML", "CSS"],
         category: "web",
         featured: true,
-        image: "assets/images/projects/lengdjdth/1.svg",
+        image: "assets/images/projects/authpage/1.svg",
         images: [
-            "assets/images/projects/ajjajajja/1.svg",
-            "assets/images/projects/lenghsjsth/2.jpg",
-            "assets/images/projects/lengwuth/3.jpg"
+            "assets/images/projects/authpage/1.svg",
+            "assets/images/projects/authpage/2.jpg",
+            "assets/images/projects/authpage/3.jpg",
+            "assets/images/projects/authpage/4.jpg",
+            "assets/images/projects/authpage/5.jpg",
+            "assets/images/projects/authpage/6.jpg",
+            "assets/images/projects/authpage/7.jpg"
         ],
-        githubUrl: "",
+        githubUrl: "https://github.com/piyush-kumar499/Tool-Projects/tree/main/Authentication%20Page",
         liveUrl: "",
         completedDate: "2024-12-15",
         highlights: [
