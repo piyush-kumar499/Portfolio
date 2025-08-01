@@ -406,13 +406,16 @@ window.projectsData = [
         technologies: ["HTML", "CSS", "JavaScript"],
         category: "tools",
         featured: true,
-        image: "assets/images/projects/lengdjdth/1.svg",
+        image: "assets/images/projects/imgtopdf/1.svg",
         images: [
-            "assets/images/projects/ajjajajja/1.svg",
-            "assets/images/projects/lenghsjsth/2.jpg",
-            "assets/images/projects/lengwuth/3.jpg"
+            "assets/images/projects/imgtopdf/1.svg",
+            "assets/images/projects/imgtopdf/2.jpg",
+            "assets/images/projects/imgtopdf/3.jpg",
+            "assets/images/projects/imgtopdf/4.jpg",
+            "assets/images/projects/imgtopdf/5.jpg",
+            "assets/images/projects/imgtopdf/6.jpg"
         ],
-        githubUrl: "",
+        githubUrl: "https://github.com/piyush-kumar499/Tool-Projects/tree/main/Image%20to%20PDF",
         liveUrl: "",
         completedDate: "2025-04-20",
         highlights: [
