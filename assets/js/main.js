@@ -222,13 +222,18 @@ if (skillsContainer && window.skillsData) {
         featuredProjects.forEach(project => {
             const projectElement = document.createElement('div');
             projectElement.className = 'project-card';
+            
+            // Make the entire card clickable with data attribute
+            projectElement.setAttribute('data-project-id', project.id);
+            projectElement.style.cursor = 'pointer';
+            
             projectElement.innerHTML = `
                 <div class="project-image">
                     <img src="${project.image || 'https://via.placeholder.com/500x300/007bff/ffffff?text=Project'}" alt="${project.title || 'Project'}">
                     <div class="project-overlay">
                         <div class="project-links">
-                            ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>` : ''}
-                            ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i></a>` : ''}
+                            ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>` : ''}
+                            ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i></a>` : ''}
                         </div>
                     </div>
                 </div>
@@ -240,8 +245,66 @@ if (skillsContainer && window.skillsData) {
                     </div>
                 </div>
             `;
+            
+            // Add click event listener to the project card
+            projectElement.addEventListener('click', function(e) {
+                // Prevent default action
+                e.preventDefault();
+                
+                // Get the project ID
+                const projectId = this.getAttribute('data-project-id');
+                
+                // Redirect to projects page with project ID as URL parameter
+                window.location.href = `projects.html?project=${projectId}`;
+            });
+            
             featuredProjectsContainer.appendChild(projectElement);
         });
+    }
+}
+
+// Add this new function for handling URL parameters on projects page
+function handleProjectRedirect() {
+    // Check if we're on the projects page and have a project parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get('project');
+    
+    if (projectId && window.projectsData) {
+        // Find the project
+        const project = window.projectsData.find(p => p.id == projectId);
+        
+        if (project) {
+            // Small delay to ensure page is fully loaded
+            setTimeout(() => {
+                // First, scroll to the project card
+                const projectCard = document.querySelector(`[data-project-id="${projectId}"]`);
+                
+                if (projectCard) {
+                    // Smooth scroll to the project
+                    projectCard.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                    
+                    // Add highlight effect
+                    projectCard.classList.add('highlighted-project');
+                    
+                    // After a brief moment, automatically open the project modal
+                    setTimeout(() => {
+                        // Find and click the details button
+                        const detailsBtn = projectCard.querySelector('.view-details');
+                        if (detailsBtn) {
+                            detailsBtn.click();
+                        }
+                        
+                        // Remove highlight after modal opens
+                        setTimeout(() => {
+                            projectCard.classList.remove('highlighted-project');
+                        }, 1000);
+                    }, 800); // Wait 800ms after scroll completes
+                }
+            }, 500); // Wait 500ms for page initialization
+        }
     }
 }
 
