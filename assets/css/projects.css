@@ -1059,3 +1059,54 @@
         }
     }
 }
+
+/* Add these CSS styles to your projects.css file for the highlight effect */
+
+.highlighted-project {
+    animation: highlightProject 2s ease-in-out;
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes highlightProject {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 8px 40px rgba(99, 102, 241, 0.3);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Optional: Add hover effect for homepage project cards */
+.project-card[data-project-id] {
+    transition: all 0.3s ease;
+}
+
+.project-card[data-project-id]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Add a subtle pointer cursor hint */
+.project-card[data-project-id]::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card[data-project-id]:hover::after {
+    opacity: 1;
+}
