@@ -98,104 +98,112 @@
     <!-- Scripts -->
     <script src="assets/js/data.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-        // Enhanced initialization with better error handling and timing
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Projects page DOM loaded');
-            
-            // Force body layout structure immediately
-            document.body.classList.add('portfolio-body');
-            document.body.style.paddingTop = '80px';
-            document.body.style.margin = '0';
-            document.body.style.minHeight = '100vh';
-            document.body.style.display = 'flex';
-            document.body.style.flexDirection = 'column';
-            
-            // Use the more reliable sequential loading function
-            if (typeof window.loadComponentsSequentially === 'function') {
-                window.loadComponentsSequentially(function() {
-                    console.log('Components loaded, initializing projects page');
-                    
-                    // Add extra safety delay for projects page
-                    setTimeout(function() {
-                        try {
-                            populateProjectsPage();
-                            initializeProjectFilters();
-                            initializeProjectModal();
-                            
-                            // Initialize project image viewer
-                            initializeProjectImageViewer();
-                            updatePopulateProjectsPageForImages();
-                            
-                            console.log('Projects page populated successfully');
-                            
-                            // Ensure footer is at bottom
-                            const footer = document.getElementById('footer-placeholder');
-                            if (footer) {
-                                footer.style.marginTop = 'auto';
-                                footer.style.position = 'relative';
-                                footer.style.zIndex = '100';
-                            }
-                            
-                        } catch (error) {
-                            console.error('Error populating projects page:', error);
-                        }
-                    }, 300);
-                });
-            } else {
-                // Fallback to the other function
-                console.log('Using fallback loading function');
-                window.loadComponentsAndInit(function() {
-                    setTimeout(function() {
-                        try {
-                            populateProjectsPage();
-                            initializeProjectFilters();
-                            initializeProjectModal();
-                            
-                            // Initialize project image viewer
-                            initializeProjectImageViewer();
-                            updatePopulateProjectsPageForImages();
-                            
-                            // Ensure footer is at bottom
-                            const footer = document.getElementById('footer-placeholder');
-                            if (footer) {
-                                footer.style.marginTop = 'auto';
-                                footer.style.position = 'relative';
-                                footer.style.zIndex = '100';
-                            }
-                            
-                        } catch (error) {
-                            console.error('Error populating projects page:', error);
-                        }
-                    }, 400);
-                });
-            }
-        });
+<script>
+    // Enhanced initialization with URL parameter handling
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Projects page DOM loaded');
         
-        // Additional safety check after window load
-        window.addEventListener('load', function() {
-            console.log('Projects page fully loaded');
+        // Force body layout structure immediately
+        document.body.classList.add('portfolio-body');
+        document.body.style.paddingTop = '80px';
+        document.body.style.margin = '0';
+        document.body.style.minHeight = '100vh';
+        document.body.style.display = 'flex';
+        document.body.style.flexDirection = 'column';
+        
+        // Use the more reliable sequential loading function
+        if (typeof window.loadComponentsSequentially === 'function') {
+            window.loadComponentsSequentially(function() {
+                console.log('Components loaded, initializing projects page');
+                
+                // Add extra safety delay for projects page
+                setTimeout(function() {
+                    try {
+                        populateProjectsPage();
+                        initializeProjectFilters();
+                        initializeProjectModal();
+                        
+                        // Initialize project image viewer
+                        if (typeof initializeProjectImageViewer === 'function') {
+                            initializeProjectImageViewer();
+                        }
+                        
+                        // Handle project redirect from homepage
+                        handleProjectRedirect();
+                        
+                        console.log('Projects page populated successfully');
+                        
+                        // Ensure footer is at bottom
+                        const footer = document.getElementById('footer-placeholder');
+                        if (footer) {
+                            footer.style.marginTop = 'auto';
+                            footer.style.position = 'relative';
+                            footer.style.zIndex = '100';
+                        }
+                        
+                    } catch (error) {
+                        console.error('Error populating projects page:', error);
+                    }
+                }, 300);
+            });
+        } else {
+            // Fallback to the other function
+            console.log('Using fallback loading function');
+            window.loadComponentsAndInit(function() {
+                setTimeout(function() {
+                    try {
+                        populateProjectsPage();
+                        initializeProjectFilters();
+                        initializeProjectModal();
+                        
+                        // Initialize project image viewer
+                        if (typeof initializeProjectImageViewer === 'function') {
+                            initializeProjectImageViewer();
+                        }
+                        
+                        // Handle project redirect from homepage
+                        handleProjectRedirect();
+                        
+                        // Ensure footer is at bottom
+                        const footer = document.getElementById('footer-placeholder');
+                        if (footer) {
+                            footer.style.marginTop = 'auto';
+                            footer.style.position = 'relative';
+                            footer.style.zIndex = '100';
+                        }
+                        
+                    } catch (error) {
+                        console.error('Error populating projects page:', error);
+                    }
+                }, 400);
+            });
+        }
+    });
+    
+    // Additional safety check after window load
+    window.addEventListener('load', function() {
+        console.log('Projects page fully loaded');
+        
+        // Final verification of layout
+        setTimeout(function() {
+            const header = document.getElementById('header-placeholder');
+            const footer = document.getElementById('footer-placeholder');
             
-            // Final verification of layout
-            setTimeout(function() {
-                const header = document.getElementById('header-placeholder');
-                const footer = document.getElementById('footer-placeholder');
-                
-                if (header) {
-                    header.style.position = 'fixed';
-                    header.style.top = '0';
-                    header.style.zIndex = '9999';
-                }
-                
-                if (footer) {
-                    footer.style.position = 'relative';
-                    footer.style.marginTop = 'auto';
-                    footer.style.zIndex = '100';
-                }
-                
-                console.log('Final layout verification completed');
-            }, 500);
-        });
-    </script>
+            if (header) {
+                header.style.position = 'fixed';
+                header.style.top = '0';
+                header.style.zIndex = '9999';
+            }
+            
+            if (footer) {
+                footer.style.position = 'relative';
+                footer.style.marginTop = 'auto';
+                footer.style.zIndex = '100';
+            }
+            
+            console.log('Final layout verification completed');
+        }, 500);
+    });
+</script>
 </body>
 </html>
