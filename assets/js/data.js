@@ -426,28 +426,31 @@ window.projectsData = [
         ]
     },
     {
-        id: 8,
-        title: "Image Size Reducer (JS)",
-        shortDescription: "Frontend image compression using JavaScript",
-        fullDescription: "Client-side tool built to compress images before uploading. Great for optimizing uploads without needing a backend server.",
-        technologies: ["HTML", "CSS", "JavaScript"],
-        category: "tools",
-        featured: true,
-        image: "assets/images/projects/lengdjdth/1.svg",
-        images: [
-            "assets/images/projects/ajjajajja/1.svg",
-            "assets/images/projects/lenghsjsth/2.jpg",
-            "assets/images/projects/lengwuth/3.jpg"
-        ],
-        githubUrl: "",
-        liveUrl: "",
-        completedDate: "2025-01-10",
-        highlights: [
-            "Drag-and-drop image input",
-            "Client-side compression algorithm",
-            "Instant download of reduced files"
-        ]
-    },
+    id: 8,
+    title: "Internet Speed Test",
+    shortDescription: "Check your internet download and upload speed in real-time",
+    fullDescription: "A simple and responsive web-based internet speed testing tool built using HTML, CSS, and JavaScript. It allows users to test their download and upload speeds as well as ping and jitter values. Great for quick checks of connectivity performance without needing any external software.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    category: "tools",
+    featured: true,
+    image: "assets/images/projects/speedtest/1.svg",
+    images: [
+        "assets/images/projects/speedtest/1.svg",
+        "assets/images/projects/speedtest/2.jpg",
+        "assets/images/projects/speedtest/3.jpg",
+        "assets/images/projects/speedtest/4.jpg",
+        "assets/images/projects/speedtest/5.jpg"
+    ],
+    githubUrl: "",
+    liveUrl: "",
+    completedDate: "2025-01-10",
+    highlights: [
+        "Real-time download and upload speed measurement",
+        "Ping and jitter test included",
+        "Clean and user-friendly interface",
+        "Purely browser-based with no external dependencies"
+    ]
+},
     {
         id: 9,
         title: "Colour Code Picker",
