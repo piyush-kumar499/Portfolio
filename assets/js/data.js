@@ -376,28 +376,29 @@ window.projectsData = [
         ]
     },
     {
-        id: 6,
-        title: "Image Size Reducer (PHP)",
-        shortDescription: "Compress images using PHP server-side scripting",
-        fullDescription: "A simple web-based tool to upload and compress images using PHP and JavaScript. Reduces file size while preserving image quality.",
-        technologies: ["PHP", "JavaScript", "HTML", "CSS"],
-        category: "tools",
-        featured: false,
-        image: "assets/images/projects/lengdjdth/1.svg",
-        images: [
-            "assets/images/projects/ajjajajja/1.svg",
-            "assets/images/projects/lenghsjsth/2.jpg",
-            "assets/images/projects/lengwuth/3.jpg"
-        ],
-        githubUrl: "",
-        liveUrl: "",
-        completedDate: "2025-05-10",
-        highlights: [
-            "Image compression via PHP",
-            "Drag and drop image upload",
-            "Progress indicator with real-time feedback"
-        ]
-    },
+    id: 6,
+    title: "Image Size Reducer (JavaScript)",
+    shortDescription: "Client-side tool to compress images using JavaScript.",
+    fullDescription: "A lightweight browser-based tool that allows users to upload and compress images directly using HTML5 and JavaScript. Reduces file size while maintaining quality, without the need for server-side processing.",
+    technologies: ["JavaScript", "HTML", "CSS"],
+    category: "tools",
+    featured: false,
+    image: "assets/images/projects/imgesizereducer/1.svg",
+    images: [
+        "assets/images/projects/imgesizereducer/1.svg",
+        "assets/images/projects/imgesizereducer/2.jpg",
+        "assets/images/projects/imgesizereducer/3.jpg",
+        "assets/images/projects/imgesizereducer/4.jpg"
+    ],
+    githubUrl: "https://github.com/piyush-kumar499/Tool-Projects/tree/main/Image%20Size%20Reducer",
+    liveUrl: "",
+    completedDate: "2025-05-10",
+    highlights: [
+        "Client-side image compression with JavaScript",
+        "Drag and drop image upload",
+        "Instant preview and quality adjustment options"
+    ]
+},
     {
         id: 7,
         title: "Image to PDF Generator",
