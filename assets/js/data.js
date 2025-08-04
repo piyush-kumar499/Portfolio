@@ -441,7 +441,7 @@ window.projectsData = [
         "assets/images/projects/speedtest/4.jpg",
         "assets/images/projects/speedtest/5.jpg"
     ],
-    githubUrl: "",
+    githubUrl: "https://github.com/piyush-kumar499/Tool-Projects/tree/main/Internet%20Speed%20Test",
     liveUrl: "",
     completedDate: "2025-01-10",
     highlights: [
