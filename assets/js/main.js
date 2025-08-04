@@ -570,17 +570,20 @@ function showProjectModal(project) {
                     </div>
                 ` : ''}
                 
-                ${project.images && project.images.length > 1 ? `
+                ${project.images && project.images.length > 0 ? `
                     <div class="modal-project-gallery">
-                        <h3>Project Gallery</h3>
+                        <h3>Project Gallery (${project.images.length} ${project.images.length === 1 ? 'Image' : 'Images'})</h3>
                         <div class="modal-gallery-grid">
                             ${project.images.map((image, index) => `
-                                <img src="${image}" 
-                                     alt="${project.title} - Image ${index + 1}" 
-                                     class="modal-gallery-image"
-                                     data-image-index="${index}"
-                                     style="cursor: pointer;"
-                                     title="Click to view full size">
+                                <div class="gallery-image-container">
+                                    <img src="${image}" 
+                                         alt="${project.title} - Image ${index + 1}" 
+                                         class="modal-gallery-image"
+                                         data-image-index="${index}"
+                                         loading="lazy"
+                                         title="Click to view full size"
+                                         onerror="this.src='https://via.placeholder.com/200x150/007bff/ffffff?text=Image+Not+Found'">
+                                </div>
                             `).join('')}
                         </div>
                     </div>
