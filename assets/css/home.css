@@ -798,12 +798,10 @@ body {
     backdrop-filter: blur(10px);
 }
 
-.project-card:hover .project-overlay {
+.project-links:hover~.project-overlay,
+.project-overlay:hover {
     opacity: 1;
-}
-
-.project-card:hover .project-image img {
-    transform: scale(1.1) rotate(2deg);
+    pointer-events: auto;
 }
 
 .project-links {
